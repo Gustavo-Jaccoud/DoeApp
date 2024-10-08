@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/grid_campanhas.css">
+
+
+</head>
+<body>
+    <header id="menu-container"></header>
+    <div class="carrosel"></div>
+    <div id="campanhas-container"></div>
+    <h1 class="titulo-h1">DEPOIMENTOS</h1>
+    <script>
+   function loadContentIntoElement(elementId, filePath) {
+    // Verifica se o elemento existe na página
+    const targetElement = document.getElementById(elementId);
+    if (targetElement) {
+        // Faz o fetch do arquivo de conteúdo
+        fetch(filePath)
+            .then(response => {
+                // Verifica se a requisição foi bem-sucedida
+                if (!response.ok) {
+                    throw new Error(`Erro ao carregar o arquivo: ${response.statusText}`);
+                }
+                return response.text();
+            })
+            .then(data => {
+                // Insere o conteúdo no elemento de destino
+                targetElement.innerHTML = data;
+            })
+            .catch(error => console.error('Erro ao carregar o conteúdo:', error));
+    } else {
+        console.error(`Elemento com ID "${elementId}" não foi encontrado.`);
+    }
+}
+loadContentIntoElement('menu-container', 'components/menu.html');
+loadContentIntoElement('campanhas-container', 'components/grid_campanhas.html');
+    </script>
+
+</body>
+</html>
