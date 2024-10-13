@@ -1,3 +1,6 @@
+html, body {
+    margin: 0;
+}
 body{
     display: flex;
     background-color: #F1F9FE;

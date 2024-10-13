@@ -1,0 +1,28 @@
+main{
+    width: 80vw;
+}
+main h1, main h2{
+    color: #3988C2;
+}
+main p{
+    font-size: 1.5rem;
+    text-align: justify;
+}
+.quemSomos{
+    display: flex;
+}
+.quemSomos .texto{
+    width: 45vw;
+}
+.img{
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+}
+main img{
+    width: 50vw;
+}
+.quemSomos img{
+    margin-left: 5vw;
+    width: 30vw;
+}
