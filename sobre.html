@@ -4,40 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DoeApp</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/menu.css">
+    
     <link rel="stylesheet" href="css/sobre.css">
+    <link rel="stylesheet" href="css/body.css">
+    <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
-    <div id="menu-container"></div>
+    <header id="menu-container"></header>
     <main>
         <div class="quemSomos">
-            <div class="texto">
+            <div class="texto fade-in">
                 <h1>QUEM SOMOS?</h1>
-                <p>O DoeApp é uma plataforma web que facilita a intermediação entre doadores e empresas que necessitam de recursos para manter suas operações. Com foco em campanhas específicas, o DoeApp permite que doadores encontrem facilmente empresas que precisam de produtos como equipamentos, materiais, e serviços essenciais, oferecendo um espaço prático e transparente para apoiar negócios e organizações em necessidade.</p>
+                <p id="textoQuemSomos">O DoeApp é uma plataforma web que facilita a intermediação entre doadores e empresas que necessitam de recursos para manter suas operações. Com foco em campanhas específicas, o DoeApp permite que doadores encontrem facilmente empresas que precisam de produtos como equipamentos, materiais, e serviços essenciais, oferecendo um espaço prático e transparente para apoiar negócios e organizações em necessidade.</p>
             </div>
-            <img src="img/about_0.svg" alt="">
+            <img src="img/about_0.svg" alt="" class="fade-in">
         </div>
 
-        <h2>Sobre a empresa</h2>
+        <h2 class="fade-in">Sobre a empresa</h2>
 
-        <div class="img"><img src="img/about_1.svg" alt=""></div>
+        <p class="fade-in">O DoeApp é uma plataforma web que facilita a intermediação entre doadores e empresas que necessitam de recursos para manter suas operações. Com foco em campanhas específicas, o DoeApp permite que doadores encontrem facilmente empresas que precisam de produtos como equipamentos, materiais, e serviços essenciais, oferecendo um espaço prático e transparente para apoiar negócios e organizações em necessidade.</p>
+        <div class="img fade-in"><img src="img/about_1.svg" alt=""></div>
 
-        <p>O DoeApp é uma plataforma web que facilita a intermediação entre doadores e empresas que necessitam de recursos para manter suas operações. Com foco em campanhas específicas, o DoeApp permite que doadores encontrem facilmente empresas que precisam de produtos como equipamentos, materiais, e serviços essenciais, oferecendo um espaço prático e transparente para apoiar negócios e organizações em necessidade.</p>
+        <h2 class="fade-in">Nosso objetivo</h2>
         
-        <h2>Nosso objetivo</h2>
-
-        <div class="img"><img src="img/about_2.svg" alt=""></div>
-
-        <p>O DoeApp é uma plataforma web que facilita a intermediação entre doadores e empresas que necessitam de recursos para manter suas operações. Com foco em campanhas específicas, o DoeApp permite que doadores encontrem facilmente empresas que precisam de produtos como equipamentos, materiais, e serviços essenciais, oferecendo um espaço prático e transparente para apoiar negócios e organizações em necessidade.</p>
-
+        <p class="fade-in">O DoeApp é uma plataforma web que facilita a intermediação entre doadores e empresas que necessitam de recursos para manter suas operações. Com foco em campanhas específicas, o DoeApp permite que doadores encontrem facilmente empresas que precisam de produtos como equipamentos, materiais, e serviços essenciais, oferecendo um espaço prático e transparente para apoiar negócios e organizações em necessidade.</p>
+        <div class="img fade-in"><img src="img/about_2.svg" alt=""></div>     
+       
     </main>
-    <div id="footer-container"></div>
+    <footer id="footer-container"></footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+        if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+        }
+        });
+        }, { threshold: 0.1 });
+        const elements = document.querySelectorAll('.fade-in');
+        elements.forEach(el => observer.observe(el));
+        });
+        </script>
     <script src="js/import.js"></script>
     <script>
-          loadContentIntoElement('menu-container', 'components/menu.html');
-          loadContentIntoElement('footer-container', 'components/footer.html');
+          loadContentIntoElement('menu-container', 'menu.html');
+          loadContentIntoElement('footer-container', 'footer.html');
     </script>
 </body>
 </html>

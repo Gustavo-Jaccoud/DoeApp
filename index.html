@@ -1,26 +1,207 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DoeApp</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/menu.css">
-    <link rel="stylesheet" href="css/grid_campanhas.css">
+    <title>Landscape do DOEAPP</title>
+
+    <!-- Fontes e ícones -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100..900&family=Monoton&display=swap" rel="stylesheet">
+
+    <!-- CSS em ordem -->
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="css/campanhas.css">
+    <link rel="stylesheet" href="css/depoimentos.css">
+    <link rel="stylesheet" href="css/mapa.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/animações.css">
+    <link rel="stylesheet" href="css/body.css">
+
+
 </head>
 <body>
     <header id="menu-container"></header>
-    <div class="carrosel"><h1 class="titulo-h1">Carrosel</h1></div>
-    <div id="campanhas-container"></div>
-    <h1 class="titulo-h1">DEPOIMENTOS</h1>
-    <div id="footer-container"></div>
+
+    <div class="container">
+        <div class="carousel-container">
+            <img src="img/slide1.png" alt="Image 1" class="carousel-img center">
+            <img src="img/slide3.png" alt="Image 3" class="carousel-img right">
+            <img src="img/slide2.png" alt="Image 2" class="carousel-img left">
+            <div class="progress-bar">
+              <div class="progress"></div>
+            </div>
+          </div>
+        
+        <div class="catdiv">
+            <h1 class="campanhastex invisible">CAMPANHAS</h1>
+            <div class="bordercam invisible"></div>
+            <!-- para mudar as categorias, apenas mude o valor de acordo com a lista abaixo: -->
+            <!-- Alimentação : cat1 -->
+            <!-- Rémedios e medicina : cat2 -->
+            <!-- Educação: cat3 -->
+            <!-- Pet : cat4 -->
+            <!-- Natureza : cat5 -->
+            <!-- Arte : cat6 -->
+            <div class="category-buttons">
+                <img src="img/cat1.png" alt="Categoria 1" data-category="cat1">
+                <img src="img/cat2.png" alt="Categoria 2" data-category="cat2">
+                <img src="img/cat3.png" alt="Categoria 3" data-category="cat3">
+                <img src="img/cat4.png" alt="Categoria 4" data-category="cat4">
+                <img src="img/cat5.png" alt="Categoria 5" data-category="cat5">
+                <img src="img/cat6.png" alt="Categoria 6" data-category="cat6">
+            </div>
+
+            <div class="campaigns-grid" id="campaigns">
+                <!-- Campanhas -->
+                <div class="campaign invisible" data-category="cat1">
+                    <h3>Doação de Equipamentos</h3>
+                    <img src="img/placeholder.png" alt="Campanha 1">
+                    <p class="author">AUTOR</p>
+                    <p class="description">Empresas que operam em setores industriais, construção civil e saúde precisam constantemente de EPIs para garantir a segurança de seus funcionários. Ajude com a doação de capacetes, luvas, óculos de proteção e outros materiais essenciais.</p>
+                </div>
+                <div class="campaign invisible" data-category="cat2">
+                    <h3>Materiais de Escritório</h3>
+                    <img src="img/placeholder.png" alt="Campanha 2">
+                    <p class="author">AUTOR</p>
+                    <p class="description">Pequenas empresas e ONGs necessitam de materiais de escritório para continuar suas atividades administrativas. Doe itens como papéis, canetas, impressoras e cartuchos de tinta para apoiar as operações diárias.</p>
+                </div>
+                <div class="campaign invisible" data-category="cat2">
+                    <h3>Equipamentos Tecnológicos</h3>
+                    <img src="img/placeholder.png" alt="Campanha 2">
+                    <p class="author">AUTOR</p>
+                    <p class="description">A tecnologia é fundamental para muitas empresas manterem seus serviços ativos. Você pode doar computadores, notebooks, tablets ou smartphones para empresas que precisam de suporte digital, ajudando-as a expandir suas operações.</p>
+                </div>
+                <div class="campaign invisible" data-category="cat1">
+                    <h3>Doação de Equipamentos</h3>
+                    <img src="img/placeholder.png" alt="Campanha 1">
+                    <p class="author">AUTOR</p> 
+                    <p class="description">Empresas que operam em setores industriais, construção civil e saúde precisam constantemente de EPIs para garantir a segurança de seus funcionários. Ajude com a doação de capacetes, luvas, óculos de proteção e outros materiais essenciais.</p>
+                </div>
+                <div class="campaign invisible" data-category="cat2">
+                    <h3>Materiais de Escritório</h3>
+                    <img src="img/placeholder.png" alt="Campanha 2">
+                    <p class="author">AUTOR</p>
+                    <p class="description">Pequenas empresas e ONGs necessitam de materiais de escritório para continuar suas atividades administrativas. Doe itens como papéis, canetas, impressoras e cartuchos de tinta para apoiar as operações diárias.</p>
+                </div>
+                <div class="campaign invisible" data-category="cat2">
+                    <h3>Equipamentos Tecnológicos</h3>
+                    <img src="img/placeholder.png" alt="Campanha 2">
+                    <p class="author">AUTOR</p>
+                    <p class="description">A tecnologia é fundamental para muitas empresas manterem seus serviços ativos. Você pode doar computadores, notebooks, tablets ou smartphones para empresas que precisam de suporte digital, ajudando-as a expandir suas operações.</p>
+                </div>
+                <div class="campaign invisible" data-category="cat1">
+                    <h3>Doação de Equipamentos</h3>
+                    <img src="img/placeholder.png" alt="Campanha 1">
+                    <p class="author">AUTOR</p> 
+                    <p class="description">Empresas que operam em setores industriais, construção civil e saúde precisam constantemente de EPIs para garantir a segurança de seus funcionários. Ajude com a doação de capacetes, luvas, óculos de proteção e outros materiais essenciais.</p>
+                </div>
+                <div class="campaign invisible" data-category="cat2">
+                    <h3>Materiais de Escritório</h3>
+                    <img src="img/placeholder.png" alt="Campanha 2">
+                    <p class="author">AUTOR</p>
+                    <p class="description">Pequenas empresas e ONGs necessitam de materiais de escritório para continuar suas atividades administrativas. Doe itens como papéis, canetas, impressoras e cartuchos de tinta para apoiar as operações diárias.</p>
+                </div>
+                <div class="campaign invisible" data-category="cat2">
+                    <h3>Equipamentos Tecnológicos</h3>
+                    <img src="img/placeholder.png" alt="Campanha 2">
+                    <p class="author">AUTOR</p>
+                    <p class="description">A tecnologia é fundamental para muitas empresas manterem seus serviços ativos. Você pode doar computadores, notebooks, tablets ou smartphones para empresas que precisam de suporte digital, ajudando-as a expandir suas operações.</p>
+                </div>
+                <!-- Adicionar mais se quiser (não recomendo..) -->
+            </div>
+        </div>
+
+        <div class="explore-more invisible">
+            <h3>Veja mais no Explorar</h3>
+        </div>
+
+        <div class="testimonials">
+            <h1 class="depoimentos invisible">DEPOIMENTOS</h1>
+            <div class="border invisible"></div>
+            <div class="inner">
+                <div class="slider-container">
+                    <div class="testimonial invisible">
+                        <img src="img/dep1.png" alt="">
+                        <div class="name">NOME</div>
+                        <div class="camp">LOCAL/CAMPANHA</div>
+                        <p class="dep">"Etiam nec elit nec sem ultricies rhoncus non ac justo. Fusce ornare, nulla at sodales tristique, lectus ex porta turpis, ac blandit nisi arcu in tellus."</p>
+                    </div>
+                    <div class="testimonial invisible">
+                        <img src="img/dep2.png" alt="">
+                        <div class="name">NOME</div>
+                        <div class="camp">LOCAL/CAMPANHA</div>
+                        <p class="dep">"Etiam nec elit nec sem ultricies rhoncus non ac justo. Fusce ornare, nulla at sodales tristique, lectus ex porta turpis, ac blandit nisi arcu in tellus."</p>
+                    </div>
+                    <div class="testimonial invisible">
+                        <img src="img/dep3.png" alt="">
+                        <div class="name">NOME</div>
+                        <div class="camp">LOCAL/CAMPANHA</div>
+                        <p class="dep">"Etiam nec elit nec sem ultricies rhoncus non ac justo. Fusce ornare, nulla at sodales tristique, lectus ex porta turpis, ac blandit nisi arcu in tellus."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="mdiv">
+            <h1 class="mapa invisible">TOTAL ARRECADADO ATÉ AGORA:</h1>
+            <div class="border invisible"></div>
+            <div class="map-container">
+                <img src="img/brasilmapa.png" alt="Mapa do Brasil">
+                
+                <!-- Pontos no mapa | Estados -->
+                <div class="map-point point-rr">
+                    <div class="tooltip">Roraima: 120 doações</div>
+                </div>
+                <div class="map-point point-ap">
+                    <div class="tooltip">Amapá: 120 doações</div>
+                </div>
+        
+                <div class="map-point point-pa">
+                    <div class="tooltip">Pará: 80 doações</div>
+                </div>
+        
+                <div class="map-point point-am">
+                    <div class="tooltip">Amazonas: 50 doações</div>
+                </div>
+        
+                <div class="map-point point-ms">
+                    <div class="tooltip">Mato Grosso do Sul: 100 doações</div>
+                </div>
+        
+                <div class="map-point point-mt">
+                    <div class="tooltip">Mato Grosso: 60 doações</div>
+                </div>
+            </div>
+            <div class="text-container">
+                <div>
+                    <div class="text-title invisible">ESTA SEMANA</div>
+                    <div class="text-value invisible">5.000R$</div>
+                </div>
+                <div>
+                    <div class="text-title invisible">ESTE MÊS</div>
+                    <div class="text-value invisible">25.000R$</div>
+                </div>
+                <div>
+                    <div class="text-title invisible">TOTAL</div>
+                    <div class="text-value invisible">40.000R$</div>
+                </div>
+            </div>
+        </div>
+    </div>  
+
+    <!-- footer -->
+    <footer id="footer-container"></footer>
+
+    <script src="js/scriptgeral.js"></script>
+    <!--Script para importa os componentes-->
     <script src="js/import.js"></script>
     <script>
-          loadContentIntoElement('menu-container', 'components/menu.html');
-          loadContentIntoElement('campanhas-container', 'components/grid_campanhas.html');
-          loadContentIntoElement('footer-container', 'components/footer.html');
+          loadContentIntoElement('menu-container', 'menu.html');
+          loadContentIntoElement('footer-container', 'footer.html');
     </script>
-
 </body>
 </html>
