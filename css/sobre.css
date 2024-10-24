@@ -1,28 +1,74 @@
-main{
-    width: 80vw;
-}
-main h1, main h2{
-    color: #3988C2;
-}
-main p{
-    font-size: 1.5rem;
-    text-align: justify;
-}
-.quemSomos{
+    main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
-}
-.quemSomos .texto{
-    width: 45vw;
-}
-.img{
-    width: 80vw;
+    flex-direction: column;
+    justify-content: center;
+    }
+    
+    main h1 {
+    color: #3988C2;
+    font-size: 60px;
+    margin-left: 0px;
+    margin-top: 30px;
+    }
+    
+    main p {
+    font-size: 25px;
+    text-align: justify;
+    width: 100%;
+    }
+    #textoQuemSomos{
+        font-size: 25px;
+        text-align: justify;
+        width: 75%;
+    }
+    
+    .quemSomos {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 200px;
+    }
+    
+    .quemSomos .texto {
+    width: 60%;
+    }
+
+    .quemSomos img {
+    position: absolute;
+    right: 0;
+    width: 600px;
+    height: auto;
+    top: 1px;
+    }
+    
+    .img {
     display: flex;
     justify-content: center;
-}
-main img{
-    width: 50vw;
-}
-.quemSomos img{
-    margin-left: 5vw;
-    width: 30vw;
-}
+    margin-top: 30px;
+    }
+
+    .img img {
+    width: 800px;
+    height: auto;
+    margin-bottom: 30px;
+    }
+    
+    main h2 {
+    color: #3988C2;
+    font-size: 37px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    }
+
+    .fade-in {
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+        }
+        .fade-in.visible {
+        opacity: 1;
+        }

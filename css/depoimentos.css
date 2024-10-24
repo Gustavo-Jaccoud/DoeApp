@@ -1,0 +1,153 @@
+/* container depoimentos */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* títulos e textos */
+.name, .dep, .camp, .depoimentos {
+    margin: 0;
+    padding: 0;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 900;
+}
+
+.name {
+    color: #21897E;
+}
+
+.dep {
+    color: #00584F;
+}
+
+.camp {
+    color: #26C6B5;
+}
+
+.depoimentos {
+    font-weight: 600;
+    color: #21897E;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.depoimentos::before, .depoimentos::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 480px;
+    height: 5px;
+    background-color: #26C6B5;
+    border-radius: 10px;
+}
+
+.depoimentos::before {
+    left: -500px;
+}
+
+.depoimentos::after {
+    right: -500px;
+}
+
+/* depoimentos */
+.testimonials {
+    position: relative;
+    padding: 40px 0;
+    color: #000000;
+    text-align: center;
+}
+
+/* interno */
+.inner {
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+.slider-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.testimonial {
+    flex: 0 0 30%;
+    max-width: 30%;
+}
+
+/* slider mobile */
+@media (max-width: 768px) {
+    .depoimentos::before, .depoimentos::after {
+        width: 120px;
+    }
+
+    .slider-container {
+        display: flex;
+        overflow-x: auto; 
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        gap: 10px;
+    }
+
+    .testimonial {
+        flex: 0 0 100%;
+        max-width: 100%;
+        scroll-snap-align: center;
+    }
+
+    .testimonial img {
+        max-width: 150px;
+        height: auto;
+    }
+
+    .name, .camp, .dep {
+        font-size: 14px; 
+    }
+
+    .depoimentos::before, .depoimentos::after {
+        display: none;
+    }
+}
+
+/* estilo do slider */
+.testimonial.invisible {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.testimonial.visible {
+    opacity: 1;
+}
+
+
+/* colunas para os depoimentos */
+.col1, .col2, .col3 {
+    flex: 33.33%;
+    max-width: 33.33%;
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+/* padding para cada depoimento */
+.testimonial {
+    padding: 30px;
+}
+
+/* imagens de perfil */
+.testimonial img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%; /* Imagem circular */
+}
+
+/* nome no depoimento */
+.name {
+    font-size: 23px;
+    text-transform: uppercase;
+    margin: 10px 0;
+}

@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100..900&family=Monoton&display=swap");
+/* body geral */
+body {
+    font-family: "Work Sans", sans-serif;
+    background-color: #F1F9FE;
+}
+
+/* reset básico */
+* {
+    font-family: "Work Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
