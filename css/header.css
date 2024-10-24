@@ -1,0 +1,127 @@
+/* header */
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 100;
+}
+/* logo */
+.logo img {
+    width: 160px;
+    height: auto;
+}
+
+/* botões */
+nav a {
+    text-decoration: none;
+    color: black;
+    margin-right: 20px;
+    font-size: 16px;
+    font-weight: 300;
+    transition: font-weight 0.3s;
+}
+
+nav a:hover {
+    font-weight: 500;
+}
+
+.btn-entrar {
+    color: #3988C2;
+    border: 4px solid #3988C2;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: 600;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-entrar:hover {
+    background-color: #3988C2;
+    color: white;
+}
+
+.btn-cadastrar {
+    color: white;
+    background-color: #21897E;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.btn-cadastrar:hover {
+    background-color: #043b36;
+}
+
+nav a:last-child {
+    margin-right: 0;
+}
+
+/* menu hambúrguer */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* overlay para escurecer o fundo */
+.overlay {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100vw;
+    height: calc(100vh - 60px);
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 1;
+}
+
+
+/* mobile */
+@media (max-width: 768px) {
+    header {
+        justify-content: space-between;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transform: translateY(-100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 10;
+    }
+
+    nav a {
+        margin: 15px 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    /* menu está ativo */
+    nav.active {
+        display: flex;
+        transform: translateY(0);
+    }
+
+    .overlay.active {
+        display: block;
+    }
+
+    /* impede rolagem */
+    body.menu-open {
+        overflow: hidden;
+    }
+}

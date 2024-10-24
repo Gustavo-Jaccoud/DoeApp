@@ -1,0 +1,187 @@
+/* div categorias geral */
+.catdiv {
+    position: relative;
+    padding: 40px 0;
+    color: #000000;
+    text-align: center;
+}
+
+/* título | "CAMPANHAS" */
+.campanhastex {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
+    color: #21897E;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.campanhastex::before, .campanhastex::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 480px;
+    height: 5px;
+    background-color: #26C6B5;
+    border-radius: 10px;
+}
+
+.campanhastex::before {
+    left: -500px;
+}
+
+.campanhastex::after {
+    right: -500px;
+}
+
+/* botões de categoria */
+.category-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-bottom: 20px;
+}
+
+.category-buttons img {
+    width: 50px;
+    height: auto;
+    cursor: pointer;
+    transition: filter 0.3s;
+}
+
+.category-buttons img.selected {
+    filter: brightness(0.5);
+}
+
+.category-buttons img:hover {
+    filter: brightness(0.8);
+}
+
+/* grid de campanhas */
+.campaigns-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.campaign {
+    text-align: center;
+}
+
+.campaign img {
+    width: 70%;
+    height: auto;
+}
+
+.campaign h3, .campaign p.author {
+    font-weight: bold;
+    font-family: 'Work Sans', sans-serif;
+    text-align: center;
+}
+
+.campaign p.description {
+    text-align: justify;
+    font-weight: 600;
+    font-family: 'Work Sans', sans-serif;
+    margin: 0 auto;
+    width: 80%;
+}
+
+/* botão 'explorar' */
+.explore-more {
+    font-weight: 600;
+    font-family: "Work Sans", sans-serif;
+    width: 30%;
+    margin: 20px auto;
+    text-align: center;
+    color: white;
+    background-color: #21897E;
+    padding: 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.explore-more:hover {
+    color: white;
+    background-color: #043b36;
+}
+
+.explore-more h3 {
+    font-weight: 500;
+    font-family: "Work Sans", sans-serif;
+}
+
+
+/* Slider para mobile */
+@media (max-width: 768px) {
+
+    .category-buttons {
+        gap: 10px; 
+        margin-bottom: 10px;
+    }
+
+    .category-buttons img {
+        width: 40px;
+    }
+
+    .campanhastex {
+        font-size: 20px;
+    }
+
+    .campanhastex::before, .campanhastex::after {
+        width: 150px;
+    }
+
+    /* Slider horizontal */
+    .campaigns-grid {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 15px;
+        padding-bottom: 20px;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .campaign {
+        flex: 0 0 100%;
+        max-width: 100%;
+        scroll-snap-align: center;
+    }
+
+    .campaign img {
+        width: 60%;
+    }
+
+    .campaign h3 {
+        font-size: 16px;
+    }
+
+    .campaign p.author {
+        font-size: 14px;
+    }
+
+    .campaign p.description {
+        font-size: 12px;
+        width: 90%;
+    }
+
+    .campanhastex::before, .campanhastex::after {
+        display: none;
+    }
+
+    .explore-more {
+        font-weight: 600;
+        font-family: "Work Sans", sans-serif;
+        width: 60%;
+        margin: 0px auto;
+        text-align: center;
+        color: white;
+        background-color: #21897E;
+        padding: 20px;
+        border-radius: 15px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+}

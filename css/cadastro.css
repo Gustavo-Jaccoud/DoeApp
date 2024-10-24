@@ -12,7 +12,9 @@ main {
     align-items: center;
     justify-content: center;
 }
-
+.logo_header_img{
+    margin-bottom: -23px;
+}
 .fundo {
     margin-top: 3vw;
     width: 40vw;
