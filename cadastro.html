@@ -9,26 +9,102 @@
 </head>
 <body>
 <main>    
-<img src="/img/logo.png" alt="" class="logo_header_img">
-<div class="fundo">
-    <h1>CADASTRO</h1>
-    <form action="">
-        <label for="email">E-mail</label><br>
-        <input type="text" name="email"><br>
-        <label for="senha">Senha</label><br>
-        <input type="password" name="senha">
-        <label for="c_senha">Confirmar Senha</label>
-        <input type="password" name="c_senha"><br>
-        <label for="cpf">CPF/CNPJ</label><br>
-        <input type="text" name="cpf"><br>
-        <label for="Telefone">Telefone</label><br>
-        <input type="tel" name="Telefone">
+    <img src="/img/logo.png" alt="" class="logo_header_img">
+    <div class="fundo">
+        <h1>CADASTRO</h1>
+        <form id="formCadastro">
+            <!-- Tipo de Conta -->
+            <label for="t_conta">Tipo de conta</label><br>
+            <div class="metade">
+                <div>
+                    <input type="radio" name="t_conta" id="fisica" value="fisica" onclick="alterarFormulario()">
+                    <label for="fisica">Pessoa Física</label>
+                </div>
+                <div>
+                    <input type="radio" name="t_conta" id="juridica" value="juridica" onclick="alterarFormulario()">
+                    <label for="juridica">Pessoa Jurídica</label><br>
+                </div>
+            </div>
 
-        <input type="submit" value="Entrar">
-    </form>
-</div>
-<div class="fundo2">
-</div>
+            <!-- Dados Pessoais -->
+            <label for="cpf">CPF</label>
+            <input type="text" name="cpf" id="cpf" placeholder="Digite seu CPF">
+
+            <label for="nome" id="labelNome">Nome</label>
+            <input type="text" name="nome" id="nome" placeholder="Digite seu nome">
+
+            <label style="display: none;" for="representante" id="labelRepresentante">Nome do Representante</label>
+            <input style="display: none;" type="text" name="representante" id="representante" placeholder="Digite o nome do representante">
+
+            <!-- Dados de Contato -->
+            <label for="email">E-mail</label>
+            <input type="email" name="email" id="email" placeholder="Digite seu e-mail">
+
+            <label for="telefone">Telefone</label>
+            <input type="tel" name="telefone" id="telefone" placeholder="Digite seu telefone">
+
+            <!-- Endereço -->
+            <div class="metade">
+                <div>
+                    <label for="estado">Estado</label>
+                    <input type="text" name="estado" id="estado" placeholder="Digite seu estado">
+                </div>
+                <div>
+                    <label for="cidade">Cidade</label>
+                    <input type="text" name="cidade" id="cidade" placeholder="Digite sua cidade">
+                </div>
+            </div>
+
+            <label for="rua">Rua</label>
+            <input type="text" name="rua" id="rua" placeholder="Digite sua rua">
+
+            <div class="metade">
+                <div>
+                    <label for="numero">Número</label>
+                    <input type="text" name="numero" id="numero" placeholder="Número da residência">
+                </div>
+                <div>
+                    <label for="bairro">Bairro</label>
+                    <input type="text" name="bairro" id="bairro" placeholder="Digite seu bairro">
+                </div>
+            </div>
+
+            <label for="complemento">Complemento</label>
+            <input type="text" name="complemento" id="complemento" placeholder="Apto, Bloco, etc.">
+
+            <!-- Senha -->
+            <div class="metade">
+                <div>
+                    <label for="senha">Senha</label>
+                    <input type="password" name="senha" id="senha" placeholder="Digite sua senha">
+                </div>
+                <div>
+                    <label for="c_senha">Confirmar Senha</label>
+                    <input type="password" name="c_senha" id="c_senha" placeholder="Confirme sua senha">
+                </div>
+            </div>
+
+            <input type="submit" id="enviar_cadastro" value="Cadastrar">
+        </form>
+    </div>
+    <div class="fundo2">
+        <p>Já possui uma conta? <a href="login.html">Login</a></p>
+    </div>
 </main> 
+<script>
+    function cadastrar(event) {
+        event.preventDefault(); // Impede o envio do formulário
+        const email = document.getElementById("email").value;
+        const senha = document.getElementById("senha").value;
+
+        localStorage.setItem("email", email);
+        localStorage.setItem("senha", senha); 
+
+        window.location.href = "login.html";
+    }
+
+    document.getElementById('formCadastro').onsubmit = cadastrar; 
+</script>
+<script src="js/form_cadastro.js"></script>
 </body>
 </html>

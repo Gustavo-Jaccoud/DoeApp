@@ -46,13 +46,21 @@ h1 {
 form {
     padding: 1vw;
 }
-
-
+input{
+    margin-top: 0.5vw;
+    margin-bottom: 1vw;
+}
+#error{
+    color: #c23e39;
+    display: none;
+}
 input[type="text"], input[type="password"], input[type="submit"] {
     width: 100%;
     height: 3vw;
     box-sizing: border-box; 
     border: #ffffff;
+    padding-left: 10px;
+    padding-right: 10px;
     border-radius: 0.78vw;
     margin-bottom: 1vw;
 }
@@ -63,6 +71,9 @@ input[type="submit"] {
     color: #ffffff;
     font-size: 2vw;
 }
+input[type="submit"]:hover{
+    background-color: #3979c2;
+} 
 
 p{
     text-align: center;
@@ -73,4 +84,7 @@ p{
 a{
     font-size: 1.2em;
     color: black;
+}
+a:hover{
+    color: #054283;
 }

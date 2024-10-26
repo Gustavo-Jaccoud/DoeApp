@@ -9,21 +9,40 @@
 </head>
 <body>
 <main>    
-<img src="/img/logo.png" alt="" class="logo_header_img">
-<div class="fundo">
-    <h1>LOGIN</h1>
-    <form action="">
-        <label for="email">E-mail</label><br>
-        <input type="text" name="email"><br>
-        <label for="senha">Senha</label><br>
-        <input type="password" name="senha"><br>
-        <input type="submit" value="Entrar">
-    </form>
-</div>
-<div class="fundo2">
-    <p>Ainda não tem conta? <a href="cadastro.html">Cadastre-se</a></p>
-</div>
+    <img src="/img/logo.png" alt="" class="logo_header_img">
+    <div class="fundo">
+        <h1>LOGIN</h1>
+        <form id="formLogin">
+            <label for="email">E-mail</label>
+            <input type="text" name="email" id="email" placeholder="Digite seu e-mail" required>
+            <label for="senha">Senha</label>
+            <input type="password" name="senha" id="senha" placeholder="Digite sua senha" required>
+            <input type="submit" value="Entrar" id="enviar_login">
+            <Label id="error">E-mail ou senha incorretos. Tente novamente.</Label>
+        </form>
+    </div>
+    <div class="fundo2">
+        <p>Ainda não tem conta? <a href="cadastro.html">Cadastre-se</a></p>
+    </div>
 </main>
-    
+<script>
+    function login(event) {
+        event.preventDefault(); 
+        const email = document.getElementById("email").value;
+        const senha = document.getElementById("senha").value;
+
+        const email_salvo = localStorage.getItem("email");
+        const senha_salvo = localStorage.getItem("senha");
+
+        if (email === email_salvo && senha === senha_salvo) {
+            localStorage.setItem("logado", true);
+            window.location.href = "index.html"; 
+        } else {
+            errorMessage.style.display = "block";
+        }
+    }
+    const errorMessage = document.getElementById("error");
+    document.getElementById('formLogin').onsubmit = login; 
+</script>
 </body>
 </html>

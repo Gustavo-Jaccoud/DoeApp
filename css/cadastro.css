@@ -1,8 +1,12 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
 body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
     margin: 0;
 }
 
@@ -13,11 +17,12 @@ main {
     justify-content: center;
 }
 .logo_header_img{
+    margin-top: 5vw;
     margin-bottom: -23px;
 }
 .fundo {
     margin-top: 3vw;
-    width: 40vw;
+    width: 50vw;
     background: #89C6FF;
     border-top-left-radius: 2.8vw;
     border-top-right-radius: 2.8vw;
@@ -26,8 +31,11 @@ main {
     box-sizing: border-box;
 }
 .fundo2{
-    width: 40vw;
+    width: 50vw;
     height: 3.4vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #3988C2;
     border-bottom-left-radius: 2.8vw;
     border-bottom-right-radius: 2.8vw;
@@ -41,15 +49,27 @@ h1 {
 form {
     padding: 1vw;
 }
+.metade{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.metade div{
+    width: 48%;
+}
 
-
-input[type="text"], input[type="password"], input[type="submit"],input[type="tel"]  {
+input{
+    margin-top: 0.5vw;
+    margin-bottom: 1vw;
+}
+input[type="text"],input[type="email"], input[type="password"], input[type="submit"],input[type="tel"]  {
     width: 100%;
     height: 3vw;
     box-sizing: border-box; 
+    padding-left: 10px;
+    padding-right: 10px;
     border: #ffffff;
     border-radius: 0.78vw;
-    margin-bottom: 1vw;
 }
 
 input[type="submit"] {
@@ -59,7 +79,9 @@ input[type="submit"] {
     color: #ffffff;
     font-size: 2vw;
 }
-
+input[type="submit"]:hover{
+    background-color: #3979c2;
+} 
 p{
     text-align: center;
     font-size: 1.2em;
@@ -69,4 +91,7 @@ p{
 a{
     font-size: 1.2em;
     color: black;
+}
+a:hover{
+    color: #054283;
 }
