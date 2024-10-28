@@ -6,6 +6,7 @@
     <title>DoeApp</title>
     <link rel="stylesheet" href="css/body.css">
     <link rel="stylesheet" href="css/cadastro.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Inclua o jQuery -->
 </head>
 <body>
 <main>    
@@ -17,7 +18,7 @@
             <label for="t_conta">Tipo de conta</label><br>
             <div class="metade">
                 <div>
-                    <input type="radio" name="t_conta" id="fisica" value="fisica" onclick="alterarFormulario()">
+                    <input type="radio" name="t_conta" id="fisica" value="fisica" checked onclick="alterarFormulario()"> <!-- Marcar como padrão -->
                     <label for="fisica">Pessoa Física</label>
                 </div>
                 <div>
