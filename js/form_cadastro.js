@@ -26,6 +26,7 @@ function alterarFormulario() {
         labelRepresentante.style.display = "none";
         representante.style.display = "none";
         cpfInput.placeholder = "Digite seu CPF";
+        labelCpfCnpj.textContent = "CPF";
         aplicarMascaraCPF(cpfInput);
     } else {
         labelNome.textContent = "Razão Social";
@@ -33,6 +34,7 @@ function alterarFormulario() {
         labelRepresentante.style.display = "block";
         representante.style.display = "block";
         cpfInput.placeholder = "Digite seu CNPJ";
+        labelCpfCnpj.textContent = "CNPJ";
         aplicarMascaraCNPJ(cpfInput);
     }
 }
