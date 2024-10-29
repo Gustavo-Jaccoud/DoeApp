@@ -23,7 +23,25 @@
 
 </head>
 <body>
-    <header id="menu-container"></header>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="img/logo.png" alt="Logo do site"></a>
+        </div>
+        <div class="hamburger" id="hamburger">
+                &#9776;
+         </div>
+        <nav id="nav-links">
+            <a href="explorar.html">Explorar</a>
+            <a href="sobre.html">Sobre Nós</a>
+            <a href="login.html" class="btn-entrar">Entrar</a>
+            <a href="cadastro.html" class="btn-cadastrar">Cadastrar-se</a>
+            <a class="btn-perfil">Nome</a>
+        </nav>
+            <!-- Escurece o fundo | menu hamburguer -->
+        <div class="overlay" id="overlay"></div>
+
+        <script src="js/menu.js"></script>
+</header>
 
     <div class="container">
         <div class="carousel-container">
@@ -114,10 +132,11 @@
             </div>
         </div>
 
+        <a href="explorar.html">
         <div class="explore-more invisible">
             <h3>Veja mais no Explorar</h3>
         </div>
-
+    </a>
         <div class="testimonials">
             <h1 class="depoimentos invisible">DEPOIMENTOS</h1>
             <div class="border invisible"></div>
@@ -200,7 +219,6 @@
     <!--Script para importa os componentes-->
     <script src="js/import.js"></script>
     <script>
-          loadContentIntoElement('menu-container', 'menu.html');
           loadContentIntoElement('footer-container', 'footer.html');
     </script>
 </body>

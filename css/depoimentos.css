@@ -92,6 +92,7 @@
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
         gap: 10px;
+        justify-content: flex-start;
     }
 
     .testimonial {

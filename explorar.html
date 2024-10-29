@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landscape do DOEAPP</title>
+
+    <!-- Fontes e ícones -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100..900&family=Monoton&display=swap" rel="stylesheet">
+
+    <!-- CSS em ordem -->
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/campanhas.css">
+    <link rel="stylesheet" href="css/depoimentos.css">
+    <link rel="stylesheet" href="css/mapa.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/animações.css">
+    <link rel="stylesheet" href="css/body.css">
+
+</head>
+<body>
+    <header>
+            <div class="logo">
+                <a href="index.html"><img src="img/logo.png" alt="Logo do site"></a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                    &#9776;
+             </div>
+            <nav id="nav-links">
+                <a href="explorar.html">Explorar</a>
+                <a href="sobre.html">Sobre Nós</a>
+                <a href="login.html" class="btn-entrar">Entrar</a>
+                <a href="cadastro.html" class="btn-cadastrar">Cadastrar-se</a>
+                <a class="btn-perfil">Nome</a>
+            </nav>
+                <!-- Escurece o fundo | menu hamburguer -->
+            <div class="overlay" id="overlay"></div>
+
+            <script src="js/menu.js"></script>
+    </header>
+
+    <div class="container">
+        <div class="textogrande">
+                    <h1 class="explorarcampanhastxt">Explorar campanhas</h1>
+        </div>
+        <div class="highlighted-campaigns">
+            <div class="highlighted-item">
+                <img src="img/placeholder.png" alt="Campanha 1">
+                <div class="overlaycampanhas">
+                    <h3>Campanha 1</h3>
+                    <p>Descrição da campanha 1 - teste de tamanho ------------------------------------------</p>
+                </div>
+            </div>
+            <div class="highlighted-item">
+                <img src="img/placeholder.png" alt="Campanha 2">
+                <div class="overlaycampanhas">
+                    <h3>Campanha 2</h3>
+                    <p>Descrição da campanha 2 - teste de tamanho ------------------------------------------</p>
+                </div>
+            </div>
+            <div class="highlighted-item">
+                <img src="img/placeholder.png" alt="Campanha 3">
+                <div class="overlaycampanhas">
+                    <h3>Campanha 3</h3>
+                    <p>Descrição da campanha 3 - teste de tamanho ------------------------------------------</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="catdiv">
+            <input type="text" id="search-bar" placeholder="Pesquisar campanhas..." class="search-bar">
+            <div class="bordercam"></div>
+            <!-- para mudar as categorias, apenas mude o valor de acordo com a lista abaixo: -->
+            <!-- Alimentação : cat1 -->
+            <!-- Rémedios e medicina : cat2 -->
+            <!-- Educação: cat3 -->
+            <!-- Pet : cat4 -->
+            <!-- Natureza : cat5 -->
+            <!-- Arte : cat6 -->
+            <div class="category-buttons">
+                <img src="img/cat1b.png" alt="Categoria 1" data-category="cat1">
+                <img src="img/cat2b.png" alt="Categoria 2" data-category="cat2">
+                <img src="img/cat3b.png" alt="Categoria 3" data-category="cat3">
+                <img src="img/cat4b.png" alt="Categoria 4" data-category="cat4">
+                <img src="img/cat5b.png" alt="Categoria 5" data-category="cat5">
+                <img src="img/cat6b.png" alt="Categoria 6" data-category="cat6">
+            </div>
+
+            <div class="campaigns-grid" id="campaigns">
+                <!-- Campanhas -->
+                <div class="campaign" data-category="cat1">
+                    <h3>Doação de Equipamentos</h3>
+                    <img src="img/placeholder.png" alt="Campanha 1">
+                    <p class="author">AUTOR</p>
+                    <p class="description">Empresas que operam em setores industriais, construção civil e saúde precisam constantemente de EPIs para garantir a segurança de seus funcionários. Ajude com a doação de capacetes, luvas, óculos de proteção e outros materiais essenciais.</p>
+                </div>
+                <div class="campaign" data-category="cat2">
+                    <h3>Materiais de Escritório</h3>
+                    <img src="img/placeholder.png" alt="Campanha 2">
+                    <p class="author">AUTOR</p>
+                    <p class="description">Pequenas empresas e ONGs necessitam de materiais de escritório para continuar suas atividades administrativas. Doe itens como papéis, canetas, impressoras e cartuchos de tinta para apoiar as operações diárias.</p>
+                </div>
+                <div class="campaign" data-category="cat2">
+                    <h3>Equipamentos Tecnológicos</h3>
+                    <img src="img/placeholder.png" alt="Campanha 2">
+                    <p class="author">AUTOR</p>
+                    <p class="description">A tecnologia é fundamental para muitas empresas manterem seus serviços ativos. Você pode doar computadores, notebooks, tablets ou smartphones para empresas que precisam de suporte digital, ajudando-as a expandir suas operações.</p>
+                </div>
+                <div class="campaign" data-category="cat1">
+                    <h3>Doação de Equipamentos</h3>
+                    <img src="img/placeholder.png" alt="Campanha 1">
+                    <p class="author">AUTOR</p> 
+                    <p class="description">Empresas que operam em setores industriais, construção civil e saúde precisam constantemente de EPIs para garantir a segurança de seus funcionários. Ajude com a doação de capacetes, luvas, óculos de proteção e outros materiais essenciais.</p>
+                </div>
+                <div class="campaign" data-category="cat2">
+                    <h3>Materiais de Escritório</h3>
+                    <img src="img/placeholder.png" alt="Campanha 2">
+                    <p class="author">AUTOR</p>
+                    <p class="description">Pequenas empresas e ONGs necessitam de materiais de escritório para continuar suas atividades administrativas. Doe itens como papéis, canetas, impressoras e cartuchos de tinta para apoiar as operações diárias.</p>
+                </div>
+                <div class="campaign" data-category="cat2">
+                    <h3>Equipamentos Tecnológicos</h3>
+                    <img src="img/placeholder.png" alt="Campanha 2">
+                    <p class="author">AUTOR</p>
+                    <p class="description">A tecnologia é fundamental para muitas empresas manterem seus serviços ativos. Você pode doar computadores, notebooks, tablets ou smartphones para empresas que precisam de suporte digital, ajudando-as a expandir suas operações.</p>
+                </div>
+                <div class="campaign" data-category="cat1">
+                    <h3>Doação de Equipamentos</h3>
+                    <img src="img/placeholder.png" alt="Campanha 1">
+                    <p class="author">AUTOR</p> 
+                    <p class="description">Empresas que operam em setores industriais, construção civil e saúde precisam constantemente de EPIs para garantir a segurança de seus funcionários. Ajude com a doação de capacetes, luvas, óculos de proteção e outros materiais essenciais.</p>
+                </div>
+                <div class="campaign" data-category="cat2">
+                    <h3>Materiais de Escritório</h3>
+                    <img src="img/placeholder.png" alt="Campanha 2">
+                    <p class="author">AUTOR</p>
+                    <p class="description">Pequenas empresas e ONGs necessitam de materiais de escritório para continuar suas atividades administrativas. Doe itens como papéis, canetas, impressoras e cartuchos de tinta para apoiar as operações diárias.</p>
+                </div>
+                <div class="campaign" data-category="cat2">
+                    <h3>Materiais de Escritório</h3>
+                    <img src="img/placeholder.png" alt="Campanha 2">
+                    <p class="author">AUTOR</p>
+                    <p class="description">Pequenas empresas e ONGs necessitam de materiais de escritório para continuar suas atividades administrativas. Doe itens como papéis, canetas, impressoras e cartuchos de tinta para apoiar as operações diárias.</p>
+                </div>
+                <div class="campaign" data-category="cat2">
+                    <h3>Teste para as outras páginas</h3>
+                    <img src="img/placeholder.png" alt="Campanha 2">
+                    <p class="author">Teste para as outras páginas</p>
+                    <p class="description">Teste para as outras páginas/p>
+                </div>
+                <div class="campaign" data-category="cat2">
+                    <h3>Teste para as paginasla</h3>
+                    <img src="img/placeholder.png" alt="Campanha 2">
+                    <p class="author">Teste para as paginasla</p>
+                    <p class="description">Teste para as paginasla</p>
+                </div>
+                <div class="campaign" data-category="cat2">
+                    <h3>Teste para as outras páginas</h3>
+                    <img src="img/placeholder.png" alt="Campanha 2">
+                    <p class="author">Teste para as outras páginas</p>
+                    <p class="description">Teste para as outras páginas</p>
+                </div>
+                <div class="campaign" data-category="cat2">
+                    <h3>Teste para as paginasla</h3>
+                    <img src="img/placeholder.png" alt="Campanha 2">
+                    <p class="author">Teste para as paginasla</p>
+                    <p class="description">Teste para as paginasla</p>
+                </div>
+                <div class="campaign" data-category="cat2">
+                    <h3>Teste para as outras páginas</h3>
+                    <img src="img/placeholder.png" alt="Campanha 2">
+                    <p class="author">Teste para as outras páginas</p>
+                    <p class="description">Teste para as outras páginas</p>
+                </div>
+                <div class="campaign" data-category="cat2">
+                    <h3>Teste para as paginasla</h3>
+                    <img src="img/placeholder.png" alt="Campanha 2">
+                    <p class="author">Teste para as paginasla</p>
+                    <p class="description">Teste para as paginasla</p>
+                </div>
+                <div class="campaign" data-category="cat2">
+                    <h3>Teste para as outras páginas</h3>
+                    <img src="img/placeholder.png" alt="Campanha 2">
+                    <p class="author">Teste para as outras páginas</p>
+                    <p class="description">Teste para as outras páginas</p>
+                </div>
+                <div class="campaign" data-category="cat2">
+                    <h3>Teste para as paginasla</h3>
+                    <img src="img/placeholder.png" alt="Campanha 2">
+                    <p class="author">Teste para as paginasla</p>
+                    <p class="description">Teste para as paginasla</p>
+                </div>
+                <div class="campaign" data-category="cat2">
+                    <h3>Teste para as outras páginas</h3>
+                    <img src="img/placeholder.png" alt="Campanha 2">
+                    <p class="author">Teste para as outras páginas</p>
+                    <p class="description">Teste para as outras páginas</p>
+                </div>
+                <div class="campaign" data-category="cat2">
+                    <h3>Teste para as paginasla</h3>
+                    <img src="img/placeholder.png" alt="Campanha 2">
+                    <p class="author">Teste para as paginasla</p>
+                    <p class="description">Teste para as paginasla</p>
+                </div>
+                <div class="campaign" data-category="cat2">
+                    <h3>Teste para as outras páginas</h3>
+                    <img src="img/placeholder.png" alt="Campanha 2">
+                    <p class="author">Teste para as outras páginas</p>
+                    <p class="description">Teste para as outras páginas</p>
+                </div>
+                <div class="campaign" data-category="cat2">
+                    <h3>Teste para as paginasla</h3>
+                    <img src="img/placeholder.png" alt="Campanha 2">
+                    <p class="author">Teste para as paginasla</p>
+                    <p class="description">Teste para as paginasla</p>
+                </div>
+                <div class="campaign" data-category="cat2">
+                    <h3>Teste para as outras páginas</h3>
+                    <img src="img/placeholder.png" alt="Campanha 2">
+                    <p class="author">Teste para as outras páginas</p>
+                    <p class="description">Teste para as outras páginas</p>
+                </div>
+                <div class="campaign" data-category="cat2">
+                    <h3>Teste para as paginasla</h3>
+                    <img src="img/placeholder.png" alt="Campanha 2">
+                    <p class="author">Teste para as paginasla</p>
+                    <p class="description">Teste para as paginasla</p>
+                </div>
+                <!-- Adicionar mais se quiser -->
+            </div>
+            <div class="pagination" id="pagination">
+            </div>
+        </div>
+        </div>
+
+
+    <!-- footer -->
+    <footer id="footer-container"></footer>
+
+    <script src="js/scriptgeral.js"></script>
+    <!--Script para importa os componentes-->
+    <script src="js/import.js"></script>
+    <script>
+          loadContentIntoElement('footer-container', 'footer.html');
+    </script>
+</body>
+</html>

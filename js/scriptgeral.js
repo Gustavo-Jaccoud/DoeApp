@@ -1,3 +1,48 @@
+// Função para adicionar os eventos ao menu e overlay
+function initializeMenu() {
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+  const overlay = document.getElementById('overlay');
+  const body = document.body;
+
+  if (!hamburger || !navLinks || !overlay) return;
+
+  // Função para abrir o menu
+  function openMenu() {
+      navLinks.classList.add('active');
+      overlay.classList.add('active');
+      body.classList.add('menu-open'); // Impede a rolagem da página
+  }
+
+  // Função para fechar o menu
+  function closeMenu() {
+      navLinks.classList.remove('active');
+      overlay.classList.remove('active');
+      body.classList.remove('menu-open'); // Habilita a rolagem da página
+  }
+
+  // Adiciona evento de clique ao ícone do hambúrguer
+  hamburger.addEventListener('click', openMenu);
+
+  // Adiciona evento de clique ao overlay para fechar o menu
+  overlay.addEventListener('click', closeMenu);
+
+  // Fecha o menu ao clicar fora dele ou no overlay
+  document.addEventListener('click', (event) => {
+      if (!navLinks.contains(event.target) && event.target !== hamburger && overlay.classList.contains('active')) {
+          closeMenu();
+      }
+  });
+}
+
+// Monitora a presença dos elementos no DOM e inicializa o menu quando disponíveis
+const checkForElements = setInterval(() => {
+  if (document.getElementById('hamburger') && document.getElementById('nav-links') && document.getElementById('overlay')) {
+      clearInterval(checkForElements);
+      initializeMenu();
+  }
+}, 100); // Verifica a cada 100ms até encontrar os elementos
+
 // ------------------- PAGINAS CATEGORIA LOGIC -------------------
      // Filtro de categorias com deseleção
      document.querySelectorAll('.category-buttons img').forEach(button => {
@@ -24,6 +69,52 @@
         });
     });
 
+
+
+    document.addEventListener("DOMContentLoaded", function() {
+      const campaigns = Array.from(document.querySelectorAll("#campaigns .campaign"));
+      const paginationContainer = document.getElementById("pagination");
+      const itemsPerPage = 9; // Exibir 9 campanhas por página
+      const totalPages = Math.ceil(campaigns.length / itemsPerPage);
+      let currentPage = 1;
+  
+      // Função para exibir apenas as campanhas da página atual
+      function displayPage(page) {
+          const start = (page - 1) * itemsPerPage;
+          const end = page * itemsPerPage;
+  
+          campaigns.forEach((campaign, index) => {
+              campaign.style.display = (index >= start && index < end) ? "block" : "none";
+          });
+          
+          // Atualizar estilo do botão ativo
+          document.querySelectorAll(".pagination-button").forEach((button, idx) => {
+              button.classList.toggle("active", idx === page - 1);
+          });
+      }
+  
+      // Criar botões de navegação de página
+      function createPaginationButtons() {
+          for (let i = 1; i <= totalPages; i++) {
+              const button = document.createElement("div");
+              button.classList.add("pagination-button");
+              button.textContent = i;
+  
+              // Adiciona evento de clique para cada botão
+              button.addEventListener("click", function() {
+                  currentPage = i;
+                  displayPage(currentPage);
+              });
+              
+              paginationContainer.appendChild(button);
+          }
+      }
+  
+      // Inicializar a primeira página e botões de navegação
+      createPaginationButtons();
+      displayPage(currentPage);
+  });
+  
     // Paginação
     document.querySelectorAll('.pagination button').forEach(button => {
         button.addEventListener('click', function() {
@@ -46,6 +137,72 @@
     document.querySelectorAll('.campaign').forEach((campaign, index) => {
         campaign.style.display = index < 9 ? 'block' : 'none';
     });
+
+
+    document.addEventListener("DOMContentLoaded", function() {
+      const campaigns = Array.from(document.querySelectorAll("#campaigns .campaign"));
+      const paginationContainer = document.getElementById("pagination");
+      const searchBar = document.getElementById("search-bar");
+      const itemsPerPage = 9;
+      let currentPage = 1;
+      let filteredCampaigns = campaigns;
+  
+      const totalPages = () => Math.ceil(filteredCampaigns.length / itemsPerPage);
+  
+      // Função para exibir campanhas da página atual
+      function displayPage(page) {
+          const start = (page - 1) * itemsPerPage;
+          const end = page * itemsPerPage;
+  
+          campaigns.forEach(campaign => campaign.style.display = "none"); // Esconde todas inicialmente
+          filteredCampaigns.slice(start, end).forEach(campaign => campaign.style.display = "block"); // Mostra apenas as da página
+  
+          // Atualizar estilo do botão ativo
+          document.querySelectorAll(".pagination-button").forEach((button, idx) => {
+              button.classList.toggle("active", idx === page - 1);
+          });
+      }
+  
+      // Função para criar botões de paginação com base nas campanhas filtradas
+      function createPaginationButtons() {
+          paginationContainer.innerHTML = ""; // Limpa os botões de paginação antigos
+          for (let i = 1; i <= totalPages(); i++) {
+              const button = document.createElement("div");
+              button.classList.add("pagination-button");
+              button.textContent = i;
+  
+              // Evento de clique para cada botão
+              button.addEventListener("click", function() {
+                  currentPage = i;
+                  displayPage(currentPage);
+              });
+              
+              paginationContainer.appendChild(button);
+          }
+      }
+  
+      // Função para filtrar campanhas baseado no texto de pesquisa
+      function filterCampaigns(query) {
+          const searchQuery = query.toLowerCase();
+          filteredCampaigns = campaigns.filter(campaign => {
+              const textContent = campaign.textContent.toLowerCase();
+              return textContent.includes(searchQuery);
+          });
+  
+          // Reinicializa para a primeira página após filtragem
+          currentPage = 1;
+          createPaginationButtons();
+          displayPage(currentPage);
+      }
+  
+      // Listener para entrada de texto na barra de pesquisa
+      searchBar.addEventListener("input", (e) => filterCampaigns(e.target.value));
+  
+      // Inicializar a primeira página e botões de navegação
+      createPaginationButtons();
+      displayPage(currentPage);
+  });
+  
 
 // ------------------- Carousel -------------------
 

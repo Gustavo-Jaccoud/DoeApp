@@ -8,7 +8,7 @@ header {
     background-color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: relative;
-    z-index: 100;
+    z-index: 200;
 }
 /* logo */
 .logo img {
@@ -42,6 +42,18 @@ nav a:hover {
 .btn-entrar:hover {
     background-color: #3988C2;
     color: white;
+}
+.sumir{
+    display: none;
+}
+.btn-perfil{
+    color: white;
+    background-color: #3988C2;
+    border: 4px solid #3988C2;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: 600;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .btn-cadastrar {
