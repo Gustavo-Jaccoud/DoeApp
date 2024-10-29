@@ -72,3 +72,40 @@
         .fade-in.visible {
         opacity: 1;
         }
+
+        @media (max-width: 768px) {
+            main h1 {
+                color: #3988C2;
+                font-size: 50px;
+                margin-left: 0px;
+                margin-top: 100px;
+            }
+            #textoQuemSomos {
+                font-size: 23px;
+                text-align: justify;
+                width: 170%;
+            }
+            .quemSomos img {
+                position: absolute;
+                right: 0;
+                width: 200px;
+                height: auto;
+                top: 1px;
+            }
+            .quemSomos {
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 40px;
+            }
+            #textobaixo {
+                font-size: 23px;
+            }
+            .img img {
+                width: 350px;
+                height: auto;
+                margin-bottom: 30px;
+            }
+        }

@@ -88,3 +88,63 @@ a{
 a:hover{
     color: #054283;
 }
+
+@media (max-width: 768px) {
+    .logo_header_img{
+        margin-bottom: 0px;
+        height: 50px;
+        width: auto;
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        top: 200px;
+        position: absolute;
+    }
+    .fundo {
+        margin-top: 0px;
+        width: 350px;
+        height: 250px;
+        background: #89C6FF;
+        border-top-left-radius: 2.80vw;
+        border-top-right-radius: 2.8vw;
+        padding: 3.8vw;
+        padding-bottom: 1vw;
+        box-sizing: border-box;
+    }
+    .fundo2{
+        width: 350px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #3988C2;
+        border-bottom-left-radius: 2.8vw;
+        border-bottom-right-radius: 2.8vw;
+        font-size: 14px;
+    }
+    input[type="text"], input[type="password"], input[type="submit"] {
+        width: 100%;
+        height: 8vw;
+        box-sizing: border-box;
+        border: #ffffff;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 0.78vw;
+        margin-bottom: 1vw;
+    }
+    input[type="submit"] {
+        margin-top: 1vw;
+        background-color: #3988C2;
+        color: #ffffff;
+        font-size: 5vw;
+    }
+    #error {
+        color: #c23e39;
+        display: none;
+        font-size: 13px;
+        font-weight: 800;
+    }
+}
