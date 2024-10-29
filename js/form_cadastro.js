@@ -8,6 +8,9 @@ function cadastrar(event) {
     localStorage.setItem("senha", senha);
     localStorage.setItem("nome", nome); 
 
+    localStorage.setItem("email", email);
+    localStorage.setItem("senha", senha); 
+
     window.location.href = "login.html";
 }
 
