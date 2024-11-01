@@ -1,29 +1,3 @@
-// Botão para abrir o modal
-const contatoButton = document.getElementById("contatoButton");
-const contactModal = document.getElementById("contactModal");
-
-// Abrir modal ao clicar no botão "Contato"
-contatoButton.addEventListener("click", () => {
-    contactModal.classList.remove("hidden");
-});
-
-// Fechar modal ao clicar fora do conteúdo
-contactModal.addEventListener("click", (e) => {
-    if (e.target === contactModal) {
-        contactModal.classList.add("hidden");
-    }
-});
-
-// Máscara para o campo de telefone
-const telefoneInput = document.getElementById("telefone");
-telefoneInput.addEventListener("input", (e) => {
-    e.target.value = e.target.value
-        .replace(/\D/g, "")
-        .replace(/^(\d{2})(\d)/, "($1) $2")
-        .replace(/(\d{5})(\d)/, "$1-$2")
-        .replace(/(-\d{4})\d+?$/, "$1");
-});
-
 
 // Função para adicionar os eventos ao menu e overlay
 function initializeMenu() {
@@ -413,3 +387,29 @@ function animateNumbers(element) {
   };
   requestAnimationFrame(updateValue);
 }
+
+// Botão para abrir o modal
+const contatoButton = document.getElementById("contatoButton");
+const contactModal = document.getElementById("contactModal");
+
+// Abrir modal ao clicar no botão "Contato"
+contatoButton.addEventListener("click", () => {
+    contactModal.classList.remove("hidden");
+});
+
+// Fechar modal ao clicar fora do conteúdo
+contactModal.addEventListener("click", (e) => {
+    if (e.target === contactModal) {
+        contactModal.classList.add("hidden");
+    }
+});
+
+// Máscara para o campo de telefone
+const telefoneInput = document.getElementById("telefone");
+telefoneInput.addEventListener("input", (e) => {
+    e.target.value = e.target.value
+        .replace(/\D/g, "")
+        .replace(/^(\d{2})(\d)/, "($1) $2")
+        .replace(/(\d{5})(\d)/, "$1-$2")
+        .replace(/(-\d{4})\d+?$/, "$1");
+});
