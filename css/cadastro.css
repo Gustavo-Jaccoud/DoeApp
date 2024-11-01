@@ -82,7 +82,6 @@ input[type="text"], input[type="email"], input[type="password"], input[type="sub
 
 input[type="submit"] {
     margin-top: 1vw;
-    margin-bottom: 0;
     background-color: #3988C2;
     color: #ffffff;
     font-size: 2vw;
@@ -106,6 +105,51 @@ a {
 a:hover {
     color: #054283;
 }
+
+.social-login {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    margin-bottom: 2vw;
+}
+
+.social-login button {
+    width: 100%;
+    padding: 1vw;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 0.78vw;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+/* Google Button */
+.btn-google {
+    background-color: #db4a39;
+}
+
+.btn-google:hover {
+    background-color: #c13d32;
+}
+
+/* Facebook Button */
+.btn-facebook {
+    background-color: #3b5998;
+}
+
+.btn-facebook:hover {
+    background-color: #324b82;
+}
+
+/* Twitter Button */
+.btn-twitter {
+    background-color: #1da1f2;
+}
+
+.btn-twitter:hover {
+    background-color: #1a91da;
+}
+
 
 @media (max-width: 768px) {
     body {

@@ -211,6 +211,45 @@
     margin-bottom: 50px;
     margin-bottom: 30px;
 }
+
+/* Título acima dos botões */
+.category-title {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #21897E;
+    margin-bottom: 20px;
+}
+
+/* Estilo dos itens de categoria */
+.category-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 20px;
+}
+
+.category-item {
+    text-align: center;
+}
+
+.category-item img {
+    width: 50px;
+    height: auto;
+    cursor: pointer;
+    transition: filter 0.3s;
+}
+
+.category-item img:hover {
+    filter: brightness(0.8);
+}
+
+.category-item p {
+    margin-top: 5px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #004e46;
+}
+
 /* Slider para mobile */
 @media (max-width: 768px) {
 
