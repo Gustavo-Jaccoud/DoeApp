@@ -372,4 +372,11 @@
         height: 73%;
         border-radius: 30px;
     }
+
+    .category-item p {
+        margin-top: 5px;
+        font-size: 10px;
+        font-weight: 700;
+        color: #004e46;
+    }
 }
