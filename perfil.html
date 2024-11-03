@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoeApp | Perfil</title>
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/body.css">
+    <link rel="stylesheet" href="css/perfil.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="img/logo.png" alt="Logo do site"></a>
+        </div>
+        <div class="hamburger" id="hamburger">
+            &#9776;
+        </div>
+        <nav id="nav-links">
+            <div class="dropdown-menu" id="dropdownMenu">
+                <a href="perfil.html">Ver Perfil</a>
+                <button id="logoutButton">Deslogar</button>
+            </div> 
+            <a href="explorar.html">Explorar</a>
+            <a href="sobre.html">Sobre Nós</a>
+            <a id="contatoButton">Contato</a>
+            <a href="login.html" class="btn-entrar">Entrar</a>
+            <a href="cadastro.html" class="btn-cadastrar">Cadastrar-se</a>
+            <a class="btn-perfil">Nome</a>
+        </nav>
+        
+            <!-- Escurece o fundo | menu hamburguer -->
+        <div class="overlay" id="overlay"></div>
+        <script src="js/menu.js"></script>
+    </header>
+    <div class="main-container">
+        <!-- Seção de Perfil -->
+        <div class="profile-section">
+            <img src="img/default-profile-picture.png" alt="Imagem de Perfil" class="profile-pic">
+            <h1 class="username">Nome</h1>
+            <p class="username-description">Breve descrição da pessoa ou organização.</p>
+        </div>
+
+        <!-- Seções de Doações e Favoritos -->
+        <div class="content-section">
+            <div class="content-column">
+                <h2>Últimas Doações</h2>
+                <div class="donation-card">
+                    <img src="img/placeholder.png" alt="Doação">
+                    <h3>Doação 1</h3>
+                    <p>Descrição curta da doação.</p>
+                </div>
+                <div class="donation-card">
+                    <img src="img/placeholder.png" alt="Doação">
+                    <h3>Doação 2</h3>
+                    <p>Descrição curta da doação.</p>
+                </div>
+            </div>
+
+            <div class="content-column">
+                <h2>Campanhas Favoritadas</h2>
+                <div class="donation-card">
+                    <img src="img/placeholder.png" alt="Favorito">
+                    <h3>Favorito 1</h3>
+                    <p>Descrição curta do favorito.</p>
+                </div>
+                <div class="donation-card">
+                    <img src="img/placeholder.png" alt="Favorito">
+                    <h3>Favorito 2</h3>
+                    <p>Descrição curta do favorito.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/scriptgeral.js"></script>
+</body>
+</html>
