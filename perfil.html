@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DoeApp | Perfil</title>
     <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/profile.css">
     <link rel="stylesheet" href="css/body.css">
     <link rel="stylesheet" href="css/perfil.css">
 </head>
@@ -38,7 +37,7 @@
         <!-- Seção de Perfil -->
         <div class="profile-section">
             <img src="img/default-profile-picture.png" alt="Imagem de Perfil" class="profile-pic">
-            <h1 class="username">Nome</h1>
+            <h1 class="username" id="username">Nome</h1>
             <p class="username-description">Breve descrição da pessoa ou organização.</p>
         </div>
 
@@ -87,6 +86,13 @@
             </div>
         </div>
     </div>
+    <script>
+        const nome = localStorage.getItem("nome");
+        var campoNome = document.getElementById("username");
+        if (nome) {
+            campoNome.textContent = nome;
+        }
+    </script>
     <script src="js/scriptgeral.js"></script>
 </body>
 </html>
