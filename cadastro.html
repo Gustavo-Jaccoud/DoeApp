@@ -4,93 +4,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DoeApp | Cadastro</title>
-    <link rel="stylesheet" href="css/body.css">
     <link rel="stylesheet" href="css/cadastro.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Inclua o jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-<main>    
-    <img src="img/logo.png" alt="" class="logo_header_img">
+<main>
+    <img src="img/logo_cadastro.png" alt="Logo" class="logo_header_img">
     <div class="fundo">
-        <h1>CADASTRO</h1>
-        <form id="formCadastro">
-            <!-- Tipo de Conta -->
-            <label for="t_conta">Tipo de conta</label><br>
-            <div class="metade">
-                <div>
-                    <input type="radio" name="t_conta" id="fisica" value="fisica" checked onclick="alterarFormulario()"> <!-- Marcar como padrão -->
-                    <label for="fisica">Pessoa Física</label>
-                </div>
-                <div>
-                    <input type="radio" name="t_conta" id="juridica" value="juridica" onclick="alterarFormulario()">
-                    <label for="juridica">Pessoa Jurídica</label><br>
-                </div>
-            </div>
+        <form id="formLogin">
+<!-- Tipo de Conta -->
+<div class="metade">
+    <button type="button" class="tipo-conta-btn" id="fisica" value="fisica" onclick="alterarFormulario('fisica')">Pessoa Física</button>
+    <button type="button" class="tipo-conta-btn" id="juridica" value="juridica" onclick="alterarFormulario('juridica')">Pessoa Jurídica</button>
+</div>
 
             <!-- Dados Pessoais -->
-            <label for="cpf"></label>
             <label for="cpf" id="labelCpfCnpj">CPF</label>
-            <input type="text" name="cpf" id="cpf" placeholder="Digite seu CPF">
+            <input type="text" name="cpf" id="cpf" class="input-field" placeholder="Digite seu CPF">
 
             <label for="nome" id="labelNome">Nome</label>
-            <input type="text" name="nome" id="nome" placeholder="Digite seu nome">
+            <input type="text" name="nome" id="nome" class="input-field" placeholder="Digite seu nome">
 
             <label style="display: none;" for="representante" id="labelRepresentante">Nome do Representante</label>
-            <input style="display: none;" type="text" name="representante" id="representante" placeholder="Digite o nome do representante">
+            <input style="display: none;" type="text" name="representante" id="representante" class="input-field" placeholder="Digite o nome do representante">
 
             <!-- Dados de Contato -->
-            <label for="email">E-mail</label>
-            <input type="email" name="email" id="email" placeholder="Digite seu e-mail">
+            <label style="display: none;" for="email">E-mail</label>
+            <input style="display: none;" type="text" name="representante" id="representante" class="input-field" placeholder="Digite seu e-mail">
 
-            <label for="telefone">Telefone</label>
-            <input type="tel" name="telefone" id="telefone" placeholder="Digite seu telefone">
+            <label style="display: none;" for="telefone">Telefone</label>
+            <input style="display: none;" type="text" name="representante" id="representante" class="input-field" placeholder="Digite seu telefone">
 
             <!-- Endereço -->
             <div class="metade">
                 <div>
                     <label for="estado">Estado</label>
-                    <input type="text" name="estado" id="estado" placeholder="Digite seu estado">
+                    <input type="text" name="estado" id="estado" class="input-field" placeholder="Digite seu estado">
                 </div>
                 <div>
                     <label for="cidade">Cidade</label>
-                    <input type="text" name="cidade" id="cidade" placeholder="Digite sua cidade">
+                    <input type="text" name="cidade" id="cidade" class="input-field" placeholder="Digite sua cidade">
                 </div>
             </div>
 
             <label for="rua">Rua</label>
-            <input type="text" name="rua" id="rua" placeholder="Digite sua rua">
+            <input type="text" name="rua" id="rua" class="input-field" placeholder="Digite sua rua">
 
             <div class="metade">
                 <div>
                     <label for="numero">Número</label>
-                    <input type="text" name="numero" id="numero" placeholder="Número da residência">
+                    <input type="text" name="numero" id="numero" class="input-field" placeholder="Número da residência">
                 </div>
                 <div>
                     <label for="bairro">Bairro</label>
-                    <input type="text" name="bairro" id="bairro" placeholder="Digite seu bairro">
+                    <input type="text" name="bairro" id="bairro" class="input-field" placeholder="Digite seu bairro">
                 </div>
             </div>
 
             <label for="complemento">Complemento</label>
-            <input type="text" name="complemento" id="complemento" placeholder="Apto, Bloco, etc.">
+            <input type="text" name="complemento" id="complemento" class="input-field" placeholder="Apto, Bloco, etc.">
 
             <!-- Senha -->
             <div class="metade">
                 <div>
                     <label for="senha">Senha</label>
-                    <input type="password" name="senha" id="senha" placeholder="Digite sua senha">
+                    <input type="password" name="senha" id="senha" class="input-field" placeholder="Digite sua senha">
                 </div>
                 <div>
                     <label for="c_senha">Confirmar Senha</label>
-                    <input type="password" name="c_senha" id="c_senha" placeholder="Confirme sua senha">
+                    <input type="password" name="c_senha" id="c_senha" class="input-field" placeholder="Confirme sua senha">
                 </div>
             </div>
-            <input type="submit" id="enviar_cadastro" value="Cadastrar">
+
+            <input type="submit" id="enviar_login" class="submit-btn" value="Cadastrar">
 
             <div class="social-login">
-                <button class="btn-google">Continuar com Google</button>
-                <button class="btn-facebook">Continuar com Facebook</button>
-                <button class="btn-X">Continuar com X</button>
+                <button class="btn-google">
+                    <img src="img/google_logo.png" alt="Google Logo" class="social-logo">
+                </button>
+                <button class="btn-facebook">
+                    <img src="img/facebook_logo.png" alt="Facebook Logo" class="social-logo">
+                </button>
+                <button class="btn-twitter">
+                    <img src="img/x_twitter_logo.png" alt="Twitter Logo" class="social-logo">
+                </button>
             </div>
         </form>
     </div>
@@ -98,9 +95,11 @@
         <p>Já possui uma conta? <a href="login.html">Login</a></p>
     </div>
 </main> 
+
+<script src="js/form_cadastro.js"></script>
 <script>
     function cadastrar(event) {
-        event.preventDefault(); // Impede o envio do formulário
+        event.preventDefault();
         const email = document.getElementById("email").value;
         const senha = document.getElementById("senha").value;
 
@@ -110,8 +109,7 @@
         window.location.href = "login.html";
     }
 
-    document.getElementById('formCadastro').onsubmit = cadastrar; 
+    document.getElementById('formLogin').onsubmit = cadastrar; 
 </script>
-<script src="js/form_cadastro.js"></script>
 </body>
 </html>

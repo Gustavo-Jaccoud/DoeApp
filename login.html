@@ -4,32 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DoeApp | Login</title>
-    <link rel="stylesheet" href="css/body.css">
     <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
 <main>    
-    <img src="img/logo.png" alt="" class="logo_header_img">
-    <div class="fundo">
-        <h1>LOGIN</h1>
-        <form id="formLogin">
-            <label for="email">E-mail</label>
-            <input type="text" name="email" id="email" placeholder="Digite seu e-mail" required>
-            <label for="senha">Senha</label>
-            <input type="password" name="senha" id="senha" placeholder="Digite sua senha" required>
-            <input type="submit" value="Entrar" id="enviar_login">
-            <div class="social-login">
-                <button class="btn-google">Continuar com Google</button>
-                <button class="btn-facebook">Continuar com Facebook</button>
-                <button class="btn-X">Continuar com X</button>
-            </div>
-            <Label id="error">E-mail ou senha incorretos. Tente novamente.</Label>
-        </form>
-    </div>
+    <img src="img/logo_login.png" alt="Logo DoeApp" class="logo_header_img">
+    <label id="error" style="display: none;">E-mail ou senha incorretos. Tente novamente.</label>
+    <form id="formLogin">
+        <label for="email">E-mail</label>
+        <input type="text" name="email" id="email" placeholder="Digite seu e-mail" required>
+        
+        <label for="senha">Senha</label>
+        <input type="password" name="senha" id="senha" placeholder="Digite sua senha" required>
+        
+        <input type="submit" value="ENTRAR" id="enviar_login">
+        
+        <div class="social-login">
+            <button class="btn-google">
+                <img src="img/google_logo.png" alt="Google Logo" class="social-logo">
+            </button>
+            <button class="btn-facebook">
+                <img src="img/facebook_logo.png" alt="Facebook Logo" class="social-logo">
+            </button>
+            <button class="btn-twitter">
+                <img src="img/x_twitter_logo.png" alt="Twitter Logo" class="social-logo">
+            </button>
+        </div>
+    </form>
+    
     <div class="fundo2">
         <p>Ainda não tem conta? <a href="cadastro.html">Cadastre-se</a></p>
     </div>
 </main>
+
 <script>
     function login(event) {
         event.preventDefault(); 

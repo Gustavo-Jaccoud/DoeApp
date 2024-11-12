@@ -4,28 +4,30 @@ function cadastrar(event) {
     const senha = document.getElementById("senha").value;
     const nome = document.getElementById("nome").value;
 
+    // Armazenando informações no localStorage
     localStorage.setItem("email", email);
     localStorage.setItem("senha", senha);
-    localStorage.setItem("nome", nome); 
+    localStorage.setItem("nome", nome);
 
-    localStorage.setItem("email", email);
-    localStorage.setItem("senha", senha); 
-
+    // Redirecionando para a página de login
     window.location.href = "login.html";
 }
 
+// Associando a função cadastrar ao evento de envio do formulário
 document.getElementById('formCadastro').onsubmit = cadastrar; 
 
-function alterarFormulario() {
-    const tipoConta = document.querySelector('input[name="t_conta"]:checked').value;
+function alterarFormulario(tipo) {
     const labelNome = document.getElementById("labelNome");
     const representante = document.getElementById("representante");
     const labelRepresentante = document.getElementById("labelRepresentante");
     const cpfInput = document.getElementById("cpf");
     const nomeInput = document.getElementById("nome");
+    const labelCpfCnpj = document.getElementById("labelCpfCnpj");
+
+    // Limpar o valor do campo CPF/CNPJ
     cpfInput.value = '';
 
-    if (tipoConta === "fisica") {
+    if (tipo === "fisica") {
         labelNome.textContent = "Nome";
         nomeInput.placeholder = "Digite seu nome";
         labelRepresentante.style.display = "none";
@@ -44,6 +46,7 @@ function alterarFormulario() {
     }
 }
 
+// Máscaras para CPF
 function aplicarMascaraCPF(input) {
     $(input).off('input').on('input', function() {
         let value = input.value.replace(/\D/g, '');
@@ -60,7 +63,7 @@ function aplicarMascaraCPF(input) {
     });
 }
 
-
+// Máscaras para CNPJ
 function aplicarMascaraCNPJ(input) {
     $(input).off('input').on('input', function() {
         let value = input.value.replace(/\D/g, '');
@@ -78,7 +81,7 @@ function aplicarMascaraCNPJ(input) {
     });
 }
 
-
+// Máscaras para telefone
 function aplicarMascaraTelefone(input) {
     $(input).on('input', function() {
         let value = input.value.replace(/\D/g, '');
@@ -88,8 +91,17 @@ function aplicarMascaraTelefone(input) {
     });
 }
 
+// Função de inicialização
 window.onload = function() {
-    alterarFormulario();
     aplicarMascaraCPF(document.getElementById("cpf"));
     aplicarMascaraTelefone(document.getElementById("telefone"));
+    
+    // Define os eventos de clique para os botões de tipo de conta
+    document.getElementById("fisica").onclick = function() {
+        alterarFormulario("fisica");
+    };
+    
+    document.getElementById("juridica").onclick = function() {
+        alterarFormulario("juridica");
+    };
 };

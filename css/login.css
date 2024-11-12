@@ -1,4 +1,15 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
+    background-image: url(../img/background_central.jpg);
+    overflow-y: auto; /* Permite scroll vertical */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #333;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -6,189 +17,115 @@ body {
     margin: 0;
 }
 
+/* Estilo Principal */
 main {
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-    justify-content: center;
-}
-
-.logo_header_img{
-    margin-bottom: -23px;
-}
-
-.fundo {
-    margin-top: 3vw;
-    width: 40vw;
-    background: #89C6FF;
-    border-top-left-radius: 2.8vw;
-    border-top-right-radius: 2.8vw;
-    padding: 3.8vw;
-    padding-bottom: 1vw;
-    box-sizing: border-box;
-}
-.fundo2{
-    width: 40vw;
-    height: 3.4vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #3988C2;
-    border-bottom-left-radius: 2.8vw;
-    border-bottom-right-radius: 2.8vw;
-}
-
-h1 {
-    text-align: center;
-    border-bottom: black solid 3px;
-}
-
-form {
-    padding: 1vw;
-}
-input{
-    margin-top: 0.5vw;
-    margin-bottom: 1vw;
-}
-#error{
-    color: #c23e39;
-    display: none;
-}
-input[type="text"], input[type="password"], input[type="submit"] {
     width: 100%;
-    height: 3vw;
-    box-sizing: border-box; 
-    border: #ffffff;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 0.78vw;
-    margin-bottom: 1vw;
-}
-
-input[type="submit"] {
-    margin-top: 1vw;
-    background-color: #3988C2;
-    color: #ffffff;
-    font-size: 2vw;
-}
-input[type="submit"]:hover{
-    background-color: #3979c2;
-} 
-
-p{
+    max-width: 600px; /* Aumentado para maior largura */
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 0px 12px #21897e;
     text-align: center;
-    font-size: 1.2em;
-    color: #ffffff;
 }
 
-a{
-    font-size: 1.2em;
-    color: black;
+.logo_header_img {
+    width: 300px; /* Aumentado para maior visibilidade */
+    height: auto;
+    margin-bottom: 20px;
 }
-a:hover{
-    color: #054283;
+
+#formLogin label {
+    display: block;
+    font-size: 14px;
+    color: #6e6e73;
+    text-align: left;
+    margin-bottom: 4px;
+}
+
+#formLogin input[type="text"],
+#formLogin input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 16px;
+    border: 1px solid #d2d2d7;
+    border-radius: 8px;
+    background-color: #f5f5f7;
+    font-size: 16px;
+    color: #1d1d1f;
+}
+
+#formLogin input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #21897e;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#formLogin input[type="submit"]:hover {
+    background-color: #21897e;
+}
+
+#enviar_login {
+    margin-top: 12px;
+}
+
+#formLogin #error {
+    display: none;
+    color: #d32f2f;
+    font-size: 14px;
+    margin-bottom: 16px;
+    text-align: left;
 }
 
 .social-login {
     display: flex;
-    flex-direction: column;
-    gap: 1vw;
+    flex-direction: row;
+    justify-content: center; /* Centraliza os botões */
+    gap: 8px; /* Define o espaço entre os botões */
+    margin-top: 16px;
 }
 
 .social-login button {
-    width: 100%;
-    padding: 1vw;
-    font-size: 1.2em;
-    border: none;
-    border-radius: 0.78vw;
-    color: #ffffff;
-    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border: 1px solid #21897e;
+    ;
+    border-radius: 50%;
+    background-color: #f5f5f7;
+    transition: transform 0.7s ease;
 }
 
-/* Google Button */
-.btn-google {
-    background-color: #db4a39;
+.social-login button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 1px #21897e, 0 0 7px #21897e, 0 0 50px #21897e;
 }
 
-.btn-google:hover {
-    background-color: #c13d32;
+.social-logo {
+    width: 24px;
+    height: 24px;
 }
 
-/* Facebook Button */
-.btn-facebook {
-    background-color: #3b5998;
+.fundo2 {
+    font-size: 14px;
+    color: #6e6e73;
+    margin-top: 12px;
 }
 
-.btn-facebook:hover {
-    background-color: #324b82;
+.fundo2 a {
+    color: #21897e;
+    text-decoration: none;
+    transition: color 0.2s;
 }
 
-/* Twitter Button */
-.btn-X {
-    background-color: #1C1C1C;
-}
-
-.btn-X:hover {
-    background-color: #161616;
-}
-
-
-@media (max-width: 768px) {
-    .logo_header_img{
-        margin-bottom: 0px;
-        height: 50px;
-        width: auto;
-    }
-    main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        top: 200px;
-        position: absolute;
-    }
-    .fundo {
-        margin-top: 0px;
-        width: 350px;
-        height: 250px;
-        background: #89C6FF;
-        border-top-left-radius: 2.80vw;
-        border-top-right-radius: 2.8vw;
-        padding: 3.8vw;
-        padding-bottom: 1vw;
-        box-sizing: border-box;
-    }
-    .fundo2{
-        width: 350px;
-        height: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #3988C2;
-        border-bottom-left-radius: 2.8vw;
-        border-bottom-right-radius: 2.8vw;
-        font-size: 14px;
-    }
-    input[type="text"], input[type="password"], input[type="submit"] {
-        width: 100%;
-        height: 8vw;
-        box-sizing: border-box;
-        border: #ffffff;
-        padding-left: 10px;
-        padding-right: 10px;
-        border-radius: 0.78vw;
-        margin-bottom: 1vw;
-    }
-    input[type="submit"] {
-        margin-top: 1vw;
-        background-color: #3988C2;
-        color: #ffffff;
-        font-size: 5vw;
-    }
-    #error {
-        color: #c23e39;
-        display: none;
-        font-size: 13px;
-        font-weight: 800;
-    }
+.fundo2 a:hover {
+    color: #21897e;
 }

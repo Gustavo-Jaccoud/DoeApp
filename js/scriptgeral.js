@@ -413,3 +413,5 @@ telefoneInput.addEventListener("input", (e) => {
         .replace(/(\d{5})(\d)/, "$1-$2")
         .replace(/(-\d{4})\d+?$/, "$1");
 });
+
+

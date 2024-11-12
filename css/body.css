@@ -3,6 +3,7 @@
 body {
     font-family: "Work Sans", sans-serif;
     background-color: #F1F9FE;
+    background-image: url(../img/background_central.jpg);
 }
 
 /* reset básico */

@@ -1,203 +1,160 @@
+/* Reset básico */
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body {
+    background-image: url(../img/background_central.jpg);
+    overflow-y: auto; /* Permite scroll vertical */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #333;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 150vh;
     margin: 0;
-    min-height: 100vh; /* Define uma altura mínima */
 }
 
+/* Estilo Principal */
 main {
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-    justify-content: center;
+    width: 100%;
+    max-width: 600px; /* Aumentado para maior largura */
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 0px 12px #21897e;
+    text-align: center;
 }
 
 .logo_header_img {
-    margin-top: 5vw;
-    margin-bottom: -23px;
+    width: 300px; /* Aumentado para maior visibilidade */
+    height: auto;
+    margin-bottom: 20px;
 }
 
-.fundo {
-    margin-top: 3vw;
-    width: 50vw;
-    background: #89C6FF;
-    border-top-left-radius: 2.8vw;
-    border-top-right-radius: 2.8vw;
-    padding: 3.8vw;
-    padding-bottom: 1vw;
-    box-sizing: border-box;
+#formLogin label {
+    display: block;
+    font-size: 14px;
+    color: #6e6e73;
+    text-align: left;
+    margin-bottom: 4px;
 }
 
-.fundo2 {
-    width: 50vw;
-    height: 3.4vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #3988C2;
-    border-bottom-left-radius: 2.8vw;
-    border-bottom-right-radius: 2.8vw;
+#formLogin .metade {
+    display: flex; /* Flexbox para permitir alinhamento horizontal */
+    justify-content: space-between; /* Espaço igual entre os itens */
+    margin-bottom: 16px; /* Espaço abaixo da seção */
 }
 
-h1 {
-    text-align: center;
-    border-bottom: black solid 3px;
+#formLogin input[type="radio"] {
+    margin-right: 8px; /* Espaço entre o input e o rótulo */
 }
 
-form {
-    padding: 1vw;
-}
-
-.metade {
+#formLogin input[type="text"],
+#formLogin input[type="password"] {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
+    padding: 12px;
+    margin-bottom: 16px;
+    border: 1px solid #d2d2d7;
+    border-radius: 8px;
+    background-color: #f5f5f7;
+    font-size: 16px;
+    color: #1d1d1f;
 }
 
-.metade div {
-    width: 48%;
+/* Estilo dos botões de Tipo de Conta */
+.tipo-conta-btn {
+    flex: 1; /* Permite que os botões ocupem espaço igual */
+    padding: 12px;
+    margin: 0 8px; /* Margem entre os botões */
+    background-color: #21897e;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
 }
 
-input {
-    margin-top: 0.5vw;
-    margin-bottom: 1vw;
+.tipo-conta-btn:hover {
+    background-color: #21897e; /* Cor ao passar o mouse */
+    transform: scale(1.05); /* Efeito de escala ao passar o mouse */
 }
 
-input[type="text"], input[type="email"], input[type="password"], input[type="submit"], input[type="tel"] {
+#formLogin input[type="submit"] {
     width: 100%;
-    height: 3vw;
-    box-sizing: border-box; 
-    padding-left: 10px;
-    padding-right: 10px;
-    border: #ffffff;
-    border-radius: 0.78vw;
-}
-
-input[type="submit"] {
-    margin-top: 1vw;
-    background-color: #3988C2;
+    padding: 12px;
+    background-color: #21897e;
     color: #ffffff;
-    font-size: 2vw;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
 }
 
-input[type="submit"]:hover {
-    background-color: #3979c2;
+#formLogin input[type="submit"]:hover {
+    background-color: #21897e; /* Mudança de cor ao passar o mouse */
 }
 
-p {
-    text-align: center;
-    font-size: 1.2em;
-    color: #ffffff;
+#enviar_login {
+    margin-top: 12px;
 }
 
-a {
-    font-size: 1.2em;
-    color: black;
-}
-
-a:hover {
-    color: #054283;
+#formLogin #error {
+    display: none;
+    color: #21897e;
+    font-size: 14px;
+    margin-bottom: 16px;
+    text-align: left;
 }
 
 .social-login {
     display: flex;
-    flex-direction: column;
-    gap: 1vw;
-    margin-bottom: 2vw;
+    flex-direction: row;
+    justify-content: center; /* Centraliza os botões */
+    gap: 8px; /* Define o espaço entre os botões */
+    margin-top: 16px;
 }
 
 .social-login button {
-    width: 100%;
-    padding: 1vw;
-    font-size: 1.2em;
-    border: none;
-    border-radius: 0.78vw;
-    color: #ffffff;
-    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border: 1px solid #21897e;
+    border-radius: 50%;
+    background-color: #f5f5f7;
+    transition: transform 0.7s ease;
 }
 
-/* Google Button */
-.btn-google {
-    background-color: #db4a39;
+.social-login button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 1px #21897e, 0 0 7px #21897e, 0 0 50px #21897e;
 }
 
-.btn-google:hover {
-    background-color: #c13d32;
+.social-logo {
+    width: 24px;
+    height: 24px;
 }
 
-/* Facebook Button */
-.btn-facebook {
-    background-color: #3b5998;
+.fundo2 {
+    font-size: 14px;
+    color: #6e6e73;
+    margin-top: 12px;
 }
 
-.btn-facebook:hover {
-    background-color: #324b82;
+.fundo2 a {
+    color: #21897e;
+    text-decoration: none;
+    transition: color 0.2s;
 }
 
-/* Twitter Button */
-.btn-X {
-    background-color: #1C1C1C;
-}
-
-.btn-X:hover {
-    background-color: #161616;
-}
-
-
-@media (max-width: 768px) {
-    body {
-        min-height: 115vh;
-        overflow-y: auto;
-        display: flex;
-        align-items: flex-start;
-        align-content: flex-start;
-        justify-content: space-around;
-    }
-    .logo_header_img {
-        margin-bottom: 0px;
-        height: 50px;
-        width: auto;
-    }
-    .fundo {
-        margin-top: 0px;
-        width: 90vw; /* Ocupa 90% da largura da tela */
-        height: auto;
-        background: #89C6FF;
-        border-top-left-radius: 2.8vw;
-        border-top-right-radius: 2.8vw;
-        padding: 3.8vw;
-        padding-bottom: 1vw;
-        box-sizing: border-box;
-    }
-    .fundo2 {
-        width: 90vw;
-        height: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #3988C2;
-        border-bottom-left-radius: 2.8vw;
-        border-bottom-right-radius: 2.8vw;
-        font-size: 14px;
-    }
-    input[type="text"], input[type="email"], input[type="password"], input[type="submit"], input[type="tel"] {
-        width: 100%;
-        height: 8vw;
-        box-sizing: border-box;
-        padding-left: 10px;
-        padding-right: 10px;
-        border-radius: 0.78vw;
-        margin-bottom: 1vw;
-    }
-    input[type="submit"] {
-        font-size: 4vw;
-        margin-bottom: 1vw;
-    }
+.fundo2 a:hover {
+    color: #21897e; /* Mudança de cor ao passar o mouse */
 }
