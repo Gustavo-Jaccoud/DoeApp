@@ -104,6 +104,8 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    background: #ffffff80;
+    border-radius: 40px;
 }
 
 .campaign {
@@ -111,8 +113,10 @@
 }
 
 .campaign img {
-    width: 70%;
-    height: auto;
+    width: 250px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20%;
 }
 
 .campaign h3, .campaign p.author {
