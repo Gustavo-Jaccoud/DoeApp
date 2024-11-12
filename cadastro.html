@@ -102,7 +102,9 @@
         event.preventDefault();
         const email = document.getElementById("email").value;
         const senha = document.getElementById("senha").value;
+        const nome = document.getElementById("nome").value;
 
+        localStorage.setItem("nome", nome);
         localStorage.setItem("email", email);
         localStorage.setItem("senha", senha); 
 
