@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoeApp | Base Campanha</title>
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/body.css">
+    <link rel="stylesheet" href="css/carousel.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="img/logo.png" alt="Logo do site"></a>
+        </div>
+        <div class="hamburger" id="hamburger">&#9776;</div>
+        <nav id="nav-links">
+            <div class="dropdown-menu" id="dropdownMenu">
+                <a href="perfil.html">Ver Perfil</a>
+                <button id="logoutButton">Deslogar</button>
+            </div>
+            <a href="explorar.html">EXPLORAR</a>
+            <a href="sobre.html">SOBRE NÓS</a>
+            <a id="contatoButton">CONTATO</a>
+            <a href="login.html" class="btn-entrar">ENTRAR</a>
+            <a href="cadastro.html" class="btn-cadastrar">CADASTRAR-SE</a>
+            <a class="btn-perfil">NOME</a>
+        </nav>
+        <div class="overlay" id="overlay"></div>
+        <script src="js/menu.js"></script>
+    </header>
+    <footer id="footer-container"></footer>
+    <script src="js/import.js"></script>
+    <script src="js/scriptgeral.js"></script>
+    <script>
+          loadContentIntoElement('footer-container', 'footer.html');
+    </script>
+</body>
+</html>
