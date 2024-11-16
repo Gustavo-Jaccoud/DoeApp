@@ -8,18 +8,21 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/body.css">
     <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="css/base_campanha.css">
 </head>
 <body>
     <header>
         <div class="logo">
             <a href="index.html"><img src="img/logo.png" alt="Logo do site"></a>
         </div>
-        <div class="hamburger" id="hamburger">&#9776;</div>
+        <div class="hamburger" id="hamburger">
+            &#9776;
+        </div>
         <nav id="nav-links">
             <div class="dropdown-menu" id="dropdownMenu">
-                <a href="perfil.html">Ver Perfil</a>
+                <a href="perfil.html">VER PERFIL</a>
                 <button id="logoutButton">Deslogar</button>
-            </div>
+            </div> 
             <a href="explorar.html">EXPLORAR</a>
             <a href="sobre.html">SOBRE NÓS</a>
             <a id="contatoButton">CONTATO</a>
@@ -27,11 +30,106 @@
             <a href="cadastro.html" class="btn-cadastrar">CADASTRAR-SE</a>
             <a class="btn-perfil">NOME</a>
         </nav>
+        
+            <!-- Escurece o fundo | menu hamburguer -->
         <div class="overlay" id="overlay"></div>
         <script src="js/menu.js"></script>
     </header>
 
-    
+    <div id="contactModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-left">
+                <h2>Envie-nos uma mensagem</h2>
+                <form id="contactForm">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                    
+                    <label for="telefone">Telefone:</label>
+                    <input type="text" id="telefone" placeholder="(XX) XXXXX-XXXX" required>
+                    
+                    <label for="assunto">Assunto:</label>
+                    <input type="text" id="assunto" required>
+                    
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" rows="5" required></textarea>
+                    
+                    <!-- Captcha Placeholder -->
+                    <div class="captcha">
+                        <p>Por favor, resolva o captcha antes de enviar.</p>
+                    </div>
+
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+            <div class="modal-right">
+                <h3>Nossas informações:</h3>
+                <p><span>Endereços:</span> <br> Rua Exemplo, 123 <br> Avenida Modelo, 456 <br> Travessa Teste, 789</p>
+                <p><span>Telefone:</span> <br> (11) 1234-5678</p>
+                <p><span>Email:</span> <br> contato@exemplo.com</p>
+            </div>        
+        </div>
+    </div>
+    <section class="campanha-header">
+        <div class="campanha-header-content">
+            <img src="img/camp3.png" alt="Imagem da Campanha" class="campanha-header-image">
+            <h1 class="campanha-header-title">Alimentando Vidas - Combate à Fome</h1>
+        </div>
+    </section>
+
+<main>
+    <div class="campanha-detalhes">
+        <p>
+            **Descrição da Campanha: "Alimentando Vidas - Combate à Fome"**
+
+A fome é uma realidade cruel enfrentada por milhões de pessoas todos os dias. Famílias inteiras, incluindo crianças, idosos e pessoas em situação de vulnerabilidade, não sabem se terão algo para comer em suas mesas. É por isso que lançamos a campanha **"Alimentando Vidas"**, uma iniciativa com o objetivo de combater a fome em comunidades carentes e oferecer esperança para aqueles que mais precisam.
+
+Nosso propósito vai além de fornecer alimentos; queremos criar um impacto positivo duradouro. A campanha arrecadará fundos para a compra de cestas básicas, alimentos frescos, e itens de higiene pessoal para distribuição em áreas afetadas pela insegurança alimentar. Cada doação conta como um gesto de solidariedade que transforma vidas.
+
+Com sua contribuição, poderemos alcançar os seguintes objetivos:
+
+1. **Distribuir cestas básicas** para mais de 5.000 famílias em áreas carentes, garantindo que tenham alimentos suficientes para pelo menos 30 dias.
+2. **Promover ações de conscientização** sobre nutrição, saúde e práticas alimentares sustentáveis, capacitando as comunidades para construir um futuro mais saudável.
+3. **Estabelecer parcerias com mercados locais** para impulsionar a economia regional, adquirindo alimentos frescos diretamente de pequenos agricultores.
+
+A fome não é apenas a falta de comida, mas também a ausência de dignidade, esperança e oportunidade. Sua doação ajudará a reconstruir essas bases para milhares de pessoas que enfrentam dificuldades inimagináveis diariamente. Aqui estão exemplos de como sua ajuda pode ser utilizada:
+
+- Com **R$ 30,00**, você contribui com alimentos suficientes para alimentar uma pessoa durante uma semana.
+- Com **R$ 100,00**, você fornece uma cesta básica completa para uma família de quatro pessoas por um mês.
+- Com **R$ 500,00**, você ajuda na logística de transporte e distribuição, garantindo que as doações cheguem aos lugares mais remotos.
+
+Além disso, acreditamos que a transparência é fundamental. Todas as arrecadações e distribuições serão documentadas e compartilhadas publicamente. Você poderá acompanhar o impacto da sua contribuição e ver como juntos estamos alimentando vidas e transformando realidades.
+
+Não podemos fazer isso sozinhos. Contamos com você para unir forças e lutar contra a fome. Cada real doado é um passo na direção de um mundo mais justo, onde ninguém tenha que ir dormir com fome. Junte-se a nós nessa causa e seja um agente de transformação.
+
+**Doe agora e faça parte da mudança.** Uma vida alimentada hoje pode ser a esperança de um futuro melhor amanhã.
+
+_"A solidariedade é o alimento da alma. Juntos, podemos saciar a fome e nutrir a esperança."_
+        </p>
+    </div>
+</div>
+<div class="campanha-arrecadacao">
+    <div class="arrecadacao-info">
+        <p><strong>Arrecadado</strong></p>
+        <p class="valor">R$ 41.837,60</p>
+        <p><strong>Meta</strong></p>
+        <p>R$ 50.000,00</p>
+        <p><strong>Apoiadores</strong></p>
+        <p>644</p>
+        <button class="btn-quero-ajudar">Quero Ajudar</button>
+    </div>
+    <div class="doador-info">
+        <p><strong>Suzane Souza De Melo</strong></p>
+        <p>Parintins / AM</p>
+        <p>Ativo(a) no DoeApp desde agosto/2022</p>
+        <p>3 campanhas criadas + 1 campanha apoiada</p>
+    </div>
+</div>
+</div>
+</main>
+
 
     <footer id="footer-container"></footer>
     <script src="js/import.js"></script>

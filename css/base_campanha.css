@@ -1,0 +1,121 @@
+
+
+/* Campanha Header - Imagem e Título */
+.campanha-header {
+    text-align: center;
+    margin-bottom: 30px;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.campanha-header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.campanha-header-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.campanha-header-title {
+    font-size: 2rem;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Container principal */
+main {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Detalhes da Campanha (Esquerda) */
+.campanha-detalhes {
+    flex: 2;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
+}
+
+.campanha-detalhes p {
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.campanha-detalhes strong {
+    font-weight: bold;
+}
+
+/* Informações e Botão (Direita) */
+.campanha-arrecadacao {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.arrecadacao-info {
+    margin-bottom: 20px;
+}
+
+.arrecadacao-info p {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #333;
+}
+
+.arrecadacao-info .valor {
+    font-size: 1.8rem;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.btn-quero-ajudar {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn-quero-ajudar:hover {
+    background-color: #45a049;
+}
+
+.doador-info p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 5px 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    .campanha-detalhes,
+    .campanha-arrecadacao {
+        flex: none;
+        width: 100%;
+    }
+}
