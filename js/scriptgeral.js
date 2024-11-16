@@ -334,6 +334,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
   growObserver.observe(document.querySelector('.campanhastex'));
+  growObserver.observe(document.querySelector('.carotex'));
   growObserver.observe(document.querySelector('.mapa'));
 
   // Animação do mapa e pontos

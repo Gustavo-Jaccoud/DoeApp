@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/animações.css">
     <link rel="stylesheet" href="css/body.css">
+    <link rel="stylesheet" href="css/doarcriar.css">
 
 
 </head>
@@ -84,9 +85,34 @@
         </div>        
     </div>
 </div>
+<div class="main-container" id="main-container">
+    <!-- Fundo dinâmico -->
+    <div id="donate-bg" class="background-image" style="background-image: url('./img/doa1.png');"></div>
+    <div id="campaign-bg" class="background-image" style="background-image: url('./img/doa2.png');"></div>
+    <!-- Conteúdo -->
+    <div class="content">
+        <h1>O que você deseja fazer?</h1>
+        <div class="button-container">
+            <button id="donate" class="button" 
+                    onmouseover="showBackground('donate-bg')" 
+                    onmouseout="hideBackground('donate-bg')">
+                Fazer uma Doação
+            </button>
+            <button id="campaign" class="button" 
+            onmouseover="showBackground('campaign-bg'); toggleDynamicText(true);" 
+            onmouseout="hideBackground('campaign-bg'); toggleDynamicText(false);">
+        Criar uma Campanha
+    </button>
+        </div>
+        <div id="dynamic-text" class="dynamic-text">*Apenas empresas podem criar campanhas</div>
+    </div>
+</div>
+<script src="js/criarmenudoar.js"></script>
 
     <div class="container">
         <div class="carousel-container">
+            <h1 class="carotex invisible">CAMPANHAS</h1>
+            <div class="bordercam invisible"></div>
             <img src="img/slide1.png" alt="Image 1" class="carousel-img center">
             <img src="img/slide3.png" alt="Image 3" class="carousel-img right">
             <img src="img/slide2.png" alt="Image 2" class="carousel-img left">

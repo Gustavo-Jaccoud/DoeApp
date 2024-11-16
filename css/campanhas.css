@@ -104,12 +104,15 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    background: #ffffff80;
+    background: #ffffffbd;
     border-radius: 40px;
+    box-shadow: 0 0px 12px #21897e;
 }
 
 .campaign {
     text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .campaign img {
