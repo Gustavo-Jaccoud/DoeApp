@@ -82,3 +82,7 @@
     max-width: 50%; /* Limita a largura máxima do container */  
 
 }
+.texto-imagem-campanha {
+    text-align: justify;
+    margin: 10px auto;
+}
