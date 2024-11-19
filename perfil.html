@@ -5,11 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DoeApp | Perfil</title>
-    <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/body.css">
     <link rel="stylesheet" href="css/carousel.css">
-
     <link rel="stylesheet" href="css/perfil.css">
 </head>
 
@@ -36,8 +34,8 @@
     </header>
 
     <div class="main-container">
-        <!-- Seção de Perfil -->
         <div class="profile-section">
+            <div class="profile-background"></div>
             <img src="img/default-profile-picture.png" alt="Imagem de Perfil" class="profile-pic" id="profile-photo">
             <div>
                 <h1 class="username" id="username">Nome</h1>
@@ -46,146 +44,163 @@
             </div>
         </div>
 
-        <!-- Menu de Edição (Pop-up) -->
-        <div class="edit-menu" id="edit-menu">
-            <label for="name-input">Alterar Nome</label>
-            <input type="text" id="name-input" placeholder="Novo nome">
-            <label for="photo-input">Alterar Foto</label>
-            <input type="file" id="photo-input" accept="image/*">
-            <label for="description-input">Alterar Descrição</label>
-            <input type="text" id="description-input" placeholder="Nova descrição">
-            <button onclick="saveChanges()">Salvar Alterações</button>
-            <button onclick="toggleEditMenu()">Cancelar</button>
-        </div>
-
-            <!-- Seções de Doações e Favoritos -->
-            <div class="sections">
-                <div class="section">
-                    <h3>Últimas Doações</h3>
-                    <div class="campaign-list">
-                        <div class="campaign-item">
-                            <img src="img/placeholder.png" alt="Campanha 1">
-                            <h4>Título Campanha 1</h4>
-                            <p>Descrição da Campanha 1</p>
-                        </div>
-                        <div class="campaign-item">
-                            <img src="img/placeholder.png" alt="Campanha 1">
-                            <h4>Título Campanha 1</h4>
-                            <p>Descrição da Campanha 1</p>
-                        </div>
-                        <div class="campaign-item">
-                            <img src="img/placeholder.png" alt="Campanha 1">
-                            <h4>Título Campanha 1</h4>
-                            <p>Descrição da Campanha 1</p>
-                        </div>
-                        <div class="campaign-item">
-                            <img src="img/placeholder.png" alt="Campanha 1">
-                            <h4>Título Campanha 1</h4>
-                            <p>Descrição da Campanha 1</p>
-                        </div>
-                        <div class="campaign-item">
-                            <img src="img/placeholder.png" alt="Campanha 1">
-                            <h4>Título Campanha 1</h4>
-                            <p>Descrição da Campanha 1</p>
-                        </div>
-                        <div class="campaign-item">
-                            <img src="img/placeholder.png" alt="Campanha 2">
-                            <h4>Título Campanha 2</h4>
-                            <p>Descrição da Campanha 2</p>
-                        </div>
+        <div class="sections">
+            <div class="section">
+                <h3>Últimas Doações</h3>
+                <div class="campaign-list">
+                    <div class="campaign-item">
+                        <img src="img/placeholder.png" alt="Campanha 1">
+                        <h4>Título Campanha 1</h4>
+                        <p>Descrição da Campanha 1</p>
                     </div>
-                </div>
-    
-                <div class="section">
-                    <h3>Seus Favoritos</h3>
-                    <div class="campaign-list">
-                        <div class="campaign-item">
-                            <img src="img/placeholder.png" alt="Favorito 1">
-                            <h4>Título Favorito 1</h4>
-                            <p>Descrição do Favorito 1</p>
-                        </div>
-                        <div class="campaign-item">
-                            <img src="img/placeholder.png" alt="Favorito 1">
-                            <h4>Título Favorito 1</h4>
-                            <p>Descrição do Favorito 1</p>
-                        </div>
-                        <div class="campaign-item">
-                            <img src="img/placeholder.png" alt="Favorito 1">
-                            <h4>Título Favorito 1</h4>
-                            <p>Descrição do Favorito 1</p>
-                        </div>
-                        <div class="campaign-item">
-                            <img src="img/placeholder.png" alt="Favorito 1">
-                            <h4>Título Favorito 1</h4>
-                            <p>Descrição do Favorito 1</p>
-                        </div>
-                        <div class="campaign-item">
-                            <img src="img/placeholder.png" alt="Favorito 1">
-                            <h4>Título Favorito 1</h4>
-                            <p>Descrição do Favorito 1</p>
-                        </div>
-                        <div class="campaign-item">
-                            <img src="img/placeholder.png" alt="Favorito 2">
-                            <h4>Título Favorito 2</h4>
-                            <p>Descrição do Favorito 2</p>
-                        </div>
+                    <div class="campaign-item">
+                        <img src="img/placeholder.png" alt="Campanha 1">
+                        <h4>Título Campanha 1</h4>
+                        <p>Descrição da Campanha 1</p>
+                    </div>
+                    <div class="campaign-item">
+                        <img src="img/placeholder.png" alt="Campanha 1">
+                        <h4>Título Campanha 1</h4>
+                        <p>Descrição da Campanha 1</p>
+                    </div>
+                    <div class="campaign-item">
+                        <img src="img/placeholder.png" alt="Campanha 1">
+                        <h4>Título Campanha 1</h4>
+                        <p>Descrição da Campanha 1</p>
+                    </div>
+                    <div class="campaign-item">
+                        <img src="img/placeholder.png" alt="Campanha 1">
+                        <h4>Título Campanha 1</h4>
+                        <p>Descrição da Campanha 1</p>
+                    </div>
+                    <div class="campaign-item">
+                        <img src="img/placeholder.png" alt="Campanha 2">
+                        <h4>Título Campanha 2</h4>
+                        <p>Descrição da Campanha 2</p>
                     </div>
                 </div>
             </div>
-
+            <div class="section">
+                <h3>Seus Favoritos</h3>
+                <div class="campaign-list">
+                    <div class="campaign-item">
+                        <img src="img/placeholder.png" alt="Campanha 1">
+                        <h4>Título Campanha 1</h4>
+                        <p>Descrição da Campanha 1</p>
+                    </div>
+                    <div class="campaign-item">
+                        <img src="img/placeholder.png" alt="Campanha 1">
+                        <h4>Título Campanha 1</h4>
+                        <p>Descrição da Campanha 1</p>
+                    </div>
+                    <div class="campaign-item">
+                        <img src="img/placeholder.png" alt="Campanha 1">
+                        <h4>Título Campanha 1</h4>
+                        <p>Descrição da Campanha 1</p>
+                    </div>
+                    <div class="campaign-item">
+                        <img src="img/placeholder.png" alt="Campanha 1">
+                        <h4>Título Campanha 1</h4>
+                        <p>Descrição da Campanha 1</p>
+                    </div>
+                    <div class="campaign-item">
+                        <img src="img/placeholder.png" alt="Campanha 1">
+                        <h4>Título Campanha 1</h4>
+                        <p>Descrição da Campanha 1</p>
+                    </div>
+                    <div class="campaign-item">
+                        <img src="img/placeholder.png" alt="Campanha 2">
+                        <h4>Título Campanha 2</h4>
+                        <p>Descrição da Campanha 2</p>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
 
-    <!-- Scripts -->
+    <!-- Alteração do menu de edição -->
+    <div class="edit-menu" id="edit-menu">
+        <div class="edit-menu-header">
+            <h2>Editar Perfil</h2>
+            <button class="close-button" onclick="toggleEditMenu()">×</button>
+        </div>
+        <label for="name-input">Alterar Nome</label>
+        <input type="text" id="name-input" placeholder="Novo nome">
+        <label for="description-input">Alterar Descrição</label>
+        <input type="text" id="description-input" placeholder="Nova descrição">
+        <label for="photo-input">Selecionar Foto de Perfil</label>
+        <input type="file" id="photo-input" accept="image/*">
+        <label for="background-input">Selecionar Foto de Fundo</label>
+        <input type="file" id="background-input" accept="image/*">
+        <button onclick="saveChanges()">Salvar Alterações</button>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
     <script>
-        // Carregar nome do usuário do localStorage
-        const nome = localStorage.getItem("nome");
-        const campoNome = document.getElementById("username");
-        if (nome) {
-            campoNome.textContent = nome;
-        }
-
         function toggleEditMenu() {
             const menu = document.getElementById('edit-menu');
             const overlay = document.getElementById('overlay');
             menu.classList.toggle('visible');
             overlay.classList.toggle('visible');
         }
-
-        // Função para salvar alterações do perfil
+    
+        // Função para salvar as alterações feitas no menu de edição
         function saveChanges() {
-            const nameInput = document.getElementById('name-input').value;
-            const descriptionInput = document.getElementById('description-input').value;
-            const photoInput = document.getElementById('photo-input').files[0];
-
-            // Atualizar nome se fornecido
-            if (nameInput) {
-                document.getElementById('username').textContent = nameInput;
-                localStorage.setItem("nome", nameInput);
+            // Pega os valores dos campos de entrada
+            const nameInput = document.getElementById('name-input');
+            const descriptionInput = document.getElementById('description-input');
+            const photoInput = document.getElementById('photo-input');
+            const backgroundInput = document.getElementById('background-input');
+    
+            // Atualiza o nome
+            if (nameInput.value.trim() !== "") {
+                document.getElementById('username').textContent = nameInput.value;
+                localStorage.setItem("nome", nameInput.value); // Salva no localStorage
             }
-
-            // Atualizar descrição se fornecida
-            if (descriptionInput) {
-                document.getElementById('profile-description').textContent = descriptionInput;
+    
+            // Atualiza a descrição
+            if (descriptionInput.value.trim() !== "") {
+                document.getElementById('profile-description').textContent = descriptionInput.value;
+                localStorage.setItem("descricao", descriptionInput.value); // Salva no localStorage
             }
-
-            // Atualizar foto de perfil se fornecida
-            if (photoInput) {
+    
+            // Atualiza a foto de perfil
+            if (photoInput.files && photoInput.files[0]) {
                 const reader = new FileReader();
                 reader.onload = function (e) {
                     document.getElementById('profile-photo').src = e.target.result;
+                    localStorage.setItem("fotoPerfil", e.target.result); // Salva no localStorage
                 };
-                reader.readAsDataURL(photoInput);
+                reader.readAsDataURL(photoInput.files[0]);
             }
-
-            toggleEditMenu(); // Fechar o menu de edição após salvar
+    
+            // Atualiza a foto de fundo
+            if (backgroundInput.files && backgroundInput.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    document.querySelector('.profile-background').style.backgroundImage = `url(${e.target.result})`;
+                    localStorage.setItem("fotoFundo", e.target.result); // Salva no localStorage
+                };
+                reader.readAsDataURL(backgroundInput.files[0]);
+            }
+    
+            // Fecha o menu de edição
+            toggleEditMenu();
         }
-    </script>
-
-    <footer id="footer-container"></footer>
-    <script src="js/scriptgeral.js"></script>
-    <script src="js/import.js"></script>
-    <script>
-          loadContentIntoElement('footer-container', 'footer.html');
+    
+        // Carrega dados salvos do localStorage ao abrir a página
+        document.addEventListener("DOMContentLoaded", function () {
+            const nome = localStorage.getItem("nome");
+            const descricao = localStorage.getItem("descricao");
+            const fotoPerfil = localStorage.getItem("fotoPerfil");
+            const fotoFundo = localStorage.getItem("fotoFundo");
+    
+            if (nome) document.getElementById('username').textContent = nome;
+            if (descricao) document.getElementById('profile-description').textContent = descricao;
+            if (fotoPerfil) document.getElementById('profile-photo').src = fotoPerfil;
+            if (fotoFundo) document.querySelector('.profile-background').style.backgroundImage = `url(${fotoFundo})`;
+        });
     </script>
 </body>
 

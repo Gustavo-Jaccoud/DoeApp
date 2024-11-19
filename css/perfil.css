@@ -1,6 +1,7 @@
 body {
     background-image: url(../img/background_central.jpg);
 }
+
 /* Navbar */
 .navbar {
     display: flex;
@@ -54,14 +55,27 @@ body {
     align-items: center;
 }
 
-/* Profile section */
 .profile-section {
+    position: relative;
     display: flex;
-    padding: 20px;
     align-items: center;
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
     border-radius: 8px;
-    margin-bottom: 20px;
-    width: 80%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background-image: url('img/background-profile.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
 }
 
 body {
@@ -87,11 +101,23 @@ body {
 }
 
 .profile-pic {
-    width: 150px;
-    height: auto;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     object-fit: cover;
-    margin-right: 20px;
+    margin: 20px;
+    border: 4px solid #fff;
+}
+
+.username {
+    font-size: 28px;
+    margin: 0;
+    color: #333;
+}
+
+.username-description {
+    font-size: 16px;
+    color: #666;
 }
 
 /* Estilo para o menu de edição (pop-up) */
@@ -102,7 +128,7 @@ body {
     background-color: #ffffff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0px 12px #21897e;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -115,9 +141,10 @@ body {
     display: flex;
 }
 
-/* Botões */
-.edit-menu button {
-    padding: 8px;
+.edit-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -133,7 +160,65 @@ body {
     background-color: #ccc;
 }
 
-/* Overlay (fundo escurecido) */
+.sections {
+    display: flex;
+    gap: 20px;
+    width: 80%;
+    margin-top: auto;
+}
+
+.section {
+    flex: 1;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 0px 12px #21897e;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0px -2px 4px #21897f71;
+}
+
+.edit-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px -2px 4px #21897f71;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+}
+
+.edit-menu.visible {
+    display: flex;
+}
+
+.edit-menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.edit-menu-header h2 {
+    margin: 0;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
 .overlay {
     display: none;
     position: fixed;
@@ -142,7 +227,7 @@ body {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1;
+    z-index: 5;
 }
 
 .overlay.visible {
@@ -152,7 +237,8 @@ body {
 .profile-pic,
 #profile-photo {
     width: 150px;
-    height: 150px; /* Altura fixa para evitar mudanças */
+    height: 150px;
+    /* Altura fixa para evitar mudanças */
     border-radius: 50%;
     object-fit: cover;
     margin-right: 20px;
@@ -181,7 +267,7 @@ body {
     background-color: #ffffff;
     padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px -2px 4px #21897f71;
 }
 
 .content-column-company {
@@ -189,7 +275,7 @@ body {
     background-color: #ffffff;
     padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px -2px 4px #21897f71;
     display: none;
 }
 
@@ -236,9 +322,9 @@ body {
 .sections {
     display: flex;
     gap: 20px;
-    height: 3000px;
-    }
-    .section {
+}
+
+.section {
     flex: 1;
     background-color: #fff;
     padding: 15px;
@@ -247,19 +333,21 @@ body {
     overflow-y: auto;
     max-height: 400px;
     width: 39vw;
-    height: 400px;
-    }
-    .section h3 {
+}
+
+.section h3 {
     font-size: 18px;
     color: #333;
     margin-bottom: 10px;
-    }
-    .campaign-list {
+}
+
+.campaign-list {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
-    }
-    .campaign-item {
+}
+
+.campaign-item {
     width: calc(50% - 7.5px);
     background-color: #f9f9f9;
     padding: 10px;
@@ -268,20 +356,23 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    }
-    .campaign-item img {
+}
+
+.campaign-item img {
     width: 200px;
     height: 150px;
     object-fit: cover;
     border-radius: 4px;
-    }
-    .campaign-item h4 {
+}
+
+.campaign-item h4 {
     font-size: 16px;
     color: #333;
     margin-top: 8px;
-    }
-    .campaign-item p {
+}
+
+.campaign-item p {
     font-size: 14px;
     color: #666;
     text-align: center;
-    }
+}
