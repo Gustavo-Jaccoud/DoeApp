@@ -213,7 +213,7 @@ nav a:last-child {
     }
 
     #contatoButton {
-        order: 1; /* Faz com que o botão de perfil fique acima dos outros itens */
+        order: 0; /* Faz com que o botão de perfil fique acima dos outros itens */
         /* Adicione estilos adicionais conforme necessário */
     }
 

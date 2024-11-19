@@ -338,14 +338,14 @@ document.addEventListener("DOMContentLoaded", function() {
   growObserver.observe(document.querySelector('.mapa'));
 
   // Animação do mapa e pontos
-  const map = document.querySelector('.map-container img');
+  const map = document.querySelector('.map-container');
   map.classList.add('invisible');
   const mapObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('slide-in');
         document.querySelectorAll('.map-point').forEach(point => {
-          point.classList.add('slide-in');
+          point.classList.add('fade-in');
           point.classList.remove('invisible');
         });
         observer.unobserve(entry.target);
@@ -372,7 +372,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // Função de animação para números
 function animateNumbers(element) {
-  const finalValue = parseInt(element.textContent.replace('R$', '').replace('.', ''));
+  const finalValue = parseInt(element.textContent.replace('', '').replace('.', ''));
   let currentValue = 0;
   const duration = 1000;
   const increment = finalValue / (duration / 20);
@@ -380,10 +380,10 @@ function animateNumbers(element) {
   const updateValue = () => {
     currentValue += increment;
     if (currentValue < finalValue) {
-      element.textContent = Math.floor(currentValue).toLocaleString('pt-BR') + 'R$';
+      element.textContent = Math.floor(currentValue).toLocaleString('pt-BR') + '';
       requestAnimationFrame(updateValue);
     } else {
-      element.textContent = finalValue.toLocaleString('pt-BR') + 'R$';
+      element.textContent = finalValue.toLocaleString('pt-BR') + '';
     }
   };
   requestAnimationFrame(updateValue);
