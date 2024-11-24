@@ -1,60 +1,95 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DoeApp | Doação</title>
     <link rel="stylesheet" href="css/pagamento.css">
 </head>
+
 <body>
 
-<main>
-    <img src="img/logo.png" alt="Logo DoeApp" class="logo_header_img">
-    <div class="quamain">
-    <form id="formDonation">
-        <label for="payment-method">Método de Pagamento</label>
-        <select id="payment-method" name="payment-method" required>
-            <option value="" disabled selected>Selecione um método de pagamento</option>
-            <option value="credit-card">Cartão de Crédito</option>
-            <option value="paypal">PayPal</option>
-            <option value="pix">PIX</option>
-        </select>
+    <main>
+        <img src="img/logo.png" alt="Logo DoeApp" class="logo_header_img">
+        <div class="quamain">
+            <form id="formDonation">
+                <label for="payment-method">Método de Pagamento</label>
+                <select id="payment-method" name="payment-method" required>
+                    <option value="" disabled selected>Selecione um método de pagamento</option>
+                    <option value="add-new-payment">Adicionar novo cartão de crédito</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="pix">PIX</option>
+                </select>
 
-        <label for="donation-amount">Quantidade</label>
-        <input type="number" name="donation-amount" id="donation-amount" placeholder="Digite o valor da doação" required min="1" step="any">
+                <label for="donation-amount">Quantidade</label>
+                <input type="number" name="donation-amount" id="donation-amount" placeholder="Digite o valor da doação"
+                    required min="1" step="any">
 
-        <label for="installments">Parcelas</label>
-        <select id="installments" name="installments" required>
-            <option value="" disabled selected>Escolha o número de parcelas</option>
-        </select>
+                <label for="installments">Parcelas</label>
+                <select id="installments" name="installments" required>
+                    <option value="" disabled selected>Escolha o número de parcelas</option>
+                </select>
 
-        <input type="submit" value="DOAR" id="submit-donation">
-    </form>
+                <input type="submit" value="DOAR" id="submit-donation">
+            </form>
 
-    <div class="campaign-container">
-        <img src="img/camp1.png" alt="Imagem da Campanha" class="campaign-image">
-        <div class="campaign-details">
-            <h1 class="campaign-title">Campanha Esperança</h1>
-            <p class="campaign-description">
-                Sua contribuição pode mudar vidas! Ajude a financiar tratamentos médicos para crianças em situação de vulnerabilidade.
-            </p>
+            <div class="campaign-container">
+                <img src="img/camp1.png" alt="Imagem da Campanha" class="campaign-image">
+                <div class="campaign-details">
+                    <h1 class="campaign-title">Campanha Esperança</h1>
+                    <p class="campaign-description">
+                        Sua contribuição pode mudar vidas! Ajude a financiar tratamentos médicos para crianças em
+                        situação de vulnerabilidade.
+                    </p>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
-</main>
+    </main>
 
-<script>
-    const donationAmountInput = document.getElementById('donation-amount');
-    const installmentsSelect = document.getElementById('installments');
+    <script>
+        const donationAmountInput = document.getElementById('donation-amount');
+        const installmentsSelect = document.getElementById('installments');
+        const paymentMethodSelect = document.getElementById('payment-method');
+        const formDonation = document.getElementById('formDonation');
 
-    donationAmountInput.addEventListener('input', () => {
-        const amount = parseFloat(donationAmountInput.value) || 0;
-        installmentsSelect.innerHTML = '<option value="" disabled selected>Escolha o número de parcelas</option>';
-        for (let i = 1; i <= 10; i++) {
-            const installmentValue = (amount / i).toFixed(2);
-            installmentsSelect.innerHTML += `<option value="${i}">${i}x de R$ ${installmentValue}</option>`;
-        }
-    });
-</script>
+        donationAmountInput.addEventListener('input', () => {
+            const amount = parseFloat(donationAmountInput.value) || 0;
+            installmentsSelect.innerHTML = '<option value="" disabled selected>Escolha o número de parcelas</option>';
+            for (let i = 1; i <= 10; i++) {
+                const installmentValue = (amount / i).toFixed(2);
+                installmentsSelect.innerHTML += `<option value="${i}">${i}x de R$ ${installmentValue}</option>`;
+            }
+        });
+
+        paymentMethodSelect.addEventListener('change', () => {
+            if (paymentMethodSelect.value === 'add-new-payment') {
+                window.location.href = 'adicionar-pagamento.html';
+            }
+        });
+
+        window.addEventListener('load', () => {
+            const storedCards = JSON.parse(localStorage.getItem('savedCards') || '[]');
+            storedCards.forEach((cardAlias) => {
+                const option = document.createElement('option');
+                option.value = cardAlias;
+                option.textContent = cardAlias;
+                paymentMethodSelect.appendChild(option);
+            });
+        });
+
+        formDonation.addEventListener('submit', (event) => {
+            event.preventDefault(); 
+
+            const paymentMethod = paymentMethodSelect.value;
+
+            if (paymentMethod === 'pix') {
+                window.location.href = 'pix.html'; 
+            } else {
+                window.location.href = 'confirmapagamento.html'; 
+            }
+        });
+    </script>
 </body>
+
 </html>

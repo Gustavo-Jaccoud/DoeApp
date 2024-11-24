@@ -13,7 +13,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 150vh;
+    height: 100vh;
     margin: 0;
 }
 
@@ -42,28 +42,6 @@ main {
     margin-bottom: 4px;
 }
 
-        /* Estilo para listas suspensas maiores e arredondadas */
-        select.input-field {
-            width: 100%;
-            padding: 12px;
-            font-size: 16px;
-            border: 1px solid #d2d2d7;
-            border-radius: 8px;
-            color: #6e6e73;
-            background-color: #f5f5f7;
-
-        }
-
-#formLogin .metade {
-    display: flex; /* Flexbox para permitir alinhamento horizontal */
-    justify-content: space-between; /* Espaço igual entre os itens */
-    margin-bottom: 16px; /* Espaço abaixo da seção */
-}
-
-#formLogin input[type="radio"] {
-    margin-right: 8px; /* Espaço entre o input e o rótulo */
-}
-
 #formLogin input[type="text"],
 #formLogin input[type="password"] {
     width: 100%;
@@ -74,30 +52,6 @@ main {
     background-color: #f5f5f7;
     font-size: 16px;
     color: #1d1d1f;
-}
-
-/* Estilo dos botões de Tipo de Conta */
-.tipo-conta-btn {
-    flex: 1; /* Permite que os botões ocupem espaço igual */
-    padding: 12px;
-    margin: 0 8px; /* Margem entre os botões */
-    background-color: #21897e;
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: 600;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.2s, transform 0.2s;
-}
-
-.tipo-conta-btn:hover {
-    background-color: #05534b; /* Cor ao passar o mouse */
-    transform: scale(1.05); /* Efeito de escala ao passar o mouse */
-}
-
-.tipo-conta-btn.active {
-    background-color: #003530;
 }
 
 #formLogin input[type="submit"] {
@@ -114,7 +68,7 @@ main {
 }
 
 #formLogin input[type="submit"]:hover {
-    background-color: #21897e; /* Mudança de cor ao passar o mouse */
+    background-color: #21897e;
 }
 
 #enviar_login {
@@ -123,7 +77,7 @@ main {
 
 #formLogin #error {
     display: none;
-    color: #21897e;
+    color: #d32f2f;
     font-size: 14px;
     margin-bottom: 16px;
     text-align: left;
@@ -144,6 +98,7 @@ main {
     width: 48px;
     height: 48px;
     border: 1px solid #21897e;
+    ;
     border-radius: 50%;
     background-color: #f5f5f7;
     transition: transform 0.7s ease;
@@ -172,5 +127,5 @@ main {
 }
 
 .fundo2 a:hover {
-    color: #21897e; /* Mudança de cor ao passar o mouse */
+    color: #21897e;
 }

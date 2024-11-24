@@ -68,6 +68,44 @@ body {
     margin-bottom: 10px;
     }
 
+    #buttonContainer {
+        text-align: center;
+        margin: 20px 0;
+    }
+    
+    .botao-azul {
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 18px;
+        cursor: pointer;
+        transition: transform 0.3s;
+        display: inline-flex;
+        align-items: center;
+    }
+    
+    .botao-azul:hover {
+        transform: scale(1.05);
+    }
+    
+    .botao-azul span {
+        margin-left: 8px;
+        color: white;
+    }
+    
+    .content {
+        transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    }
+    
+    .content.hidden {
+        opacity: 0;
+        transform: translateX(-100%);
+        position: absolute;
+        width: 100%;
+    }    
+
     .fade-in {
         opacity: 0;
         transition: opacity 1s ease-in-out;

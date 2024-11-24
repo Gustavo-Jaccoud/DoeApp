@@ -149,6 +149,22 @@ body {
     border-radius: 4px;
     cursor: pointer;
 }
+.create-campaign-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.edit-button:hover {
+    background-color: #003369;
+}
+.create-campaign-btn:hover {
+    background-color: #003369;
+}
 
 .edit-menu button:nth-child(4) {
     background-color: #007bff;

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Forma de Pagamento</title>
+    <link rel="stylesheet" href="css/adicionar-pagamento.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Adicionar Cartão</h1>
+        <form id="addCardForm">
+            <label for="card-type">Tipo de Cartão</label>
+            <select id="card-type" name="card-type" required>
+                <option value="" disabled selected>Selecione o tipo</option>
+                <option value="credito">Crédito</option>
+                <option value="debito">Débito</option>
+            </select>
+
+            <label for="card-number">Número do Cartão</label>
+            <input type="text" id="card-number" name="card-number" placeholder="Digite o número do cartão" required maxlength="16">
+
+            <label for="card-name">Nome no Cartão</label>
+            <input type="text" id="card-name" name="card-name" placeholder="Digite o nome como no cartão" required>
+
+            <label for="card-expiry">Data de Validade</label>
+            <input type="month" id="card-expiry" name="card-expiry" required>
+
+            <label for="card-cvv">CVV</label>
+            <input type="password" id="card-cvv" name="card-cvv" placeholder="Digite o CVV" required maxlength="3">
+
+            <label for="card-alias">Insira um apelido para o Cartão</label>
+            <input type="text" id="card-alias" name="card-alias" placeholder="Ex.: Meu Cartão Principal" required>
+
+            <input type="submit" value="Salvar Cartão">
+        </form>
+        <a href="pagamento.html" class="back-button">Voltar para Pagamento</a>
+    </div>
+
+    <script>
+        const addCardForm = document.getElementById('addCardForm');
+
+        addCardForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const cardAlias = document.getElementById('card-alias').value;
+            const savedCards = JSON.parse(localStorage.getItem('savedCards') || '[]');
+            savedCards.push(cardAlias);
+            localStorage.setItem('savedCards', JSON.stringify(savedCards));
+
+            window.location.href = 'pagamento.html';
+        });
+    </script>
+</body>
+</html>

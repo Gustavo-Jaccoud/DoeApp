@@ -1,0 +1,90 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../img/background_central.jpg);
+    font-family: Arial, sans-serif;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 0px 12px #21897e;
+    border-radius: 12px;
+}
+
+h1 {
+    font-size: 24px;
+    color: #21897e;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    font-size: 14px;
+    color: #6e6e73;
+    margin-bottom: 8px;
+}
+
+form select,
+form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 16px;
+    border: 1px solid #d2d2d7;
+    border-radius: 8px;
+    background-color: #f9f9fa;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+form select:focus,
+form input:focus {
+    border-color: #21897e;
+    outline: none;
+}
+
+form input[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    background-color: #21897e;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form input[type="submit"]:hover {
+    background-color: #1a6f65;
+}
+
+/* Botão de voltar */
+.back-button {
+    display: block;
+    margin: 10px auto 0;
+    text-align: center;
+    font-size: 14px;
+    color: #21897e;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.back-button:hover {
+    color: #1a6f65;
+}

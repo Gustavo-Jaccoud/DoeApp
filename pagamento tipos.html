@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoeApp | Doação</title>
+    <link rel="stylesheet" href="css/pagamento.css">
+</head>
+
+<body>
+
+    <main>
+        <img src="img/logo.png" alt="Logo DoeApp" class="logo_header_img">
+        <div class="quamain">
+            <form id="formDonation">
+                <label for="payment-method">Tipo de doação</label>
+                <select id="payment-method" name="payment-method" required>
+                    <option value="" disabled selected>Selecione um tipo de doação</option>
+                    <option value="roupa">Roupa</option>
+                    <option value="comida">Comida</option>
+                    <option value="materiais-escolares">Materiais escolares</option>
+                </select>
+
+                <label for="donation-amount">Quantidade</label>
+                <input type="number" name="donation-amount" id="donation-amount" placeholder="Digite a quantidade da doação"
+                    required min="1" step="1">
+
+                <label for="delivery-method">Forma de entrega</label>
+                <select id="delivery-method" name="delivery-method" required>
+                    <option value="" disabled selected>Selecione uma forma de entrega</option>
+                    <option value="local">Levar para o local</option>
+                    <option value="casa">Entregar de casa</option>
+                </select>
+
+                <input type="submit" value="DOAR" id="submit-donation">
+            </form>
+
+            <div class="campaign-container">
+                <img src="img/camp1.png" alt="Imagem da Campanha" class="campaign-image">
+                <div class="campaign-details">
+                    <h1 class="campaign-title">Campanha Esperança</h1>
+                    <p class="campaign-description">
+                        Sua contribuição pode mudar vidas! Ajude a financiar tratamentos médicos para crianças em
+                        situação de vulnerabilidade.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const formDonation = document.getElementById('formDonation');
+
+        formDonation.addEventListener('submit', (event) => {
+            event.preventDefault(); // Impede o envio padrão do formulário
+
+            // Captura os valores dos campos
+            const donationType = document.getElementById('payment-method').value;
+            const donationQuantity = document.getElementById('donation-amount').value;
+            const deliveryMethod = document.getElementById('delivery-method').value;
+
+            // Validação simples (garante que os campos não estejam vazios)
+            if (!donationType || !donationQuantity || !deliveryMethod) {
+                alert('Por favor, preencha todos os campos antes de prosseguir.');
+                return;
+            }
+
+            // Redireciona para a página de finalização
+            window.location.href = 'confirmapagamento.html';
+        });
+    </script>
+
+</body>
+
+</html>

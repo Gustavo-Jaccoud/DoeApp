@@ -22,6 +22,60 @@ body {
     margin-bottom: 20px;
 }
 
+.hidden {
+    display: none;
+}
+
+#add-card-section {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#add-card-section h2 {
+    font-size: 20px;
+    margin-bottom: 16px;
+    color: #333;
+}
+
+#add-card-section label {
+    display: block;
+    margin-bottom: 8px;
+    color: #6e6e73;
+}
+
+#add-card-section input,
+#add-card-section select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 16px;
+    border: 1px solid #d2d2d7;
+    border-radius: 8px;
+    background-color: #f5f5f7;
+    font-size: 16px;
+}
+
+#add-card-section button {
+    width: 100%;
+    padding: 12px;
+    background-color: #21897e;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#add-card-section button:hover {
+    background-color: #1a6f65;
+}
+
+
 .quamain {
     width: 100%;
     max-width: 900px;

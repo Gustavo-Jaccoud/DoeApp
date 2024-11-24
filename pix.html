@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoeApp | Confirmação</title>
+    <link rel="stylesheet" href="css/pagamento.css">
+    <style>
+        body {
+            background-image: url(../img/background_central.jpg);
+            font-family: Arial, sans-serif;
+            color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+
+        .confirmation-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .confirmation-message {
+            font-size: 24px;
+            font-weight: bold;
+            color: #21897e;
+        }
+
+        .confirmation-subtext {
+            font-size: 18px;
+            color: #6e6e73;
+        }
+
+        .confirmation-icon {
+            width: 100px;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="confirmation-container">
+        <p class="confirmation-message">Finalizando pagamento...</p>
+        <img src="/img/relogio.png" alt="Verificado" class="confirmation-icon">
+        <p class="confirmation-subtext">Redirecionando para Boa Compra...</p>
+    </div>
+
+    <script>
+        setTimeout(() => {
+            window.location.href = 'boacompra.html';
+        }, 5000);
+    </script>
+</body>
+
+</html>

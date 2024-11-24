@@ -5,11 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DoeApp | Login</title>
     <link rel="stylesheet" href="css/login.css">
+    <style>
+        #error-container {
+            display: none;
+            color: red;
+            margin-top: 10px;
+        }
+        #forgot-password {
+            margin-left: 10px;
+            text-decoration: underline;
+            color: blue;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
 <main>    
     <img src="img/logo_login.png" alt="Logo DoeApp" class="logo_header_img">
-    <label id="error" style="display: none;">E-mail ou senha incorretos. Tente novamente.</label>
+    
+    <!-- Container de erro -->
+    <div id="error-container">
+        <span id="error">E-mail ou senha incorretos. Tente novamente.</span>
+        <span id="forgot-password">Esqueceu a senha?</span>
+    </div>
+
     <form id="formLogin">
         <label for="email">E-mail</label>
         <input type="text" name="email" id="email" placeholder="Digite seu e-mail" required>
@@ -50,10 +69,11 @@
             localStorage.setItem("logado", true);
             window.location.href = "index.html"; 
         } else {
-            errorMessage.style.display = "block";
+            errorContainer.style.display = "block"; // Exibe mensagem de erro e link
         }
     }
-    const errorMessage = document.getElementById("error");
+
+    const errorContainer = document.getElementById("error-container");
     document.getElementById('formLogin').onsubmit = login; 
 </script>
 </body>

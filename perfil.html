@@ -41,6 +41,10 @@
                 <h1 class="username" id="username">Nome</h1>
                 <p class="username-description" id="profile-description">Breve descrição da pessoa ou organização.</p>
                 <button class="edit-button" onclick="toggleEditMenu()">Editar Perfil</button>
+                <a href="------">
+                    <button id="criarCampanha" class="create-campaign-btn" style="display: none;">Criar
+                        Campanha</button>
+                </a>
             </div>
         </div>
 
@@ -144,7 +148,7 @@
             menu.classList.toggle('visible');
             overlay.classList.toggle('visible');
         }
-    
+
         // Função para salvar as alterações feitas no menu de edição
         function saveChanges() {
             // Pega os valores dos campos de entrada
@@ -152,19 +156,19 @@
             const descriptionInput = document.getElementById('description-input');
             const photoInput = document.getElementById('photo-input');
             const backgroundInput = document.getElementById('background-input');
-    
+
             // Atualiza o nome
             if (nameInput.value.trim() !== "") {
                 document.getElementById('username').textContent = nameInput.value;
                 localStorage.setItem("nome", nameInput.value); // Salva no localStorage
             }
-    
+
             // Atualiza a descrição
             if (descriptionInput.value.trim() !== "") {
                 document.getElementById('profile-description').textContent = descriptionInput.value;
                 localStorage.setItem("descricao", descriptionInput.value); // Salva no localStorage
             }
-    
+
             // Atualiza a foto de perfil
             if (photoInput.files && photoInput.files[0]) {
                 const reader = new FileReader();
@@ -174,7 +178,7 @@
                 };
                 reader.readAsDataURL(photoInput.files[0]);
             }
-    
+
             // Atualiza a foto de fundo
             if (backgroundInput.files && backgroundInput.files[0]) {
                 const reader = new FileReader();
@@ -184,23 +188,40 @@
                 };
                 reader.readAsDataURL(backgroundInput.files[0]);
             }
-    
+
             // Fecha o menu de edição
             toggleEditMenu();
         }
-    
+
         // Carrega dados salvos do localStorage ao abrir a página
         document.addEventListener("DOMContentLoaded", function () {
             const nome = localStorage.getItem("nome");
             const descricao = localStorage.getItem("descricao");
             const fotoPerfil = localStorage.getItem("fotoPerfil");
             const fotoFundo = localStorage.getItem("fotoFundo");
-    
+
             if (nome) document.getElementById('username').textContent = nome;
             if (descricao) document.getElementById('profile-description').textContent = descricao;
             if (fotoPerfil) document.getElementById('profile-photo').src = fotoPerfil;
             if (fotoFundo) document.querySelector('.profile-background').style.backgroundImage = `url(${fotoFundo})`;
         });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const tipoConta = localStorage.getItem("tipoConta");
+            console.log(`Tipo de conta recuperado: ${tipoConta}`); // Verifica se o valor é recuperado corretamente
+            const criarCampanhaBtn = document.getElementById("criarCampanha");
+
+            if (criarCampanhaBtn) {
+                if (tipoConta === "juridica") {
+                    criarCampanhaBtn.style.display = "block";
+                } else {
+                    criarCampanhaBtn.style.display = "none";
+                }
+            } else {
+                console.error("Elemento criarCampanha não encontrado no DOM.");
+            }
+        });
+
     </script>
 </body>
 

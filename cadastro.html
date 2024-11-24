@@ -6,17 +6,18 @@
     <title>DoeApp | Cadastro</title>
     <link rel="stylesheet" href="css/cadastro.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 </head>
 <body>
 <main>
     <img src="img/logo_cadastro.png" alt="Logo" class="logo_header_img">
     <div class="fundo">
         <form id="formLogin">
-<!-- Tipo de Conta -->
-<div class="metade">
-    <button type="button" class="tipo-conta-btn" id="fisica" value="fisica" onclick="alterarFormulario('fisica')">Pessoa Física</button>
-    <button type="button" class="tipo-conta-btn" id="juridica" value="juridica" onclick="alterarFormulario('juridica')">Pessoa Jurídica</button>
-</div>
+            <!-- Tipo de Conta -->
+            <div class="metade">
+                <button type="button" class="tipo-conta-btn" id="fisica" value="fisica" onclick="alterarFormulario('fisica')">Pessoa Física</button>
+                <button type="button" class="tipo-conta-btn" id="juridica" value="juridica" onclick="alterarFormulario('juridica')">Pessoa Jurídica</button>
+            </div>
 
             <!-- Dados Pessoais -->
             <label for="cpf" id="labelCpfCnpj">CPF</label>
@@ -33,17 +34,48 @@
             <input type="text" name="email" id="email" class="input-field" placeholder="Digite seu e-mail">
 
             <label style="display: none;" for="telefone">Telefone</label>
-            <input style="display: none;" type="text" name="representante" id="representante" class="input-field" placeholder="Digite seu telefone">
+            <input style="display: none;" type="text" name="telefone" id="telefone" class="input-field" placeholder="Digite seu telefone">
 
             <!-- Endereço -->
             <div class="metade">
                 <div>
                     <label for="estado">Estado</label>
-                    <input type="text" name="estado" id="estado" class="input-field" placeholder="Digite seu estado">
+                    <select name="estado" id="estado" class="input-field" onchange="carregarCidades()">
+                        <option value="" disabled selected>Selecione seu estado</option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                    </select>
                 </div>
                 <div>
                     <label for="cidade">Cidade</label>
-                    <input type="text" name="cidade" id="cidade" class="input-field" placeholder="Digite sua cidade">
+                    <select name="cidade" id="cidade" class="input-field">
+                        <option value="" disabled selected>Selecione sua cidade</option>
+                    </select>
                 </div>
             </div>
 
@@ -94,10 +126,57 @@
     <div class="fundo2">
         <p>Já possui uma conta? <a href="login.html">Login</a></p>
     </div>
-</main> 
+</main>
 
 <script src="js/form_cadastro.js"></script>
 <script>
+document.addEventListener('DOMContentLoaded', function () {
+    const cidadesPorEstado = {
+        AC: ["Rio Branco", "Cruzeiro do Sul"],
+        AL: ["Maceió", "Arapiraca"],
+        AP: ["Macapá", "Santana"],
+        AM: ["Manaus", "Parintins"],
+        BA: ["Salvador", "Feira de Santana", "Vitória da Conquista"],
+        CE: ["Fortaleza", "Juazeiro do Norte", "Sobral"],
+        DF: ["Brasília"],
+        ES: ["Vitória", "Vila Velha", "Serra"],
+        GO: ["Goiânia", "Anápolis", "Aparecida de Goiânia"],
+        MA: ["São Luís", "Imperatriz"],
+        MT: ["Cuiabá", "Várzea Grande"],
+        MS: ["Campo Grande", "Dourados"],
+        MG: ["Belo Horizonte", "Uberlândia", "Contagem"],
+        PA: ["Belém", "Ananindeua"],
+        PB: ["João Pessoa", "Campina Grande"],
+        PR: ["Curitiba", "Londrina", "Maringá"],
+        PE: ["Recife", "Olinda", "Jaboatão dos Guararapes"],
+        PI: ["Teresina", "Parnaíba"],
+        RJ: ["Rio de Janeiro", "Niterói", "Duque de Caxias"],
+        RN: ["Natal", "Mossoró"],
+        RS: ["Porto Alegre", "Caxias do Sul", "Pelotas"],
+        RO: ["Porto Velho", "Ji-Paraná"],
+        RR: ["Boa Vista"],
+        SC: ["Florianópolis", "Joinville", "Blumenau"],
+        SP: ["São Paulo", "Campinas", "Santos"],
+        SE: ["Aracaju", "Nossa Senhora do Socorro"],
+        TO: ["Palmas", "Araguaína"]
+    };
+
+    function carregarCidades() {
+        const estado = document.getElementById("estado").value;
+        const cidadeSelect = document.getElementById("cidade");
+
+        cidadeSelect.innerHTML = '<option value="" disabled selected>Selecione sua cidade</option>';
+
+        if (cidadesPorEstado[estado]) {
+            cidadesPorEstado[estado].forEach(cidade => {
+                const option = document.createElement("option");
+                option.value = cidade;
+                option.textContent = cidade;
+                cidadeSelect.appendChild(option);
+            });
+        }
+    }
+
     function cadastrar(event) {
         event.preventDefault();
         const email = document.getElementById("email").value;
@@ -106,12 +185,67 @@
 
         localStorage.setItem("nome", nome);
         localStorage.setItem("email", email);
-        localStorage.setItem("senha", senha); 
+        localStorage.setItem("senha", senha);
 
         window.location.href = "login.html";
     }
 
-    document.getElementById('formLogin').onsubmit = cadastrar; 
+    document.getElementById('formLogin').onsubmit = cadastrar;
+
+    document.querySelectorAll('.tipo-conta-btn').forEach(button => {
+        button.addEventListener('click', function () {
+            document.querySelectorAll('.tipo-conta-btn').forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+            const tipo = this.value;
+            localStorage.setItem("tipoConta", tipo); // Salva o tipo no localStorage
+            alterarFormulario(tipo); // Atualiza o formulário
+        });
+    });
+
+    function alterarFormulario(tipo) {
+        const cpfCnpjField = document.getElementById('cpf');
+        const labelCpfCnpj = document.getElementById('labelCpfCnpj');
+        const labelRepresentante = document.getElementById('labelRepresentante');
+        const representanteField = document.getElementById('representante');
+        const telefoneField = document.getElementById('telefone');
+        const telefoneLabel = document.querySelector("label[for='telefone']");
+
+        if (tipo === 'fisica') {
+            labelCpfCnpj.textContent = 'CPF';
+            cpfCnpjField.placeholder = 'Digite seu CPF';
+            cpfCnpjField.value = '';
+            cpfCnpjField.setAttribute('maxlength', '14');
+            $(cpfCnpjField).mask('000.000.000-00');
+
+            labelRepresentante.style.display = 'none';
+            representanteField.style.display = 'none';
+            telefoneLabel.style.display = 'none';
+            telefoneField.style.display = 'none';
+        } else {
+            labelCpfCnpj.textContent = 'CNPJ';
+            cpfCnpjField.placeholder = 'Digite seu CNPJ';
+            cpfCnpjField.value = '';
+            cpfCnpjField.setAttribute('maxlength', '18');
+            $(cpfCnpjField).mask('00.000.000/0000-00');
+
+            labelRepresentante.style.display = 'block';
+            representanteField.style.display = 'block';
+            telefoneLabel.style.display = 'block';
+            telefoneField.style.display = 'block';
+        }
+    }
+
+    // Carrega tipo de conta salvo no localStorage ao carregar a página
+    const tipoContaSalvo = localStorage.getItem("tipoConta");
+    if (tipoContaSalvo) {
+        alterarFormulario(tipoContaSalvo);
+        document.getElementById(tipoContaSalvo).classList.add('active');
+    }
+
+    // Adiciona evento ao select de estado para carregar cidades
+    document.getElementById('estado').addEventListener('change', carregarCidades);
+});
+
 </script>
 </body>
 </html>
