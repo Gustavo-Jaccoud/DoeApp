@@ -100,20 +100,22 @@ nav a:last-child {
 
 /* Botão "Contato" especial */
 #contatoButton {
-    background: linear-gradient(135deg, #00b4db, #0083b0); /* Gradiente Azul */
-    color: white;
-    padding: 8px 16px;
-    font-size: 16px;
-    font-weight: bold;
-    border-radius: 20px;
-    border: none;
+    color: #0083b0;
+    width: 37px;
+    height: 37px;
+    padding: 0.5px 2.595px;
+    font-size: 24px;
+    font-weight: normal;
+    border-radius: 50%;
+    border: solid 4px #0083b0;
     cursor: pointer;
     transition: background 0.3s ease, transform 0.2s ease;
 }
 
 /* Efeito de Hover */
 #contatoButton:hover {
-    background: linear-gradient(135deg, #0083b0, #005a8d); /* Gradiente mais escuro */
+    background-color: #0083b0;
+    color: white;
     transform: scale(1.05); /* Leve aumento no tamanho */
 }
 

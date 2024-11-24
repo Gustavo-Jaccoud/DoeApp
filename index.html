@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,8 @@
     <!-- Fontes e ícones -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100..900&family=Monoton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100..900&family=Monoton&display=swap"
+        rel="stylesheet">
 
     <!-- CSS em ordem -->
     <link rel="stylesheet" href="css/header.css">
@@ -23,6 +25,7 @@
 
 
 </head>
+
 <body>
     <header>
         <div class="logo">
@@ -35,7 +38,7 @@
             <div class="dropdown-menu" id="dropdownMenu">
                 <a href="perfil.html">VER PERFIL</a>
                 <button id="logoutButton">Deslogar</button>
-            </div> 
+            </div>
             <a href="explorar.html">EXPLORAR</a>
             <a href="sobre.html">SOBRE NÓS</a>
             <a id="contatoButton">✉</a>
@@ -43,86 +46,85 @@
             <a href="cadastro.html" class="btn-cadastrar">CADASTRAR-SE</a>
             <a class="btn-perfil">NOME</a>
         </nav>
-        
-            <!-- Escurece o fundo | menu hamburguer -->
+
+        <!-- Escurece o fundo | menu hamburguer -->
         <div class="overlay" id="overlay"></div>
-<script src="js/menu.js"></script>
-</header>
+        <script src="js/menu.js"></script>
+    </header>
 
-<div id="contactModal" class="modal hidden">
-    <div class="modal-content">
-        <div class="modal-left">
-            <h2>Envie-nos uma mensagem</h2>
-            <form id="contactForm">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" required>
-                
-                <label for="telefone">Telefone:</label>
-                <input type="text" id="telefone" placeholder="(XX) XXXXX-XXXX" required>
-                
-                <label for="assunto">Assunto:</label>
-                <input type="text" id="assunto" required>
-                
-                <label for="mensagem">Mensagem:</label>
-                <textarea id="mensagem" rows="5" required></textarea>
-                
-                <!-- Captcha Placeholder -->
-                <div class="captcha">
-                    <p>Por favor, resolva o captcha antes de enviar.</p>
-                </div>
+    <div id="contactModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-left">
+                <h2>Envie-nos uma mensagem</h2>
+                <form id="contactForm">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" required>
 
-                <button type="submit">Enviar</button>
-            </form>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+
+                    <label for="telefone">Telefone:</label>
+                    <input type="text" id="telefone" placeholder="(XX) XXXXX-XXXX" required>
+
+                    <label for="assunto">Assunto:</label>
+                    <input type="text" id="assunto" required>
+
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" rows="5" required></textarea>
+
+                    <!-- Captcha Placeholder -->
+                    <div class="captcha">
+                        <p>Por favor, resolva o captcha antes de enviar.</p>
+                    </div>
+
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+            <div class="modal-right">
+                <h3>Nossas informações:</h3>
+                <p><span>Endereços:</span> <br> Rua Exemplo, 123 <br> Avenida Modelo, 456 <br> Travessa Teste, 789</p>
+                <p><span>Telefone:</span> <br> (11) 1234-5678</p>
+                <p><span>Email:</span> <br> contato@exemplo.com</p>
+            </div>
         </div>
-        <div class="modal-right">
-            <h3>Nossas informações:</h3>
-            <p><span>Endereços:</span> <br> Rua Exemplo, 123 <br> Avenida Modelo, 456 <br> Travessa Teste, 789</p>
-            <p><span>Telefone:</span> <br> (11) 1234-5678</p>
-            <p><span>Email:</span> <br> contato@exemplo.com</p>
-        </div>        
     </div>
-</div>
-<div class="main-container" id="main-container">
-    <!-- Fundo dinâmico -->
-    <div id="donate-bg" class="background-image" style="background-image: url('./img/doa1.png');"></div>
-    <div id="campaign-bg" class="background-image" style="background-image: url('./img/doa2.png');"></div>
-    <!-- Conteúdo -->
-    <div class="content">
-        <h1>O que você deseja fazer?</h1>
-        <div class="button-container">
-            <button id="donate" class="button" 
-                    onmouseover="showBackground('donate-bg')" 
-                    onmouseout="hideBackground('donate-bg')">
-                Fazer uma Doação
-            </button>
-            <button id="campaign" class="button" 
-            onmouseover="showBackground('campaign-bg'); toggleDynamicText(true);" 
-            onmouseout="hideBackground('campaign-bg'); toggleDynamicText(false);">
-        Criar uma Campanha
-    </button>
+    <div class="main-container" id="main-container">
+        <!-- Fundo dinâmico -->
+        <div id="donate-bg" class="background-image" style="background-image: url('./img/doa1.png');"></div>
+        <div id="campaign-bg" class="background-image" style="background-image: url('./img/doa2.png');"></div>
+        <!-- Conteúdo -->
+        <div class="content">
+            <h1>O que você deseja fazer?</h1>
+            <div class="button-container">
+                <a style="text-decoration: none;" id="donate" class="button" href="#principaisNoticias"
+                    onmouseover="showBackground('donate-bg')" onmouseout="hideBackground('donate-bg')">
+                    Fazer uma Doação
+                </a>
+                <a id="campaign" class="button" href="criarcampanha.html"
+                    onmouseover="showBackground('campaign-bg'); toggleDynamicText(true);"
+                    onmouseout="hideBackground('campaign-bg'); toggleDynamicText(false);">
+                    Criar uma Campanha
+            </a>
+            </div>
+            <div id="dynamic-text" class="dynamic-text">*Apenas empresas podem criar campanhas</div>
         </div>
-        <div id="dynamic-text" class="dynamic-text">*Apenas empresas podem criar campanhas</div>
     </div>
-</div>
-<script src="js/criarmenudoar.js"></script>
+    <script src="js/criarmenudoar.js"></script>
 
     <div class="container">
         <div class="carousel-container">
-            <h1 class="carotex invisible">CAMPANHAS</h1>
+            <h1 class="carotex invisible" id="principaisNoticias">Principais Noticias</h1>
             <div class="bordercam invisible"></div>
             <img src="img/slide1.png" alt="Image 1" class="carousel-img center">
             <img src="img/slide3.png" alt="Image 3" class="carousel-img right">
             <img src="img/slide2.png" alt="Image 2" class="carousel-img left">
             <div class="progress-bar">
-              <div class="progress"></div>
+                <div class="progress"></div>
             </div>
-          </div>
-        
+        </div>
+
         <div class="catdiv">
-            <h1 class="campanhastex invisible">CAMPANHAS</h1>
+            <h1 class="campanhastex invisible">Campanhas</h1>
             <div class="bordercam invisible"></div>
             <!-- para mudar as categorias, apenas mude o valor de acordo com a lista abaixo: -->
             <!-- Alimentação : cat1 -->
@@ -157,73 +159,91 @@
                 <div class="category-item">
                     <img src="img/cat6.png" alt="Categoria Arte" data-category="Arte">
                     <p>Arte</p>
+                </div>
             </div>
-</div>
             <div class="campaigns-grid" id="campaigns">
                 <!-- Campanhas -->
                 <div class="campaign invisible" data-category="Alimentação">
                     <h3>Instituto Alimentar</h3>
                     <img src="img/camp1.png" alt="Campanha 1">
                     <p class="author">Instituto Alimentar</p>
-                    <p class="description">O Instituto Alimentar, desenvolve a campanha de arrecadação de alimentos, cestas básicas e kits de higiene, para atender as famílias atendidas no projeto alimentando vidas e casos pontuais que chegam a nossa instituição.</p>
+                    <p class="description">O Instituto Alimentar, desenvolve a campanha de arrecadação de alimentos,
+                        cestas básicas e kits de higiene, para atender as famílias atendidas no projeto alimentando
+                        vidas e casos pontuais que chegam a nossa instituição.</p>
                 </div>
                 <div class="campaign invisible" data-category="Alimentação">
                     <h3>Materiais de Escritório</h3>
                     <img src="img/camp2.png" alt="Campanha 2">
                     <p class="author">Cresol Central Brasil</p>
-                    <p class="description">O tema do dia C deste ano foi “pequenas atitudes que fazem a diferença”. Isso nos leva a pensar: o que cada um de nós pode fazer para melhorar o mundo? Como podemos ajudar e como podemos instigar as pessoas a fazerem o mesmo?</p>
+                    <p class="description">O tema do dia C deste ano foi “pequenas atitudes que fazem a diferença”. Isso
+                        nos leva a pensar: o que cada um de nós pode fazer para melhorar o mundo? Como podemos ajudar e
+                        como podemos instigar as pessoas a fazerem o mesmo?</p>
                 </div>
                 <div class="campaign invisible" data-category="Medicina">
                     <h3>Instituto Janeiro Branco</h3>
                     <img src="img/camp3.png" alt="Campanha 2">
                     <p class="author">Instituto Janeiro Branco</p>
-                    <p class="description">Através de campanhas, o Instituto Janeiro Branco, busca quebrar estigmas, incentivar o diálogo aberto sobre questões emocionais e fornece ferramentas práticas sobre Saúde Mental.</p>
+                    <p class="description">Através de campanhas, o Instituto Janeiro Branco, busca quebrar estigmas,
+                        incentivar o diálogo aberto sobre questões emocionais e fornece ferramentas práticas sobre Saúde
+                        Mental.</p>
                 </div>
                 <div class="campaign invisible" data-category="Pet">
                     <h3>Proteção Animal</h3>
                     <img src="img/camp4.png" alt="Campanha 1">
-                    <p class="author">Cão sem dono</p> 
-                    <p class="description">A Cão sem dono é uma entidade não governamental, sem fins lucrativos, que visa tirar o maior número possível de animais das ruas, tratar de possíveis traumas e doenças e integrá-lo a famílias que estejam dispostas a dar muito amor e carinho.</p>
+                    <p class="author">Cão sem dono</p>
+                    <p class="description">A Cão sem dono é uma entidade não governamental, sem fins lucrativos, que
+                        visa tirar o maior número possível de animais das ruas, tratar de possíveis traumas e doenças e
+                        integrá-lo a famílias que estejam dispostas a dar muito amor e carinho.</p>
                 </div>
                 <div class="campaign invisible" data-category="Pet">
                     <h3>Causa Animal</h3>
                     <img src="img/camp5.png" alt="Campanha 2">
                     <p class="author">Associação Quatro Patinhas</p>
-                    <p class="description">A Associação Quatro Patinhas nasceu em 2004, após adoção da gatinha Lilo. O projeto tem como foco principal resgatar animais em situação de risco e restaurar a saúde deles, antes de fazer as campanhas de adoção.</p>
+                    <p class="description">A Associação Quatro Patinhas nasceu em 2004, após adoção da gatinha Lilo. O
+                        projeto tem como foco principal resgatar animais em situação de risco e restaurar a saúde deles,
+                        antes de fazer as campanhas de adoção.</p>
                 </div>
                 <div class="campaign invisible" data-category="Educação">
                     <h3>Campanha pelo Direito à Educação</h3>
                     <img src="img/camp6.png" alt="Campanha 2">
                     <p class="author">Campanha pelo Direito à Educação</p>
-                    <p class="description">Juntos por uma educação que transforma! Queremos uma educação que não só informe, mas também forme cidadãos conscientes, com justiça e compromisso socioambiental. Vamos construir um futuro onde cada estudante possa aprender a cuidar do planeta e das pessoas.</p>
+                    <p class="description">Juntos por uma educação que transforma! Queremos uma educação que não só
+                        informe, mas também forme cidadãos conscientes, com justiça e compromisso socioambiental. Vamos
+                        construir um futuro onde cada estudante possa aprender a cuidar do planeta e das pessoas.</p>
                 </div>
                 <div class="campaign invisible" data-category="Natureza">
                     <h3>Doação de Equipamentos</h3>
                     <img src="img/camp7.png" alt="Campanha 1">
-                    <p class="author">AUTOR</p> 
-                    <p class="description">Empresas que operam em setores industriais, construção civil e saúde precisam constantemente de EPIs para garantir a segurança de seus funcionários. Ajude com a doação de capacetes, luvas, óculos de proteção e outros materiais essenciais.</p>
+                    <p class="author">AUTOR</p>
+                    <p class="description">Empresas que operam em setores industriais, construção civil e saúde precisam
+                        constantemente de EPIs para garantir a segurança de seus funcionários. Ajude com a doação de
+                        capacetes, luvas, óculos de proteção e outros materiais essenciais.</p>
                 </div>
                 <div class="campaign invisible" data-category="Natureza">
                     <h3>Materiais de Escritório</h3>
                     <img src="img/camp8.png" alt="Campanha 2">
                     <p class="author">AUTOR</p>
-                    <p class="description">Pequenas empresas e ONGs necessitam de materiais de escritório para continuar suas atividades administrativas. Doe itens como papéis, canetas, impressoras e cartuchos de tinta para apoiar as operações diárias.</p>
+                    <p class="description">Pequenas empresas e ONGs necessitam de materiais de escritório para continuar
+                        suas atividades administrativas. Doe itens como papéis, canetas, impressoras e cartuchos de
+                        tinta para apoiar as operações diárias.</p>
                 </div>
                 <div class="campaign invisible" data-category="Natureza">
                     <h3>Equipamentos Tecnológicos</h3>
                     <img src="img/camp9.png" alt="Campanha 2">
                     <p class="author">DEFESA CIVIL RIO DE JANEIRO</p>
-                    <p class="description">O desastre tem como parte inseparável do seu conceito a produção de danos humanos, materiais ou ambientais e consequentes prejuízos econômicos e sociais. Para as pessoas que foram afetadas por algum desastre e que acabaram ficando em uma situação...</p>
+                    <p class="description">O desastre tem como parte inseparável do seu conceito a produção de danos
+                        humanos, materiais ou ambientais e consequentes prejuízos econômicos e sociais. Para as pessoas
+                        que foram afetadas por algum desastre e que acabaram ficando em uma situação...</p>
                 </div>
                 <!-- Adicionar mais se quiser (não recomendo..) -->
             </div>
         </div>
 
         <a href="explorar.html">
-        <div class="explore-more invisible">
-            <h3>Explorar mais campanhas</h3>
-        </div>
-    </a>
+            <div class="explore-more invisible">
+                <h3>Explorar mais campanhas</h3>
+            </div>
+        </a>
         <div class="testimonials">
             <h1 class="depoimentos invisible">DEPOIMENTOS</h1>
             <div class="border invisible"></div>
@@ -233,31 +253,34 @@
                         <img src="img/dep1.png" alt="">
                         <div class="name">NOME</div>
                         <div class="camp">LOCAL/CAMPANHA</div>
-                        <p class="dep">"Etiam nec elit nec sem ultricies rhoncus non ac justo. Fusce ornare, nulla at sodales tristique, lectus ex porta turpis, ac blandit nisi arcu in tellus."</p>
+                        <p class="dep">"Etiam nec elit nec sem ultricies rhoncus non ac justo. Fusce ornare, nulla at
+                            sodales tristique, lectus ex porta turpis, ac blandit nisi arcu in tellus."</p>
                     </div>
                     <div class="testimonial invisible">
                         <img src="img/dep2.png" alt="">
                         <div class="name">NOME</div>
                         <div class="camp">LOCAL/CAMPANHA</div>
-                        <p class="dep">"Etiam nec elit nec sem ultricies rhoncus non ac justo. Fusce ornare, nulla at sodales tristique, lectus ex porta turpis, ac blandit nisi arcu in tellus."</p>
+                        <p class="dep">"Etiam nec elit nec sem ultricies rhoncus non ac justo. Fusce ornare, nulla at
+                            sodales tristique, lectus ex porta turpis, ac blandit nisi arcu in tellus."</p>
                     </div>
                     <div class="testimonial invisible">
                         <img src="img/dep3.png" alt="">
                         <div class="name">NOME</div>
                         <div class="camp">LOCAL/CAMPANHA</div>
-                        <p class="dep">"Etiam nec elit nec sem ultricies rhoncus non ac justo. Fusce ornare, nulla at sodales tristique, lectus ex porta turpis, ac blandit nisi arcu in tellus."</p>
+                        <p class="dep">"Etiam nec elit nec sem ultricies rhoncus non ac justo. Fusce ornare, nulla at
+                            sodales tristique, lectus ex porta turpis, ac blandit nisi arcu in tellus."</p>
                     </div>
                 </div>
             </div>
         </div>
-        
+
 
         <div class="mdiv">
             <h1 class="mapa invisible">TOTAL ARRECADADO ATÉ AGORA:</h1>
             <div class="border invisible"></div>
             <div class="map-container">
                 <img src="img/brasilmapa.png" alt="Mapa do Brasil">
-                
+
                 <!-- Pontos no mapa | Estados -->
                 <div class="map-point point-rr">
                     <div class="tooltip">Roraima: 120 doações</div>
@@ -265,19 +288,19 @@
                 <div class="map-point point-ap">
                     <div class="tooltip">Amapá: 120 doações</div>
                 </div>
-        
+
                 <div class="map-point point-pa">
                     <div class="tooltip">Pará: 80 doações</div>
                 </div>
-        
+
                 <div class="map-point point-am">
                     <div class="tooltip">Amazonas: 50 doações</div>
                 </div>
-        
+
                 <div class="map-point point-ms">
                     <div class="tooltip">Mato Grosso do Sul: 100 doações</div>
                 </div>
-        
+
                 <div class="map-point point-mt">
                     <div class="tooltip">Mato Grosso: 60 doações</div>
                 </div>
@@ -297,7 +320,7 @@
                 </div>
             </div>
         </div>
-    </div>  
+    </div>
 
     <!-- footer -->
     <footer id="footer-container"></footer>
@@ -306,7 +329,8 @@
     <!--Script para importa os componentes-->
     <script src="js/import.js"></script>
     <script>
-          loadContentIntoElement('footer-container', 'footer.html');
+        loadContentIntoElement('footer-container', 'footer.html');
     </script>
 </body>
+
 </html>

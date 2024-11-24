@@ -1,6 +1,5 @@
 
 .container {
-    border-radius: 8px;
     overflow: hidden;
     max-width: 80vw;
     margin: 0 auto;
@@ -27,6 +26,7 @@
     font-size: 2em;
     color: #21897E;
     font-weight: bold;
+    unicode-bidi: isolate;
 }
 
 .header-icons {
@@ -65,35 +65,12 @@
 }
 
 .info-section p {
+    text-align: justify;
     font-size: 18px;
     line-height: 1.5;
     margin-bottom: 15px;
 }
 
-.donation-section {
-    margin-top: 20px;
-}
-
-.donation-section h3 {
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-
-.donation-section h4 {
-    font-size: 22px;
-    color: #007AFE;
-    margin: 5px 0;
-}
-
-.donate-button {
-    background: #007AFE;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-}
 
 .image-section {
     flex: 1;
@@ -128,6 +105,7 @@
     display: block;
     margin-left: auto;
 }
+
 @media (max-width: 550px){
     .main-content{
         flex-direction: column;

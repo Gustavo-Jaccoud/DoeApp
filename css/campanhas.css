@@ -121,8 +121,9 @@
     object-fit: cover;
     border-radius: 20%;
 }
-
+a{text-decoration: none;}
 .campaign h3, .campaign p.author {
+    
     font-weight: 700;
     font-family: 'Work Sans', sans-serif;
     text-align: center;
