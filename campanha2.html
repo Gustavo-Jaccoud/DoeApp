@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campanha</title>
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/body.css">
+    <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="css/basecampanha.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="img/logo.png" alt="Logo do site"></a>
+        </div>
+        <div class="hamburger" id="hamburger">
+            &#9776;
+        </div>
+        <nav id="nav-links">
+            <div class="dropdown-menu" id="dropdownMenu">
+                <a href="perfil.html">VER PERFIL</a>
+                <button id="logoutButton">Deslogar</button>
+            </div> 
+            <a href="explorar.html">EXPLORAR</a>
+            <a href="sobre.html">SOBRE NÓS</a>
+            <a id="contatoButton">CONTATO</a>
+            <a href="login.html" class="btn-entrar">ENTRAR</a>
+            <a href="cadastro.html" class="btn-cadastrar">CADASTRAR-SE</a>
+            <a class="btn-perfil">NOME</a>
+        </nav>
+        
+            <!-- Escurece o fundo | menu hamburguer -->
+        <div class="overlay" id="overlay"></div>
+        <script src="js/menu.js"></script>
+    </header>
+
+    <div id="contactModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-left">
+                <h2>Envie-nos uma mensagem</h2>
+                <form id="contactForm">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                    
+                    <label for="telefone">Telefone:</label>
+                    <input type="text" id="telefone" placeholder="(XX) XXXXX-XXXX" required>
+                    
+                    <label for="assunto">Assunto:</label>
+                    <input type="text" id="assunto" required>
+                    
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" rows="5" required></textarea>
+                    
+                    <!-- Captcha Placeholder -->
+                    <div class="captcha">
+                        <p>Por favor, resolva o captcha antes de enviar.</p>
+                    </div>
+
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+            <div class="modal-right">
+                <h3>Nossas informações:</h3>
+                <p><span>Endereços:</span> <br> Rua Exemplo, 123 <br> Avenida Modelo, 456 <br> Travessa Teste, 789</p>
+                <p><span>Telefone:</span> <br> (11) 1234-5678</p>
+                <p><span>Email:</span> <br> contato@exemplo.com</p>
+            </div>        
+        </div>
+    </div>
+    <div class="container">
+        <div class="cover-image">
+            <img src="img/camp2logo.png" alt="Imagem de Capa">
+        </div>
+        <div class="header-campanha">
+            <h1>No Mundo dos Afetos</h1>
+            <div class="header-icons">
+                <span class="badge">Educação</span>
+                <button class="icon-button">
+                    <i class="heart-icon">❤️</i>
+                </button>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="info-section">
+                <h2>Informações</h2>
+                <p>
+                    A Escola Estadual Professor Francisco Pereira de Souza Filho está localizada no Parque Paulistano, na cidade de São Paulo (SP), na Rua Gonçalves Ribeiro, 50. Criada em 13 de junho de 1988, a escola oferece ensino para os anos finais do Ensino Fundamental, Ensino Médio e cursos técnicos pelo programa Novotec.
+
+                A instituição dispõe de infraestrutura variada, incluindo quadras esportivas, laboratório de informática, sala de leitura, refeitório e auditório. Apesar de não possuir uma biblioteca completa, conta com recursos como internet, computadores para alunos e professores, lousa digital e tablets, que são utilizados no processo de ensino. A escola também promove ensino presencial, com uma equipe qualificada de professores e serviços de alimentação escolar.
+                </p>
+                <h2>Objetivo da campanha</h2>
+                <p>
+                    Em São Miguel Paulista, a Escola Estadual Professor Francisco Pereira de Souza Filho realiza o projeto “No Mundo dos Afetos”, que disponibiliza uma arara com cabides no corredor da unidade para que estudantes e professores possam colocar peças que não estejam mais utilizando e escolher as peças que mais lhe agradam e precisam para levar
+                </p>
+                <div class="donation-section">
+                    <h3>Doações:</h3>
+                    <p>ESTA SEMANA</p>
+                    <h4>1071 DOAÇÕES</h4><br>
+                    <p>TOTAL</p>
+                    <h4>9415 DOAÇÕES</h4><br>
+                    <button class="donate-button">DOAR</button>
+                </div>
+            </div>
+            <div class="image-section">
+                <h2>Imagens</h2>
+                <div class="image-placeholder">
+                    <img src="img/camp2educacao.png" alt="foto1" width="300px" height="100px">
+                </div>
+                <br>
+                <div class="image-placeholder">
+                    <img src="img/camp2educacao2.png" alt="foto2" width="300px" height="100px">
+                </div>
+            </div>
+        </div>
+        <button class="share-button">Compartilhar</button>
+    </div>
+    <footer id="footer-container"></footer>
+    <script src="js/import.js"></script>
+    <script src="js/scriptgeral.js"></script>
+    <script>
+          loadContentIntoElement('footer-container', 'footer.html');
+    </script>
+</body>
+</html>
