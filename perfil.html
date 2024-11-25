@@ -16,21 +16,64 @@
         <div class="logo">
             <a href="index.html"><img src="img/logo.png" alt="Logo do site"></a>
         </div>
-        <div class="hamburger" id="hamburger">&#9776;</div>
+        <div class="hamburger" id="hamburger">
+            &#9776;
+        </div>
         <nav id="nav-links">
             <div class="dropdown-menu" id="dropdownMenu">
-                <a href="perfil.html">Ver Perfil</a>
+                <a href="perfil.html">VER PERFIL</a>
                 <button id="logoutButton">Deslogar</button>
             </div>
             <a href="explorar.html">EXPLORAR</a>
             <a href="sobre.html">SOBRE NÓS</a>
+            <a id="contatoButton">✉</a>
             <a href="login.html" class="btn-entrar">ENTRAR</a>
             <a href="cadastro.html" class="btn-cadastrar">CADASTRAR-SE</a>
             <a class="btn-perfil">NOME</a>
         </nav>
+
+        <!-- Escurece o fundo | menu hamburguer -->
         <div class="overlay" id="overlay"></div>
         <script src="js/menu.js"></script>
     </header>
+
+    <div id="contactModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-left">
+                <h2>Envie-nos uma mensagem</h2>
+                <form id="contactForm">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+
+                    <label for="telefone">Telefone:</label>
+                    <input type="text" id="telefone" placeholder="(XX) XXXXX-XXXX" required>
+
+                    <label for="assunto">Assunto:</label>
+                    <input type="text" id="assunto" required>
+
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" rows="5" required></textarea>
+
+                    <!-- Captcha Placeholder -->
+                    <div class="captcha">
+                        <p>Por favor, resolva o captcha antes de enviar.</p>
+                    </div>
+
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+            <div class="modal-right">
+                <h3>Nossas informações:</h3>
+                <p><span>Endereços:</span> <br> Rua Exemplo, 123 <br> Avenida Modelo, 456 <br> Travessa Teste, 789</p>
+                <p><span>Telefone:</span> <br> (11) 1234-5678</p>
+                <p><span>Email:</span> <br> contato@exemplo.com</p>
+            </div>
+        </div>
+    </div>
+    <script src="js/modal.js"></script>
 
     <div class="main-container">
         <div class="profile-section">
@@ -207,7 +250,7 @@
 
         document.addEventListener("DOMContentLoaded", function () {
             const tipoConta = localStorage.getItem("tipoConta");
-            console.log(`Tipo de conta recuperado: ${tipoConta}`); // Verifica se o valor é recuperado corretamente
+            console.log(`Tipo de conta recuperado: ${tipoConta}`); 
             const criarCampanhaBtn = document.getElementById("criarCampanha");
 
             if (criarCampanhaBtn) {

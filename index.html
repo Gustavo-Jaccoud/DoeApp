@@ -88,6 +88,7 @@
             </div>
         </div>
     </div>
+    <script src="js/modal.js"></script>
     <div class="main-container" id="main-container">
         <!-- Fundo dinâmico -->
         <div id="donate-bg" class="background-image" style="background-image: url('./img/doa1.png');"></div>
@@ -104,7 +105,27 @@
                     onmouseover="showBackground('campaign-bg'); toggleDynamicText(true);"
                     onmouseout="hideBackground('campaign-bg'); toggleDynamicText(false);">
                     Criar uma Campanha
-            </a>
+                </a>
+
+                <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                        const tipoConta = localStorage.getItem("tipoConta");
+                        console.log(`Tipo de conta recuperado: ${tipoConta}`);
+
+                        const criarCampanhaBtn = document.getElementById("campaign");
+
+                        if (criarCampanhaBtn) {
+                            if (tipoConta === "fisica") {
+                                criarCampanhaBtn.removeAttribute("href");
+                            } else {
+                                criarCampanhaBtn.setAttribute("href", "criarcampanha.html");
+                            }
+                        } else {
+                            console.error("Elemento criarCampanha não encontrado no DOM.");
+                        }
+                    });
+                </script>
+
             </div>
             <div id="dynamic-text" class="dynamic-text">*Apenas empresas podem criar campanhas</div>
         </div>
@@ -115,7 +136,8 @@
         <div class="carousel-container">
             <h1 class="carotex invisible" id="principaisNoticias">Principais Noticias</h1>
             <div class="bordercam invisible"></div>
-            <img src="img/slide1.png" alt="Image 1" class="carousel-img center">
+
+            <img src="img/slide1.png" alt="Image 1" class="carousel-img center" onclick="window.location.href='noticia.html'">
             <img src="img/slide3.png" alt="Image 3" class="carousel-img right">
             <img src="img/slide2.png" alt="Image 2" class="carousel-img left">
             <div class="progress-bar">

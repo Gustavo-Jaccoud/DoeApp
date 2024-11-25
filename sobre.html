@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DoeApp | Sobre Nós</title>
-    
+
     <link rel="stylesheet" href="css/sobre.css">
     <link rel="stylesheet" href="css/body.css">
     <link rel="stylesheet" href="css/header.css">
@@ -61,6 +62,7 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <div class="logo">
@@ -73,7 +75,7 @@
             <div class="dropdown-menu" id="dropdownMenu">
                 <a href="perfil.html">VER PERFIL</a>
                 <button id="logoutButton">Deslogar</button>
-            </div> 
+            </div>
             <a href="explorar.html">EXPLORAR</a>
             <a href="sobre.html">SOBRE NÓS</a>
             <a id="contatoButton">✉</a>
@@ -81,48 +83,86 @@
             <a href="cadastro.html" class="btn-cadastrar">CADASTRAR-SE</a>
             <a class="btn-perfil">NOME</a>
         </nav>
-        
-            <!-- Escurece o fundo | menu hamburguer -->
+
+        <!-- Escurece o fundo | menu hamburguer -->
         <div class="overlay" id="overlay"></div>
-<script src="js/menu.js"></script>
-</header>
+        <script src="js/menu.js"></script>
+    </header>
 
-<div id="contactModal" class="modal hidden">
-    <div class="modal-content">
-        <div class="modal-left">
-            <h2>Envie-nos uma mensagem</h2>
-            <form id="contactForm">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" required>
-                
-                <label for="telefone">Telefone:</label>
-                <input type="text" id="telefone" placeholder="(XX) XXXXX-XXXX" required>
-                
-                <label for="assunto">Assunto:</label>
-                <input type="text" id="assunto" required>
-                
-                <label for="mensagem">Mensagem:</label>
-                <textarea id="mensagem" rows="5" required></textarea>
-                
-                <!-- Captcha Placeholder -->
-                <div class="captcha">
-                    <p>Por favor, resolva o captcha antes de enviar.</p>
-                </div>
+    <div id="contactModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-left">
+                <h2>Envie-nos uma mensagem</h2>
+                <form id="contactForm">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" required>
 
-                <button type="submit">Enviar</button>
-            </form>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+
+                    <label for="telefone">Telefone:</label>
+                    <input type="text" id="telefone" placeholder="(XX) XXXXX-XXXX" required>
+
+                    <label for="assunto">Assunto:</label>
+                    <input type="text" id="assunto" required>
+
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" rows="5" required></textarea>
+
+                    <!-- Captcha Placeholder -->
+                    <div class="captcha">
+                        <p>Por favor, resolva o captcha antes de enviar.</p>
+                    </div>
+
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+            <div class="modal-right">
+                <h3>Nossas informações:</h3>
+                <p><span>Endereços:</span> <br> Rua Exemplo, 123 <br> Avenida Modelo, 456 <br> Travessa Teste, 789</p>
+                <p><span>Telefone:</span> <br> (11) 1234-5678</p>
+                <p><span>Email:</span> <br> contato@exemplo.com</p>
+            </div>
         </div>
-        <div class="modal-right">
-            <h3>Nossas informações:</h3>
-            <p><span>Endereços:</span> <br> Rua Exemplo, 123 <br> Avenida Modelo, 456 <br> Travessa Teste, 789</p>
-            <p><span>Telefone:</span> <br> (11) 1234-5678</p>
-            <p><span>Email:</span> <br> contato@exemplo.com</p>
-        </div>        
     </div>
-</div>
+    <script src="js/modal.js"></script>
+
+    <div id="contactModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-left">
+                <h2>Envie-nos uma mensagem</h2>
+                <form id="contactForm">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+
+                    <label for="telefone">Telefone:</label>
+                    <input type="text" id="telefone" placeholder="(XX) XXXXX-XXXX" required>
+
+                    <label for="assunto">Assunto:</label>
+                    <input type="text" id="assunto" required>
+
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" rows="5" required></textarea>
+
+                    <!-- Captcha Placeholder -->
+                    <div class="captcha">
+                        <p>Por favor, resolva o captcha antes de enviar.</p>
+                    </div>
+
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+            <div class="modal-right">
+                <h3>Nossas informações:</h3>
+                <p><span>Endereços:</span> <br> Rua Exemplo, 123 <br> Avenida Modelo, 456 <br> Travessa Teste, 789</p>
+                <p><span>Telefone:</span> <br> (11) 1234-5678</p>
+                <p><span>Email:</span> <br> contato@exemplo.com</p>
+            </div>
+        </div>
+    </div>
 
     <main>
         <!-- Conteúdo atual -->
@@ -130,47 +170,68 @@
             <div class="quemSomos">
                 <div class="texto fade-in">
                     <h1>QUEM SOMOS?</h1>
-                    <p id="textoQuemSomos">O Doe.me é uma plataforma web que facilita a intermediação entre doadores e empresas que necessitam de recursos para manter suas operações. Com foco em campanhas específicas, o DoeApp permite que doadores encontrem facilmente empresas que precisam de produtos como equipamentos, materiais, e serviços essenciais, oferecendo um espaço prático e transparente para apoiar negócios e organizações em necessidade.</p>
+                    <p id="textoQuemSomos">O Doe.me é uma plataforma web que facilita a intermediação entre doadores e
+                        empresas que necessitam de recursos para manter suas operações. Com foco em campanhas
+                        específicas, o DoeApp permite que doadores encontrem facilmente empresas que precisam de
+                        produtos como equipamentos, materiais, e serviços essenciais, oferecendo um espaço prático e
+                        transparente para apoiar negócios e organizações em necessidade.</p>
                 </div>
                 <img src="img/about_0.png" alt="" class="fade-in">
             </div>
-    
-            <h2 class="fade-in">Sobre a empresa</h2>
-    
-            <p class="fade-in" id="textobaixo">Somos o Doe.me, uma plataforma dedicada a conectar generosidade e necessidade. Atuamos como um elo entre doadores e empresas ou organizações que precisam de recursos para continuar operando e crescendo. Oferecemos um ambiente seguro, prático e eficiente, onde cada contribuição faz diferença. Nosso compromisso é facilitar a transformação de boas intenções em impacto real.</p>
-            <div class="img fade-in"><img src="img/about_1.svg" alt=""></div>
-    
-            <h2 class="fade-in">Nosso objetivo</h2>
-            
-            <p class="fade-in" id="textobaixo">Nosso objetivo é criar um ecossistema solidário, onde doadores possam contribuir de forma significativa para campanhas essenciais, apoiando empresas e iniciativas em dificuldade. Acreditamos no poder da colaboração para impulsionar mudanças positivas, promovendo transparência e confiança em cada passo do processo.</p>
-            <div class="img fade-in"><img src="img/about_2.svg" alt=""></div>  
-        </div>
 
+            <h2 class="fade-in">Sobre a empresa</h2>
+
+            <p class="fade-in" id="textobaixo">Somos o Doe.me, uma plataforma dedicada a conectar generosidade e
+                necessidade. Atuamos como um elo entre doadores e empresas ou organizações que precisam de recursos para
+                continuar operando e crescendo. Oferecemos um ambiente seguro, prático e eficiente, onde cada
+                contribuição faz diferença. Nosso compromisso é facilitar a transformação de boas intenções em impacto
+                real.</p>
+            <div class="img fade-in"><img src="img/about_1.svg" alt=""></div>
+
+            <h2 class="fade-in">Nosso objetivo</h2>
+
+            <p class="fade-in" id="textobaixo">Nosso objetivo é criar um ecossistema solidário, onde doadores possam
+                contribuir de forma significativa para campanhas essenciais, apoiando empresas e iniciativas em
+                dificuldade. Acreditamos no poder da colaboração para impulsionar mudanças positivas, promovendo
+                transparência e confiança em cada passo do processo.</p>
+            <div class="img fade-in"><img src="img/about_2.svg" alt=""></div>
+        </div>
         <!-- Novo conteúdo para 'Nossa História' -->
         <div id="novaHistoria" class="content hidden">
             <div class="quemSomos">
                 <div class="texto fade-in">
                     <h1>Nossa História</h1>
-                    <p id="textoNossaHistoria">O Doe.me nasceu da percepção de que muitas empresas enfrentam desafios para obter os recursos necessários para manter suas operações. Observamos que havia uma lacuna entre pessoas dispostas a doar e organizações que precisavam de ajuda, e decidimos atuar como ponte para resolver esse problema.</p>
+                    <p id="textoNossaHistoria">O Doe.me nasceu da percepção de que muitas empresas enfrentam desafios
+                        para obter os recursos necessários para manter suas operações. Observamos que havia uma lacuna
+                        entre pessoas dispostas a doar e organizações que precisavam de ajuda, e decidimos atuar como
+                        ponte para resolver esse problema.</p>
                 </div>
+                <img src="img/about_4.jpg" alt="" class="fade-in">
             </div>
-    
+
             <h2 class="fade-in">Primeiros Passos</h2>
-    
-            <p class="fade-in" id="textobaixo">No início, trabalhamos com pequenos projetos locais, conectando doadores a necessidades específicas. O impacto dessas primeiras campanhas mostrou que nossa visão era viável e necessária.</p>
-            <div class="img fade-in"><img src="img/about_1.svg" alt=""></div>
-    
+
+            <p class="fade-in" id="textobaixo">No início, trabalhamos com pequenos projetos locais, conectando doadores
+                a necessidades específicas. O impacto dessas primeiras campanhas mostrou que nossa visão era viável e
+                necessária.</p>
+            <div class="img fade-in"><img src="img/about_3.jpg" alt=""></div>
+
             <h2 class="fade-in">Crescimento e Expansão</h2>
-            
-            <p class="fade-in" id="textobaixo">Com o tempo, ampliamos nossa atuação para atender uma variedade maior de setores e organizações. Incorporamos novas tecnologias e funcionalidades que tornaram o processo mais acessível e transparente para todos os envolvidos.</p>
-            <div class="img fade-in"><img src="img/about_2.svg" alt=""></div>  
+
+            <p class="fade-in" id="textobaixo">Com o tempo, ampliamos nossa atuação para atender uma variedade maior de
+                setores e organizações. Incorporamos novas tecnologias e funcionalidades que tornaram o processo mais
+                acessível e transparente para todos os envolvidos.</p>
+            <div class="img fade-in"><img src="img/about_2.svg" alt=""></div>
 
             <h2 class="fade-in">Valores que nos Guiam</h2>
-    
-            <p class="fade-in" id="textobaixo">Transparência, confiança e impacto real são os pilares que sustentam nossa história. Cada doação, pequena ou grande, contribui para escrever um capítulo de transformação na vida das empresas e comunidades que ajudamos.</p>
+
+            <p class="fade-in" id="textobaixo">Transparência, confiança e impacto real são os pilares que sustentam
+                nossa história. Cada doação, pequena ou grande, contribui para escrever um capítulo de transformação na
+                vida das empresas e comunidades que ajudamos.</p>
             <div class="img fade-in"><img src="img/about_1.svg" alt=""></div>
-            
         </div>
+
+
         </div>
     </main>
 
@@ -182,6 +243,10 @@
     </div>
 
     <footer id="footer-container"></footer>
+    <script src="js/import.js"></script>
+    <script>
+        loadContentIntoElement('footer-container', 'footer.html');
+    </script>
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -229,4 +294,5 @@
         });
     </script>
 </body>
+
 </html>
