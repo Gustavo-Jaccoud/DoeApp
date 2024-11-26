@@ -74,6 +74,10 @@
     z-index: 2;
 }
 
+.carousel-img.center:hover, .carousel-img.left:hover, .carousel-img.right:hover {
+    cursor: pointer;
+}
+
 /* barra de progresso no carousel (desisti da ideia, deixe assim mesmo por enquanto) */
 .progress-bar {
 display: none;
