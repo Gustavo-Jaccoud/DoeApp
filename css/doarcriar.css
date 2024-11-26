@@ -92,3 +92,18 @@
         visibility: visible;
         opacity: 1;
     }
+
+    @media (max-width: 768px) {
+
+        .content h1 {
+            color: white;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            padding: 15px 30px;
+            font-size: 13px;
+        }
+
+    }

@@ -82,3 +82,21 @@ display: none;
 .progress {
     display: none;
 }
+
+@media (max-width: 768px) {
+
+
+
+.carotex::before, .carotex::after {
+display: none;
+}
+
+.carotex::before {
+    left: -500px;
+}
+
+.carotex::after {
+    right: -500px;
+}
+
+}
