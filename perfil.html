@@ -83,10 +83,10 @@
                 <h1 class="username" id="username">Nome</h1>
                 <p class="username-description" id="profile-description">Breve descrição da pessoa ou organização.</p>
                 <button class="edit-button" onclick="toggleEditMenu()">Editar Perfil</button>
-                <a href="------">
-                    <button id="criarCampanha" class="create-campaign-btn" style="display: none;">Criar
-                        Campanha</button>
-                </a>
+                <button id="criarCampanha" onclick="window.location.href='criarCampanha.html'"
+                    class="create-campaign-btn" style="display: none; text-decoration: none;">Criar
+                    Campanha</button>
+                </button>
             </div>
         </div>
 
@@ -95,14 +95,14 @@
                 <h3>Últimas Doações</h3>
                 <div class="campaign-list">
                     <div class="campaign-item">
-                        <img src="img/explorar1.png" alt="Campanha 1">
-                        <h4>Instituto Industria</h4>
-                        <p>Doação de Equipamentos</p>
+                        <img src="img/camp1.png" alt="Campanha 1">
+                        <h4>Instituto Alimentar</h4>
+                        <p>Alimentação</p>
                     </div>
                     <div class="campaign-item">
-                        <img src="img/explorar2.png" alt="Campanha 1">
-                        <h4>Office S/A</h4>
-                        <p>Materiais de Escritório</p>
+                        <img src="img/camp4.png" alt="Campanha 1">
+                        <h4>Cão sem dono</h4>
+                        <p>Proteção Animal</p>
                     </div>
                     <div class="campaign-item">
                         <img src="img/explorar3.png" alt="Campanha 1">
@@ -110,14 +110,14 @@
                         <p>Equipamentos Tecnológicos</p>
                     </div>
                     <div class="campaign-item">
-                        <img src="img/explorar4.png" alt="Campanha 1">
-                        <h4>DoaNow</h4>
-                        <p>Doação de Equipamentos</p>
-                    </div>
-                    <div class="campaign-item">
                         <img src="img/explorar5.png" alt="Campanha 1">
                         <h4>Escritório Solidário</h4>
                         <p>Materiais de Escritório</p>
+                    </div>
+                    <div class="campaign-item">
+                        <img src="img/camp5.png" alt="Campanha 1">
+                        <h4>Associação Quatro Patinhas</h4>
+                        <p>Causa Animal</p>
                     </div>
                     <div class="campaign-item">
                         <img src="img/explorar6.png" alt="Campanha 2">
@@ -127,36 +127,32 @@
                 </div>
             </div>
             <div class="section">
-                <h3>Seus Favoritos</h3>
+                <h3 id="favorito">Seus Favoritos</h3>
+                <script>
+                    var tipoConta = localStorage.getItem("tipoConta");  
+                    if (tipoConta === "juridica") {
+                        document.getElementById("favorito").textContent = "Suas Campanhas";
+                    }
+                </script>
                 <div class="campaign-list">
                     <div class="campaign-item">
-                        <img src="img/explorar9.png" alt="Campanha 1">
-                        <h4>DoePulse</h4>
-                        <p>Materiais de Escritório</p>
+                        <img src="img/camp4.png" alt="Campanha 1">
+                        <h4>Cão sem dono</h4>
+                        <p>Proteção Animal</p>
                     </div>
                     <div class="campaign-item">
-                        <img src="img/explorar8.png" alt="Campanha 1">
-                        <h4>Suporte Office</h4>
-                        <p>Materiais de Escritório</p>
+                        <img src="img/camp5.png" alt="Campanha 1">
+                        <h4>Associação Quatro Patinhas</h4>
+                        <p>Causa Animal</p>
                     </div>
                     <div class="campaign-item">
-                        <img src="img/explorar7.png" alt="Campanha 1">
-                        <h4>Impacto Equipado</h4>
+                        <img src="img/camp7.png" alt="Campanha 1">
+                        <h4>SEMA</h4>
                         <p>Doação de Equipamentos</p>
                     </div>
                     <div class="campaign-item">
-                        <img src="img/explorar6.png" alt="Campanha 1">
-                        <h4>DoaNow</h4>
-                        <p>Doação de Equipamentos</p>
-                    </div>
-                    <div class="campaign-item">
-                        <img src="img/explorar5.png" alt="Campanha 1">
-                        <h4>Tech Company Inc.</h4>
-                        <p>Equipamentos Tecnológicos</p>
-                    </div>
-                    <div class="campaign-item">
-                        <img src="img/explorar4.png" alt="Campanha 2">
-                        <h4>Office S/A</h4>
+                        <img src="img/camp8.png" alt="Campanha 1">
+                        <h4>Rede Ecológica</h4>
                         <p>Materiais de Escritório</p>
                     </div>
                 </div>
@@ -250,7 +246,7 @@
 
         document.addEventListener("DOMContentLoaded", function () {
             const tipoConta = localStorage.getItem("tipoConta");
-            console.log(`Tipo de conta recuperado: ${tipoConta}`); 
+            console.log(`Tipo de conta recuperado: ${tipoConta}`);
             const criarCampanhaBtn = document.getElementById("criarCampanha");
 
             if (criarCampanhaBtn) {
@@ -265,6 +261,7 @@
         });
 
     </script>
+
 </body>
 
 </html>

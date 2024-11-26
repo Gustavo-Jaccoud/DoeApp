@@ -115,7 +115,7 @@
 }
 
 .image-placeholder img {
-    width: auto; /* Largura ajustada automaticamente */
+    width: 100%; /* Largura ajustada automaticamente */
     height: 300px; /* Define uma altura fixa */
     object-fit: cover; /* Garante que a imagem se ajuste ao contêiner sem distorções */
     border-radius: 8px;

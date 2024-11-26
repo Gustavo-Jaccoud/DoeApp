@@ -91,7 +91,7 @@
         <div class="highlighted-campaigns">
             <div class="highlighted-item">
                 <img src="img/camp1.png" alt="Campanha 1">
-                <div class="overlaycampanhas">
+                <div class="overlaycampanhas" onclick="window.location.href='campanha1.html'">
                     <h3>Instituto Alimentar</h3>
                     <p> Instituto Alimentar, desenvolve a campanha de arrecadação de alimentos,
                         cestas básicas e kits de higiene, para atender as famílias atendidas no projeto alimentando
@@ -99,16 +99,16 @@
                 </div>
             </div>
             <div class="highlighted-item">
-                <img src="img/camp2.png" alt="Campanha 2">
-                <div class="overlaycampanhas">
+                <img src="img/camp2.png" alt="Campanha 2" >
+                <div class="overlaycampanhas" onclick="window.location.href='campanha2.html'">
                     <h3>No Mundo dos Afetos</h3>
                     <p>No Mundo dos Afetos busca fortalecer vínculos e espalhar gestos de amor,
                         promovendo empatia e transformando vidas. Junte-se a nós!</p>
                 </div>
             </div>
             <div class="highlighted-item">
-                <img src="img/camp3.png" alt="Campanha 3">
-                <div class="overlaycampanhas">
+                <img src="img/camp3.png" alt="Campanha 3" >
+                <div class="overlaycampanhas" onclick="window.location.href='campanha3.html'">
                     <h3>Rede Ecológica</h3>
                     <p>O Campo e a Favela de Mãos Dadas promove união e colaboração entre comunidades 
                         rurais e urbanas para transformar vidas. Participe!</p>
@@ -155,6 +155,54 @@
 
             <div class="campaigns-grid" id="campaigns">
                 <!-- Campanhas -->
+                <div class="campaign" data-category="Pet">
+                    <h3>Proteção Animal</h3>
+                    <img src="img/camp4.png" alt="Campanha 1">
+                    <p class="author">Cão sem dono</p>
+                    <p class="description">A Cão sem dono é uma entidade não governamental, sem fins lucrativos, que
+                        visa tirar o maior número possível de animais das ruas, tratar de possíveis traumas e doenças e
+                        integrá-lo a famílias que estejam dispostas a dar muito amor e carinho.</p>
+                </div>
+                <div class="campaign" data-category="Pet">
+                    <h3>Causa Animal</h3>
+                    <img src="img/camp5.png" alt="Campanha 2">
+                    <p class="author">Associação Quatro Patinhas</p>
+                    <p class="description">A Associação Quatro Patinhas nasceu em 2004, após adoção da gatinha Lilo. O
+                        projeto tem como foco principal resgatar animais em situação de risco e restaurar a saúde deles,
+                        antes de fazer as campanhas de adoção.</p>
+                </div>
+                <div class="campaign" data-category="Educação">
+                    <h3>Campanha pelo Direito à Educação</h3>
+                    <img src="img/camp6.png" alt="Campanha 2">
+                    <p class="author">Campanha pelo Direito à Educação</p>
+                    <p class="description">Juntos por uma educação que transforma! Queremos uma educação que não só
+                        informe, mas também forme cidadãos conscientes, com justiça e compromisso socioambiental. Vamos
+                        construir um futuro onde cada estudante possa aprender a cuidar do planeta e das pessoas.</p>
+                </div>
+                <div class="campaign" data-category="Natureza">
+                    <h3>Doação de Equipamentos</h3>
+                    <img src="img/camp7.png" alt="Campanha 1">
+                    <p class="author">SEMA</p>
+                    <p class="description">Empresas que operam em setores industriais, construção civil e saúde precisam
+                        constantemente de EPIs para garantir a segurança de seus funcionários. Ajude com a doação de
+                        capacetes, luvas, óculos de proteção e outros materiais essenciais.</p>
+                </div>
+                <div class="campaign" data-category="Natureza">
+                    <h3>Materiais de Escritório</h3>
+                    <img src="img/camp8.png" alt="Campanha 2">
+                    <p class="author">Rede Ecológica</p>
+                    <p class="description">Pequenas empresas e ONGs necessitam de materiais de escritório para continuar
+                        suas atividades administrativas. Doe itens como papéis, canetas, impressoras e cartuchos de
+                        tinta para apoiar as operações diárias.</p>
+                </div>
+                <div class="campaign" data-category="Natureza">
+                    <h3>Equipamentos Tecnológicos</h3>
+                    <img src="img/camp9.png" alt="Campanha 2">
+                    <p class="author">DEFESA CIVIL RIO DE JANEIRO</p>
+                    <p class="description">O desastre tem como parte inseparável do seu conceito a produção de danos
+                        humanos, materiais ou ambientais e consequentes prejuízos econômicos e sociais. Para as pessoas
+                        que foram afetadas por algum desastre e que acabaram ficando em uma situação...</p>
+                </div>
                 <div class="campaign" data-category="cat1">
                     <h3>Doação de Equipamentos</h3>
                     <img src="img/explorar1.png" alt="Campanha 1">
@@ -176,7 +224,7 @@
                 <div class="campaign" data-category="cat1">
                     <h3>Doação de Equipamentos</h3>
                     <img src="img/explorar4.png" alt="Campanha 1">
-                    <p class="author">DoaNow</p> 
+                    <p class="author">Apoio EPI</p> 
                     <p class="description">Setores como indústria, construção civil e saúde dependem de EPIs para preservar a segurança de seus trabalhadores. Contribua com a doação de capacetes, luvas, óculos de proteção e outros itens indispensáveis.</p>
                 </div>
                 <div class="campaign" data-category="cat2">
@@ -207,95 +255,10 @@
                 <div class="campaign" data-category="cat2">
                     <h3>Materiais de Escritório</h3>
                     <img src="img/explorar9.png" alt="Campanha 2">
-                    <p class="author">DoePulse</p>
+                    <p class="author">Apoio Digital</p>
                     <p class="description">Empresas dependem de tecnologia para operar e crescer. Sua doação de computadores, notebooks, tablets ou smartphones pode fornecer o suporte digital necessário para impulsionar suas atividades.
                     </p>
                 </div>
-                <div class="campaign" data-category="cat2">
-                    <h3>Teste para as outras páginas</h3>
-                    <img src="img/explorar1.png" alt="Campanha 2">
-                    <p class="author">Teste para as outras páginas</p>
-                    <p class="description">Teste para as outras páginas/p>
-                </div>
-                <div class="campaign" data-category="cat2">
-                    <h3>Teste para as paginasla</h3>
-                    <img src="img/explorar2.png" alt="Campanha 2">
-                    <p class="author">Teste para as paginasla</p>
-                    <p class="description">Teste para as paginasla</p>
-                </div>
-                <div class="campaign" data-category="cat2">
-                    <h3>Teste para as outras páginas</h3>
-                    <img src="img/explorar3.png" alt="Campanha 2">
-                    <p class="author">Teste para as outras páginas</p>
-                    <p class="description">Teste para as outras páginas</p>
-                </div>
-                <div class="campaign" data-category="cat2">
-                    <h3>Teste para as paginasla</h3>
-                    <img src="img/explorar4.png" alt="Campanha 2">
-                    <p class="author">Teste para as paginasla</p>
-                    <p class="description">Teste para as paginasla</p>
-                </div>
-                <div class="campaign" data-category="cat2">
-                    <h3>Teste para as outras páginas</h3>
-                    <img src="img/explorar5.png" alt="Campanha 2">
-                    <p class="author">Teste para as outras páginas</p>
-                    <p class="description">Teste para as outras páginas</p>
-                </div>
-                <div class="campaign" data-category="cat2">
-                    <h3>Teste para as paginasla</h3>
-                    <img src="img/explorar6.png" alt="Campanha 2">
-                    <p class="author">Teste para as paginasla</p>
-                    <p class="description">Teste para as paginasla</p>
-                </div>
-                <div class="campaign" data-category="cat2">
-                    <h3>Teste para as outras páginas</h3>
-                    <img src="img/explorar7.png" alt="Campanha 2">
-                    <p class="author">Teste para as outras páginas</p>
-                    <p class="description">Teste para as outras páginas</p>
-                </div>
-                <div class="campaign" data-category="cat2">
-                    <h3>Teste para as paginasla</h3>
-                    <img src="img/explorar8.png" alt="Campanha 2">
-                    <p class="author">Teste para as paginasla</p>
-                    <p class="description">Teste para as paginasla</p>
-                </div>
-                <div class="campaign" data-category="cat2">
-                    <h3>Teste para as outras páginas</h3>
-                    <img src="img/explorar9.png" alt="Campanha 2">
-                    <p class="author">Teste para as outras páginas</p>
-                    <p class="description">Teste para as outras páginas</p>
-                </div>
-                <div class="campaign" data-category="cat2">
-                    <h3>Teste para as paginasla</h3>
-                    <img src="img/explorar1.png" alt="Campanha 2">
-                    <p class="author">Teste para as paginasla</p>
-                    <p class="description">Teste para as paginasla</p>
-                </div>
-                <div class="campaign" data-category="cat2">
-                    <h3>Teste para as outras páginas</h3>
-                    <img src="img/explorar2.png" alt="Campanha 2">
-                    <p class="author">Teste para as outras páginas</p>
-                    <p class="description">Teste para as outras páginas</p>
-                </div>
-                <div class="campaign" data-category="cat2">
-                    <h3>Teste para as paginasla</h3>
-                    <img src="img/explorar3.png" alt="Campanha 2">
-                    <p class="author">Teste para as paginasla</p>
-                    <p class="description">Teste para as paginasla</p>
-                </div>
-                <div class="campaign" data-category="cat2">
-                    <h3>Teste para as outras páginas</h3>
-                    <img src="img/explorar4.png" alt="Campanha 2">
-                    <p class="author">Teste para as outras páginas</p>
-                    <p class="description">Teste para as outras páginas</p>
-                </div>
-                <div class="campaign" data-category="cat2">
-                    <h3>Teste para as paginasla</h3>
-                    <img src="img/explorar5.png" alt="Campanha 2">
-                    <p class="author">Teste para as paginasla</p>
-                    <p class="description">Teste para as paginasla</p>
-                </div>
-                <!-- Adicionar mais se quiser -->
             </div>
             <div class="pagination" id="pagination">
             </div>

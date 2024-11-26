@@ -62,6 +62,8 @@ document.addEventListener('DOMContentLoaded', () => {
         logoutLinkDesktop.addEventListener('click', () => {
             localStorage.removeItem('logado');
             localStorage.removeItem('nome');
+            localStorage.removeItem('descricao');
+            localStorage.removeItem('fotoPerfil');
             location.reload();
         });
         
