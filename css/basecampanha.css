@@ -105,16 +105,24 @@
 }
 
 .image-placeholder {
-    background: #e0e0e0;
+    background: none; /* Remove o fundo cinza */
     border-radius: 5px;
-    height: 100px;
-    margin-bottom: 10px;
+    overflow: hidden; /* Garante que imagens se ajustem ao contêiner */
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 14px;
-    color: #999;
+    margin-bottom: 10px;
 }
+
+.image-placeholder img {
+    width: auto; /* Largura ajustada automaticamente */
+    height: 300px; /* Define uma altura fixa */
+    object-fit: cover; /* Garante que a imagem se ajuste ao contêiner sem distorções */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    margin: 10px auto;
+}
+
 
 .share-button {
     background: #007aff;

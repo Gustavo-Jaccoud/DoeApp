@@ -63,3 +63,13 @@
     opacity: 0;
 }
 
+.ancora-campanha {
+    color: #000;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.3s ease;
+
+}
+.ancora-campanha:hover {
+    transform: scale(1.03);
+}
