@@ -2,7 +2,7 @@ body {
     background-image: url(../img/background_central.jpg);
 }
     main {
-    width: 90%;
+    width: 80%;
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
@@ -89,7 +89,9 @@ body {
     .botao-azul:hover {
         transform: scale(1.05);
     }
-    
+    #buttonContainer{
+        margin-bottom: 100px;
+    }
     .botao-azul span {
         margin-left: 8px;
         color: white;
