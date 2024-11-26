@@ -110,6 +110,7 @@
                 <script>
                     document.addEventListener("DOMContentLoaded", function () {
                         const tipoConta = localStorage.getItem("tipoConta");
+                        const logado = localStorage.getItem("logado");
                         console.log(`Tipo de conta recuperado: ${tipoConta}`);
 
                         const criarCampanhaBtn = document.getElementById("campaign");
@@ -117,7 +118,11 @@
                         if (criarCampanhaBtn) {
                             if (tipoConta === "fisica") {
                                 criarCampanhaBtn.removeAttribute("href");
-                            } else {
+                            } 
+                            else {
+                                criarCampanhaBtn.setAttribute("href", "criarcampanha.html");
+                            }
+                            if(localStorage.getItem("logado") !== "true"){
                                 criarCampanhaBtn.setAttribute("href", "criarcampanha.html");
                             }
                         } else {
@@ -139,8 +144,8 @@
         </div>
         <div class="carousel-container">
             <img src="img/slide_1.png" alt="Image 1" class="carousel-img center" onclick="window.location.href='noticia.html'">
-            <img src="img/slide_2.png" alt="Image 3" class="carousel-img right">
-            <img src="img/slide_3.png" alt="Image 2" class="carousel-img left">
+            <img src="img/slide_2.png" alt="Image 3" class="carousel-img right" onclick="window.location.href='noticia2.html'">
+            <img src="img/slide_3.png" alt="Image 2" class="carousel-img left" onclick="window.location.href='noticia3.html'">
             <div class="progress-bar">
                 <div class="progress"></div>
             </div>

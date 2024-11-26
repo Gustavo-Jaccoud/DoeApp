@@ -32,7 +32,7 @@ nav a:hover {
 
 .btn-entrar {
     color: #3988C2;
-    border: 4px solid #3988C2;
+    border: 2px solid #3988C2;
     padding: 5px 15px;
     border-radius: 20px;
     font-weight: 600;
@@ -49,7 +49,7 @@ nav a:hover {
 .btn-perfil{
     color: white;
     background-color: #3988C2;
-    border: 4px solid #3988C2;
+    border: 2px solid #3988C2;
     padding: 5px 15px;
     border-radius: 20px;
     font-weight: 600;
@@ -59,7 +59,7 @@ nav a:hover {
     color: white;
     cursor: pointer;
     background-color: #0c324e;
-    border: 4px solid #0c324e;
+    border: 2px solid #0c324e;
     transition: background-color 0.3s, color 0.3s;
 }
 .btn-cadastrar {
@@ -105,9 +105,10 @@ nav a:last-child {
     height: 37px;
     padding: 0.5px 2.595px;
     font-size: 24px;
+    text-align: center;
     font-weight: normal;
     border-radius: 50%;
-    border: solid 4px #0083b0;
+    border: solid 2px #0083b0;
     cursor: pointer;
     transition: background 0.3s ease, transform 0.2s ease;
 }

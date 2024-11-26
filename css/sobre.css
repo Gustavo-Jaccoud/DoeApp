@@ -104,7 +104,10 @@ body {
         transform: translateX(-100%);
         position: absolute;
         width: 100%;
-    }    
+    } 
+    #novaHistoria img{
+        border-radius: 25px;
+    }
 
     .fade-in {
         opacity: 0;
