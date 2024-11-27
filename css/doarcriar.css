@@ -41,6 +41,10 @@
     .content h1 {
         color: white;
         font-size: 2rem;
+        text-shadow: 
+        0 0 5px black,   /* Contorno borrado */
+        0 0 10px black, 
+        0 0 15px black;
         margin-bottom: 20px;
     }
 
@@ -57,6 +61,10 @@
         font-size: 1rem;
         font-weight: bold;
         color: white;
+        text-shadow: 
+        0 0 5px black,   /* Contorno borrado */
+        0 0 10px black, 
+        0 0 15px black;
         border: none;
         border-radius: 5px;
         cursor: pointer;
@@ -68,19 +76,19 @@
     }
 
     .button#donate {
-        background-color: #002fff;
-        box-shadow: 0 0px 12px #25468f;
+        background-color: #1900ff;
+        box-shadow: 0 0px 12px #002fff;
     }
     
     .button#campaign {
-        background-color: #ff5100;
-        box-shadow: 0 0px 12px #895321;
+        background-color: #00ff0d;
+        box-shadow: 0 0px 12px #00ff55;
     }
 
     /* Texto dinâmico */
     .dynamic-text {
         font-size: 0.9rem;
-        color: rgb(255, 81, 0);
+        color: #00ff0d;
         margin-top: 10px;
         visibility: hidden; /* Invisível por padrão */
         opacity: 0;
