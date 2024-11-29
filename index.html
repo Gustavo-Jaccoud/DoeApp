@@ -22,8 +22,6 @@
     <link rel="stylesheet" href="css/animações.css">
     <link rel="stylesheet" href="css/body.css">
     <link rel="stylesheet" href="css/doarcriar.css">
-
-
 </head>
 
 <body>
@@ -92,14 +90,20 @@
     <script src="js/modal.js"></script>
     <div class="main-container" id="main-container">
         <!-- Fundo dinâmico -->
-        <div id="donate-bg" class="background-image" style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),url('./img/teste2.jpeg');"></div>
-        <div id="campaign-bg" class="background-image" style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),url('./img/teste.jpg');"></div>
+        <div id="donate-bg" class="background-image"
+            style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),url('./img/teste2.jpeg');">
+        </div>
+        <div id="campaign-bg" class="background-image"
+            style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),url('./img/teste.jpg');">
+        </div>
         <!-- Conteúdo -->
         <div class="content">
             <h1>Doe-me - Juntos, Podemos Fazer a Diferença</h1>
-            <p>No Doe-me, acreditamos que pequenas ações podem gerar grandes transformações. Conectamos quem precisa de recursos essenciais com quem deseja ajudar, tornando a solidariedade mais simples e eficaz. E você, como deseja fazer a diferença?</p>
+            <p>No Doe-me, acreditamos que pequenas ações podem gerar grandes transformações. Conectamos quem precisa de
+                recursos essenciais com quem deseja ajudar, tornando a solidariedade mais simples e eficaz. E você, como
+                deseja fazer a diferença?</p>
             <div class="button-container">
-                <a style="text-decoration: none;" id="donate" class="button" href="#principaisNoticias"
+                <a style="text-decoration: none;" id="donate" class="button" href="#campanhasss"
                     onmouseover="showBackground('donate-bg')" onmouseout="hideBackground('donate-bg')">
                     Fazer uma Doação
                 </a>
@@ -108,41 +112,86 @@
                     onmouseout="hideBackground('campaign-bg'); toggleDynamicText(false);">
                     Criar uma Campanha
                 </a>
-
                 <script>
                     document.addEventListener("DOMContentLoaded", function () {
+                        // Recupera o tipo de conta e o status de login do localStorage
                         const tipoConta = localStorage.getItem("tipoConta");
-                        const logado = localStorage.getItem("logado");
+                        const logado = localStorage.getItem("logado") === "true"; // Converte a string "true" para booleano
                         console.log(`Tipo de conta recuperado: ${tipoConta}`);
 
                         const criarCampanhaBtn = document.getElementById("campaign");
+                        const modal = document.getElementById("modal");
+                        const closeModalButton = document.getElementById("closeModal");
+
+                        // Se o usuário não estiver logado, redireciona para o login
+                        if (!logado) {
+                            criarCampanhaBtn.setAttribute("href", "login.html");
+                            return
+
+                        }
 
                         if (criarCampanhaBtn) {
+                            // Se o tipo de conta for "fisica", remove o link e exibe o modal
                             if (tipoConta === "fisica") {
-                                criarCampanhaBtn.removeAttribute("href");
-                            } 
-                            else {
-                                criarCampanhaBtn.setAttribute("href", "criarcampanha.html");
+                                criarCampanhaBtn.removeAttribute("href"); // Remove o link do botão
+                                criarCampanhaBtn.addEventListener("click", function () {
+                                    if (modal) {
+                                        modal.style.display = "flex"; // Exibe o modal
+                                    } else {
+                                        console.error("Modal não encontrado no DOM.");
+                                    }
+                                });
                             }
-                            if(localStorage.getItem("logado") !== "true"){
-                                criarCampanhaBtn.setAttribute("href", "criarcampanha.html");
+                            // Se o tipo de conta for "juridica", permite o redirecionamento para o link
+                            else if (tipoConta === "juridica") {
+                                criarCampanhaBtn.setAttribute("href", "criarcampanha.html"); // Define o link para a criação da campanha
                             }
                         } else {
-                            console.error("Elemento criarCampanha não encontrado no DOM.");
+                            console.error("Elemento 'campaign' não encontrado no DOM.");
+                        }
+
+                        // Eventos para o modal
+                        if (modal && closeModalButton) {
+                            // Fecha o modal ao clicar no botão "Fechar"
+                            closeModalButton.addEventListener("click", function () {
+                                modal.style.display = "none"; // Oculta o modal
+                            });
+
+                            // Fecha o modal ao clicar fora dele
+                            window.addEventListener("click", function (event) {
+                                if (event.target === modal) {
+                                    modal.style.display = "none"; // Oculta o modal
+                                }
+                            });
+                        } else {
+                            console.error("Modal ou botão 'closeModal' não encontrado no DOM.");
                         }
                     });
                 </script>
 
+
+
             </div>
-            <div id="dynamic-text" class="dynamic-text">*Apenas empresas podem criar campanhas</div>
         </div>
     </div>
     <script src="js/criarmenudoar.js"></script>
+    <div class="modal-overlay" id="modal">
+        <div class="modal-content">
+            <h3>Atenção</h3>
+            <p>Somente pessoas jurídicas podem criar campanhas.</p>
+            <button class="modal-close" id="closeModal">Fechar</button>
+        </div>
+    </div>
+
+    <script>
+        // Obtém os elementos do modal
+
+    </script>
 
 
     <div class="container">
         <div class="catdiv">
-            <h1 class="campanhastex invisible">Campanhas</h1>
+            <h1 id="campanhasss" class="campanhastex invisible">Campanhas</h1>
             <div class="bordercam invisible"></div>
             <!-- para mudar as categorias, apenas mude o valor de acordo com a lista abaixo: -->
             <!-- Alimentação : cat1 -->
@@ -197,7 +246,7 @@
                         <img src="img/camp2.png" alt="Campanha 2">
                         <p class="author">No Mundo dos Afetos</p>
                         <p class="description">No Mundo dos Afetos busca fortalecer vínculos e espalhar gestos de amor,
-                             promovendo empatia e transformando vidas. Junte-se a nós!</p>
+                            promovendo empatia e transformando vidas. Junte-se a nós!</p>
                     </div>
                 </a>
                 <a class="ancora-campanha" href="campanha3.html">
@@ -205,7 +254,8 @@
                         <h3>Alimentação</h3>
                         <img src="img/camp3.png" alt="Campanha 2">
                         <p class="author">Rede Ecológica</p>
-                        <p class="description">O Campo e a Favela de Mãos Dadas promove união e colaboração entre comunidades 
+                        <p class="description">O Campo e a Favela de Mãos Dadas promove união e colaboração entre
+                            comunidades
                             rurais e urbanas para transformar vidas. Participe!</p>
                     </div>
                 </a>
@@ -270,9 +320,12 @@
             <h1 class="carotex invisible" id="principaisNoticias">Principais Noticias</h1>
         </div>
         <div class="carousel-container">
-            <img src="img/slide_1.png" alt="Image 1" class="carousel-img center" onclick="window.location.href='noticia.html'">
-            <img src="img/slide_2.png" alt="Image 2" class="carousel-img right" onclick="window.location.href='noticia2.html'">
-            <img src="img/slide_3.png" alt="Image 3" class="carousel-img left" onclick="window.location.href='noticia3.html'">
+            <img src="img/slide_1.png" alt="Image 1" class="carousel-img center"
+                onclick="window.location.href='noticia.html'">
+            <img src="img/slide_2.png" alt="Image 2" class="carousel-img right"
+                onclick="window.location.href='noticia2.html'">
+            <img src="img/slide_3.png" alt="Image 3" class="carousel-img left"
+                onclick="window.location.href='noticia3.html'">
             <div class="progress-bar">
                 <div class="progress"></div>
             </div>

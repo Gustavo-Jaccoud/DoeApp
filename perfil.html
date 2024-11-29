@@ -93,69 +93,99 @@
         <div class="sections">
             <div class="section">
                 <h3>Últimas Doações</h3>
-                <div class="campaign-list">
-                    <div class="campaign-item">
-                        <img src="img/camp1.png" alt="Campanha 1">
-                        <h4>Instituto Alimentar</h4>
-                        <p>Alimentação</p>
-                    </div>
-                    <div class="campaign-item">
-                        <img src="img/camp4.png" alt="Campanha 1">
-                        <h4>Cão sem dono</h4>
-                        <p>Proteção Animal</p>
-                    </div>
-                    <div class="campaign-item">
-                        <img src="img/explorar3.png" alt="Campanha 1">
-                        <h4>Tech Company Inc.</h4>
-                        <p>Equipamentos Tecnológicos</p>
-                    </div>
-                    <div class="campaign-item">
-                        <img src="img/explorar5.png" alt="Campanha 1">
-                        <h4>Escritório Solidário</h4>
-                        <p>Materiais de Escritório</p>
-                    </div>
-                    <div class="campaign-item">
-                        <img src="img/camp5.png" alt="Campanha 1">
-                        <h4>Associação Quatro Patinhas</h4>
-                        <p>Causa Animal</p>
-                    </div>
-                    <div class="campaign-item">
-                        <img src="img/explorar6.png" alt="Campanha 2">
-                        <h4>TechCausa</h4>
-                        <p>Equipamentos Tecnológicos</p>
-                    </div>
-                </div>
+                <table class="campaign-table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Nome</th>
+                            <th>Descrição</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="td-img"><img src="img/camp1.png" alt="Campanha 1"></td>
+                            <td>Instituto Alimentar</td>
+                            <td>Alimentação</td>
+                            <td class="td-options"><img src="img/edit.png" alt=""><img src="img/trash.png" alt=""></td>
+                        </tr>
+                        <tr>
+                            <td class="td-img"><img src="img/camp4.png" alt="Campanha 1"></td>
+                            <td>Cão sem dono</td>
+                            <td>Proteção Animal</td>
+                            <td class="td-options"><img src="img/edit.png" alt=""><img src="img/trash.png" alt=""></td>
+                        </tr>
+                        <tr>
+                            <td class="td-img"><img src="img/explorar3.png" alt="Campanha 1"></td>
+                            <td>Tech Company Inc.</td>
+                            <td>Equipamentos Tecnológicos</td>
+                            <td class="td-options"><img src="img/edit.png" alt=""><img src="img/trash.png" alt=""></td>
+                        </tr>
+                        <tr>
+                            <td class="td-img"><img src="img/explorar5.png" alt="Campanha 1"></td>
+                            <td>Escritório Solidário</td>
+                            <td>Materiais de Escritório</td>
+                            <td class="td-options"><img src="img/edit.png" alt=""><img src="img/trash.png" alt=""></td>
+                        </tr>
+                        <tr>
+                            <td class="td-img"><img src="img/camp5.png" alt="Campanha 1"></td>
+                            <td>Associação Quatro Patinhas</td>
+                            <td>Causa Animal</td>
+                            <td class="td-options"><img src="img/edit.png" alt=""><img src="img/trash.png" alt=""></td>
+                        </tr>
+                    </tbody>
+                </table>
+
             </div>
             <div class="section">
                 <h3 id="favorito">Seus Favoritos</h3>
-                <script>
-                    var tipoConta = localStorage.getItem("tipoConta");  
-                    if (tipoConta === "juridica") {
-                        document.getElementById("favorito").textContent = "Suas Campanhas";
-                    }
-                </script>
-                <div class="campaign-list">
-                    <div class="campaign-item">
-                        <img src="img/camp4.png" alt="Campanha 1">
-                        <h4>Cão sem dono</h4>
-                        <p>Proteção Animal</p>
-                    </div>
-                    <div class="campaign-item">
-                        <img src="img/camp5.png" alt="Campanha 1">
-                        <h4>Associação Quatro Patinhas</h4>
-                        <p>Causa Animal</p>
-                    </div>
-                    <div class="campaign-item">
-                        <img src="img/camp7.png" alt="Campanha 1">
-                        <h4>SEMA</h4>
-                        <p>Doação de Equipamentos</p>
-                    </div>
-                    <div class="campaign-item">
-                        <img src="img/camp8.png" alt="Campanha 1">
-                        <h4>Rede Ecológica</h4>
-                        <p>Materiais de Escritório</p>
-                    </div>
-                </div>
+
+                <table class="campaign-table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Nome</th>
+                            <th>Descrição</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="td-img"><img src="img/camp4.png" alt="Campanha 1"></td>
+                            <td>Cão sem dono</td>
+                            <td>Proteção Animal</td>
+                            <td class="td-options sumir"><img src="img/edit.png" alt=""><img src="img/trash.png" alt="">
+                            </td>
+                            <td class="favoritar"><img src="img/heart.png"></td>
+                        </tr>
+                        <tr>
+                            <td class="td-img"><img src="img/camp5.png" alt="Campanha 2"></td>
+                            <td>Associação Quatro Patinhas</td>
+                            <td>Causa Animal</td>
+                            <td class="td-options sumir"><img src="img/edit.png" alt=""><img src="img/trash.png" alt="">
+                            </td>
+                            <td class="favoritar"><img src="img/heart.png"></td>
+                        </tr>
+                        <tr>
+                            <td class="td-img"><img src="img/camp7.png" alt="Campanha 3"></td>
+                            <td>SEMA</td>
+                            <td>Doação de Equipamentos</td>
+                            <td class="td-options sumir"><img src="img/edit.png" alt=""><img src="img/trash.png" alt="">
+                            </td>
+                            <td class="favoritar"><img src="img/heart.png"></td>
+                        </tr>
+                        <tr>
+                            <td class="td-img"><img src="img/camp8.png" alt="Campanha 4"></td>
+                            <td>Rede Ecológica</td>
+                            <td>Materiais de Escritório</td>
+                            <td class="td-options sumir"><img src="img/edit.png" alt=""><img src="img/trash.png" alt="">
+                            </td>
+                            <td class="favoritar"><img src="img/heart.png"></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
             </div>
         </div>
     </div>
@@ -261,6 +291,41 @@
         });
 
     </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Obtém o tipo de conta do armazenamento local
+            var tipoConta = localStorage.getItem("tipoConta");
+
+            if (tipoConta === "juridica") {
+                // Atualiza o título
+                document.getElementById("favorito").textContent = "Suas Campanhas";
+
+                // Oculta os elementos com a classe "favoritar"
+                document.querySelectorAll(".favoritar").forEach(function (element) {
+                    element.style.display = "none";
+                });
+
+                // Exibe os elementos com a classe "sumir"
+                document.querySelectorAll(".td-options.sumir").forEach(function (element) {
+                    element.style.display = "flex";
+                });
+            } else {
+                // Atualiza o título
+                document.getElementById("favorito").textContent = "Seus Favoritos";
+
+                // Exibe os elementos com a classe "favoritar"
+                document.querySelectorAll(".favoritar").forEach(function (element) {
+                    element.style.display = "flex";
+                });
+
+                // Oculta os elementos com a classe "sumir"
+                document.querySelectorAll(".td-options.sumir").forEach(function (element) {
+                    element.style.display = "none";
+                });
+            }
+        });
+    </script>
+
 
 </body>
 

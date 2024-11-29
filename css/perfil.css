@@ -143,7 +143,7 @@ body {
 
 .edit-button {
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #3988C2;
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -152,7 +152,7 @@ body {
 .create-campaign-btn {
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #3988C2;
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -167,7 +167,7 @@ body {
 }
 
 .edit-menu button:nth-child(4) {
-    background-color: #007bff;
+    background-color: #3988C2;
     color: #fff;
     margin-top: 10px;
 }
@@ -189,6 +189,97 @@ body {
     padding: 10px;
     border-radius: 8px;
     box-shadow: 0 0px 12px #21897e;
+}
+/* Estilo geral da tabela */
+.campaign-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+    background-color: #f9f9f9;
+}
+
+/* Cabeçalho da tabela */
+.campaign-table thead th {
+    background-color: #3988C2;
+    color: whitesmoke;
+    padding: 6px;
+    text-transform: uppercase;
+}
+
+/* Linhas da tabela */
+.campaign-table tbody tr {
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s;
+}
+
+/* Alteração de cor ao passar o mouse */
+.campaign-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Células da tabela */
+.campaign-table td, 
+.campaign-table th {
+    padding: 6px;
+}
+
+
+/* Alinhamento das células */
+.campaign-table td {
+    vertical-align: middle;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .sections{
+        flex-direction: column;
+    }
+}
+
+.td-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+}
+td img{
+    width: 30px;
+    height: 30px;
+    border-radius: 3px;
+}
+.td-options{
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: center;
+}
+.sumir{
+    display: none;
+}
+.td-options img{
+    margin: 0;
+    width: 20px;
+    height: auto;
+}
+.td-options img:hover{
+    width: 22px;
+}
+.favoritar{
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.favoritar img{
+    margin: 0;
+    width: 22px;
+    height: auto;
+}
+.favoritar img:hover{
+    width: 24px;
 }
 
 footer {
@@ -348,7 +439,6 @@ footer {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
     max-height: 400px;
-    width: 39vw;
 }
 
 .section h3 {
