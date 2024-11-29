@@ -7,7 +7,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background-image: linear-gradient(to bottom right, #8ec0fa, #21897E);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url(../img/index.jpg);
         background-size: cover;
         background-position: center;
         position: relative;
@@ -35,17 +35,30 @@
     /* Conteúdo dentro da div */
     .content {
         position: relative;
+        max-width: 600px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; 
         z-index: 2;
     }
 
+
     .content h1 {
-        color: white;
+        color: rgb(233, 233, 233);
         font-size: 2rem;
         text-shadow: 
         0 0 5px black,   /* Contorno borrado */
         0 0 10px black, 
         0 0 15px black;
         margin-bottom: 20px;
+    }
+    .content p{
+        color: rgb(233, 233, 233);
+        margin-bottom: 15px;
+        border-radius: 10px;
+        padding: 7px;
+        background-color: rgba(0, 0, 0, 0.322);
     }
 
     /* Container de botões */
@@ -60,35 +73,32 @@
         padding: 15px 30px;
         font-size: 1rem;
         font-weight: bold;
-        color: white;
-        text-shadow: 
-        0 0 5px black,   /* Contorno borrado */
-        0 0 10px black, 
-        0 0 15px black;
+        color: rgb(235, 231, 231);
         border: none;
         border-radius: 5px;
         cursor: pointer;
         transition: transform 0.3s ease, background-color 0.3s ease;
     }
+    
 
     .button:hover {
         transform: scale(1.05);
     }
 
     .button#donate {
-        background-color: #1900ff;
-        box-shadow: 0 0px 12px #002fff;
+        background-color: #3988C2;
+        box-shadow: 0 0px 12px #3988C2;
     }
     
     .button#campaign {
-        background-color: #00ff0d;
-        box-shadow: 0 0px 12px #00ff55;
+        background-color: rgb(32,133,123);
+        box-shadow: 0 0px 12px #21897E;
     }
 
     /* Texto dinâmico */
     .dynamic-text {
         font-size: 0.9rem;
-        color: #00ff0d;
+        color: #21897E;
         margin-top: 10px;
         visibility: hidden; /* Invisível por padrão */
         opacity: 0;
