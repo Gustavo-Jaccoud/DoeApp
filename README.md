@@ -11,7 +11,7 @@ Esse tutorial irá guiá-lo passo a passo em como **baixar** o repositório do s
 1.  **Acesse o repositório no GitHub**:
     
     -   Abra o seu navegador (Google Chrome, Mozilla Firefox ou Microsoft Edge).
-    -   Vá até o repositório: [https://github.com/Gustavo-Jaccoud/DoeMe](https://github.com/Gustavo-Jaccoud/DoeApp). 🖥️
+    -   Vá até o repositório: [https://github.com/Gustavo-Jaccoud/DoeApp](https://github.com/Gustavo-Jaccoud/DoeApp). 🖥️
 2.  **Baixar o repositório como arquivo ZIP**:
     
     -   No canto superior direito da página, clique no botão verde **Code**. 🟢
